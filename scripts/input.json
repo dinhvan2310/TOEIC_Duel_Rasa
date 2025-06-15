@@ -1,0 +1,213 @@
+{
+    "topic": "countable_uncountable_nouns",
+    "grammars": [
+        {
+            "index": 1,
+            "short": "**Countable nouns** are things you can count: *books*, *students*, *ideas*. 📘\n- Use *a/an* (singular), *the* (specific).\n- Use numbers: *two pens*, *three apples*.\n- Quantifiers: *many*, *a few*, *several*.\n- Question: *How many...?*",
+            "short_vi": "**Danh từ đếm được** là những thứ bạn có thể đếm được: *books*, *students*, *ideas*. 📘\n- Dùng *a/an* cho số ít, *the* cho trường hợp cụ thể.\n- Dùng số đếm: *two pens*, *three apples*.\n- Từ chỉ số lượng: *many*, *a few*, *several*.\n- Câu hỏi: *How many...?*",
+            "detail": "Countable nouns refer to individual items that can be counted.\n- **Examples**: *book/books*, *idea/ideas*, *student/students*.\n- **Articles**: Use *a/an* for singular (*a book*), *the* for specific nouns (*the idea*).\n- **Numbers**: Combine with numerals (*three pens*, *two phones*).\n- **Quantifiers**: *many*, *a few*, *several*.\n- **Questions**: Ask with *how many* (*How many chairs?*).\n- **Irregular plurals**: *man/men*, *child/children*.\n- **General use**: Use plural with no article when general (*Books are useful*).",
+            "detail_vi": "Danh từ đếm được là những thứ có thể đếm được từng cái.\n- **Ví dụ**: *book/books*, *idea/ideas*, *student/students*.\n- **Mạo từ**: Dùng *a/an* cho danh từ số ít (*a book*), dùng *the* cho trường hợp cụ thể (*the idea*).\n- **Số lượng**: Có thể đi với số đếm (*three pens*, *two phones*).\n- **Từ chỉ lượng**: *many*, *a few*, *several*.\n- **Câu hỏi**: Dùng *how many* (*How many chairs?*).\n- **Số nhiều bất quy tắc**: *man/men*, *child/children*.\n- **Trường hợp chung**: Không cần mạo từ với danh từ số nhiều mang nghĩa chung (*Books are useful*)."
+        },
+        {
+            "index": 2,
+            "short": "**Uncountable nouns** can’t be counted: *water*, *sugar*, *information*. 💧\n- No *a/an*, no plural.\n- Quantifiers: *much*, *a little*, *some*.\n- Question: *How much...?*",
+            "short_vi": "**Danh từ không đếm được** là những thứ không thể đếm riêng lẻ: *water*, *sugar*, *information*. 💧\n- Không dùng *a/an*, không có số nhiều.\n- Từ chỉ lượng: *much*, *a little*, *some*.\n- Câu hỏi: *How much...?*",
+            "detail": "Uncountable nouns are substances or concepts that can’t be separated into individual units.\n- **Examples**: *water*, *rice*, *advice*, *money*.\n- **No a/an or plural**: *a water* ❌, *informations* ❌.\n- **Quantifiers**: *much*, *a little*, *some*.\n- **Questions**: Use *how much* (*How much sugar?*).\n- **Use units**: *a bottle of water*, *two pieces of furniture*.\n- **Verb**: Always singular (*Water is clean*).",
+            "detail_vi": "Danh từ không đếm được là những chất, khái niệm không thể tách thành đơn vị riêng lẻ.\n- **Ví dụ**: *water*, *rice*, *advice*, *money*.\n- **Không dùng a/an hoặc số nhiều**: *a water* ❌, *informations* ❌.\n- **Từ chỉ lượng**: *much*, *a little*, *some*.\n- **Câu hỏi**: Dùng *how much* (*How much sugar?*).\n- **Dùng đơn vị để đo lường**: *a bottle of water*, *two pieces of furniture*.\n- **Động từ**: Luôn dùng số ít (*Water is clean*)."
+        },
+        {
+            "index": 3,
+            "short": "**Quantifiers** show amount: 📏\n- *Many*, *a few* → countable (*many books*).\n- *Much*, *a little* → uncountable (*much water*).\n- *Some*, *any*, *a lot of* → both types.",
+            "short_vi": "**Từ chỉ lượng** diễn tả số lượng: 📏\n- *Many*, *a few* dùng với danh từ đếm được (*many books*).\n- *Much*, *a little* dùng với danh từ không đếm được (*much water*).\n- *Some*, *any*, *a lot of* dùng với cả hai loại.",
+            "detail": "Quantifiers are words that express quantity.\n- **For countable nouns**: *many*, *a few*, *several*.\n- **For uncountable nouns**: *much*, *a little*, *a bit of*.\n- **For both types**: *some*, *any*, *a lot of*, *plenty of*.\n- **Questions**: Use *how many* (countable), *how much* (uncountable).\n- **Meaning**: *a few*/*a little* = a small amount (positive); *few*/*little* = almost none (negative).",
+            "detail_vi": "Từ chỉ lượng là những từ cho biết số lượng.\n- **Với danh từ đếm được**: *many*, *a few*, *several*.\n- **Với danh từ không đếm được**: *much*, *a little*, *a bit of*.\n- **Dùng chung**: *some*, *any*, *a lot of*, *plenty of*.\n- **Câu hỏi**: Dùng *how many* (cho danh từ đếm được), *how much* (cho danh từ không đếm được).\n- **Ý nghĩa**: *a few*/*a little* mang nghĩa tích cực (đủ dùng), *few*/*little* mang nghĩa tiêu cực (gần như không có)."
+        },
+        {
+            "index": 4,
+            "short": "**Some nouns** can be countable or uncountable, depending on meaning. ☕\n- *Coffee* (uncountable: the drink), *two coffees* (countable: cups).\n- *Hair* (all hair), *a hair* (one strand).",
+            "short_vi": "**Một số danh từ** có thể đếm được hoặc không đếm được tùy vào ngữ cảnh. ☕\n- *Coffee* (không đếm được: chất lỏng), *two coffees* (đếm được: ly).\n- *Hair* (tóc nói chung), *a hair* (sợi tóc).",
+            "detail": "Certain nouns change from uncountable to countable based on context.\n- **Examples**:\n  - *Coffee* (substance: *I love coffee*) vs. *two coffees* (cups).\n  - *Hair* (uncountable: *Her hair is long*) vs. *a hair* (a single strand).\n  - *Paper* (material) vs. *two papers* (documents).\n  - *Light* (general brightness) vs. *lights* (lamps).\n- Context decides grammar and article/quantifier use.",
+            "detail_vi": "Một số danh từ có thể là đếm được hoặc không đếm được, tùy vào ý nghĩa.\n- **Ví dụ**:\n  - *Coffee* là chất lỏng nói chung (*I love coffee*) nhưng *two coffees* nghĩa là hai ly cà phê.\n  - *Hair* là mái tóc, nhưng *a hair* là một sợi tóc.\n  - *Paper* (giấy) vs. *two papers* (hai bài báo).\n  - *Light* (ánh sáng) vs. *two lights* (hai đèn).\n- Ngữ cảnh quyết định cách dùng mạo từ và từ chỉ lượng."
+        },
+        {
+            "index": 5,
+            "short": "**Collective uncountable nouns**: *furniture*, *luggage*, *equipment*. 🛋️\n- No *a/an*, no plural.\n- Use units: *a piece of furniture*, *two items of luggage*.",
+            "short_vi": "**Danh từ tập hợp không đếm được**: *furniture*, *luggage*, *equipment*. 🛋️\n- Không dùng *a/an*, không có số nhiều.\n- Dùng đơn vị để đếm: *a piece of furniture*, *two items of luggage*.",
+            "detail": "Some uncountable nouns refer to groups of objects and are called collective nouns.\n- **Examples**: *furniture*, *luggage*, *equipment*, *clothing*.\n- **No a/an or plural**: *a furniture*, *luggages* ❌.\n- **Quantify with units**: *a piece of furniture*, *three items of luggage*, *two sets of equipment*.\n- **Verb form**: Singular (*The equipment is ready*).",
+            "detail_vi": "Một số danh từ không đếm được diễn tả một nhóm đồ vật và được gọi là danh từ tập hợp.\n- **Ví dụ**: *furniture* (đồ nội thất), *luggage* (hành lý), *equipment* (thiết bị).\n- **Không dùng a/an hay số nhiều**: *a furniture*, *luggages* ❌.\n- **Đếm bằng đơn vị**: *a piece of furniture*, *three items of luggage*, *two sets of equipment*.\n- **Động từ**: Luôn dùng số ít (*The equipment is ready*)."
+        },
+        {
+            "index": 6,
+            "short": "**Common mistakes** with uncountable nouns: ⚠️\n- Don’t use *a/an*: *a luggage* ❌\n- Don’t use *many*: *many money* ❌\n- Don’t pluralize: *informations* ❌\n- Use: *some luggage*, *much water* ✅",
+            "short_vi": "**Lỗi sai phổ biến** với danh từ không đếm được: ⚠️\n- Không dùng *a/an*: *a luggage* ❌\n- Không dùng *many*: *many money* ❌\n- Không thêm “s”: *informations* ❌\n- Dùng đúng: *some luggage*, *much water* ✅",
+            "detail": "Avoid these typical mistakes:\n- **Articles**: Never use *a/an* with uncountable nouns (*a furniture* ❌).\n- **Plural forms**: Don’t add -s (*informations*, *luggages* ❌).\n- **Quantifiers**: Don’t use *many* for uncountables (*many money* ❌).\n- **Correct forms**: Use *some*, *much*, *a little*.\n- **Examples**: *some advice*, *much water*, *a little salt*.",
+            "detail_vi": "Tránh các lỗi thường gặp sau:\n- **Mạo từ**: Không dùng *a/an* với danh từ không đếm được (*a furniture* ❌).\n- **Dạng số nhiều**: Không thêm “s” vào danh từ không đếm được (*informations*, *luggages* ❌).\n- **Từ chỉ lượng**: Không dùng *many* với danh từ không đếm được (*many money* ❌).\n- **Cách dùng đúng**: Dùng *some*, *much*, *a little*.\n- **Ví dụ**: *some advice*, *much water*, *a little salt*."
+        }
+    ],
+    "practices": [
+        {
+            "index": 1,
+            "question": "Which article fits this sentence:\n- ___ apple is on the table.",
+            "options": ["a", "an", "the"],
+            "correct": "b",
+            "correct_text": "‘An’ is correct because:\n- *Apple* is a countable singular noun.\n- It starts with a vowel sound, so ‘an’ is used (e.g., *an apple* 🍎).",
+            "incorrect_text": "Incorrect options:\n- ‘A’ is for consonant sounds (e.g., *a book*).\n- ‘The’ is for specific nouns but less natural here for a general statement."
+        },
+        {
+            "index": 2,
+            "question": "Choose the correct quantifier:\n- ___ books are on the shelf.",
+            "options": ["Many", "Much", "A little"],
+            "correct": "a",
+            "correct_text": "‘Many’ is correct because:\n- *Books* is a countable plural noun.\n- ‘Many’ is used for countable nouns (e.g., *many books* 📚).",
+            "incorrect_text": "Incorrect options:\n- ‘Much’ is for uncountable nouns (e.g., *much water*).\n- ‘A little’ is for uncountable nouns (e.g., *a little sugar*)."
+        },
+        {
+            "index": 3,
+            "question": "Which is correct:\n- ___ water is in the glass.",
+            "options": ["A", "An", "Some"],
+            "correct": "c",
+            "correct_text": "‘Some’ is correct because:\n- *Water* is an uncountable noun.\n- ‘Some’ is used for uncountable nouns in affirmative sentences (e.g., *some water* 💧).",
+            "incorrect_text": "Incorrect options:\n- ‘A’ and ‘An’ cannot be used with uncountable nouns like *water* (*a water* ❌)."
+        },
+        {
+            "index": 4,
+            "question": "Fill in the blank:\n- How ___ chairs do we need for the party?",
+            "options": ["many", "much", "some"],
+            "correct": "a",
+            "correct_text": "‘How many’ is correct because:\n- *Chairs* is a countable noun.\n- ‘How many’ is used to ask about quantities of countable nouns (e.g., *How many chairs?* 🪑).",
+            "incorrect_text": "Incorrect options:\n- ‘How much’ is for uncountable nouns (e.g., *How much water?*).\n- ‘Some’ is not used in ‘how’ questions for quantity."
+        },
+        {
+            "index": 5,
+            "question": "Which sentence is correct?\n- a) I need a luggage.\n- b) I need some luggage.\n- c) I need luggages.",
+            "options": ["a", "b", "c"],
+            "correct": "b",
+            "correct_text": "‘I need some luggage’ is correct because:\n- *Luggage* is an uncountable noun.\n- ‘Some’ is used for uncountable nouns (e.g., *some luggage* 🧳).",
+            "incorrect_text": "Incorrect options:\n- ‘A luggage’ is wrong because uncountable nouns don’t take ‘a’ (*a luggage* ❌).\n- ‘Luggages’ is wrong because *luggage* cannot be pluralized."
+        },
+        {
+            "index": 6,
+            "question": "Choose the correct quantifier:\n- There isn’t ___ time left.",
+            "options": ["many", "much", "a few"],
+            "correct": "b",
+            "correct_text": "‘Much’ is correct because:\n- *Time* is uncountable in this context (general concept).\n- ‘Much’ is used for uncountable nouns in negative sentences (e.g., *not much time* ⏳).",
+            "incorrect_text": "Incorrect options:\n- ‘Many’ is for countable nouns (e.g., *many books*).\n- ‘A few’ is for countable nouns and implies a positive amount."
+        },
+        {
+            "index": 7,
+            "question": "Which is correct for *coffee* as a drink order?\n- a) I’d like a coffee.\n- b) I’d like some coffees.\n- c) I’d like much coffee.",
+            "options": ["a", "b", "c"],
+            "correct": "a",
+            "correct_text": "‘I’d like a coffee’ is correct because:\n- *Coffee* is countable when referring to a specific order (one cup).\n- ‘A’ is used for singular countable nouns (e.g., *a coffee* ☕).",
+            "incorrect_text": "Incorrect options:\n- ‘Some coffees’ implies multiple cups but is less common.\n- ‘Much coffee’ is wrong because *much* is for uncountable *coffee* (e.g., *much coffee* ❌ for orders)."
+        },
+        {
+            "index": 8,
+            "question": "Fill in the blank:\n- I have ___ ideas for the project.",
+            "options": ["a little", "a few", "much"],
+            "correct": "b",
+            "correct_text": "‘A few’ is correct because:\n- *Ideas* is a countable noun.\n- ‘A few’ indicates a small positive amount (e.g., *a few ideas* 💡).",
+            "incorrect_text": "Incorrect options:\n- ‘A little’ is for uncountable nouns (e.g., *a little water*).\n- ‘Much’ is for uncountable nouns (e.g., *much information*)."
+        },
+        {
+            "index": 9,
+            "question": "Which sentence uses *hair* correctly?\n- a) Her hair are long.\n- b) A hair is in my soup.\n- c) I found hairs in my soup.",
+            "options": ["a", "b", "c"],
+            "correct": "b",
+            "correct_text": "‘A hair is in my soup’ is correct because:\n- *Hair* is countable when referring to a single strand.\n- ‘A’ is used for singular countable nouns (e.g., *a hair* 🧑‍🦱).",
+            "incorrect_text": "Incorrect options:\n- ‘Her hair are long’ is wrong because *hair* (as a whole) is uncountable and takes *is*.\n- ‘Hairs’ is less common; *a hair* is preferred for single strands."
+        },
+        {
+            "index": 10,
+            "question": "Which is correct:\n- ___ furniture is expensive.",
+            "options": ["A", "Some", "Many"],
+            "correct": "b",
+            "correct_text": "‘Some’ is correct because:\n- *Furniture* is an uncountable collective noun.\n- ‘Some’ is used for uncountable nouns in affirmative sentences (e.g., *some furniture* 🛋️).",
+            "incorrect_text": "Incorrect options:\n- ‘A’ is wrong because *furniture* doesn’t take *a/an*.\n- ‘Many’ is for countable nouns (e.g., *many chairs*)."
+        },
+        {
+            "index": 11,
+            "question": "Choose the correct form:\n- I need to buy ___ .",
+            "options": [
+                "two furnitures",
+                "two pieces of furniture",
+                "a furniture"
+            ],
+            "correct": "b",
+            "correct_text": "‘Two pieces of furniture’ is correct because:\n- *Furniture* is uncountable.\n- Units like *piece* quantify it (e.g., *two pieces of furniture* 🪑🛏️).",
+            "incorrect_text": "Incorrect options:\n- ‘Two furnitures’ is wrong because *furniture* cannot be pluralized.\n- ‘A furniture’ is wrong because *furniture* doesn’t take *a/an*."
+        },
+        {
+            "index": 12,
+            "question": "Which quantifier fits:\n- There are ___ cookies left.",
+            "options": ["a little", "a few", "much"],
+            "correct": "b",
+            "correct_text": "‘A few’ is correct because:\n- *Cookies* is a countable noun.\n- ‘A few’ indicates a small positive amount (e.g., *a few cookies* 🍪).",
+            "incorrect_text": "Incorrect options:\n- ‘A little’ is for uncountable nouns (e.g., *a little sugar*).\n- ‘Much’ is for uncountable nouns (e.g., *much water*)."
+        },
+        {
+            "index": 13,
+            "question": "Which is correct for *paper* as a material?\n- a) I need two papers.\n- b) I need some paper.\n- c) I need a paper.",
+            "options": ["a", "b", "c"],
+            "correct": "b",
+            "correct_text": "‘I need some paper’ is correct because:\n- *Paper* is uncountable when referring to the material.\n- ‘Some’ is used for uncountable nouns (e.g., *some paper* 📜).",
+            "incorrect_text": "Incorrect options:\n- ‘Two papers’ refers to documents, not material.\n- ‘A paper’ is for documents (e.g., *a paper* for a report)."
+        },
+        {
+            "index": 14,
+            "question": "Fill in the blank:\n- ___ time do you spend studying?",
+            "options": ["How many", "How much", "How some"],
+            "correct": "b",
+            "correct_text": "‘How much’ is correct because:\n- *Time* is uncountable in this context (general concept).\n- ‘How much’ is used for uncountable nouns (e.g., *How much time?* ⏳).",
+            "incorrect_text": "Incorrect options:\n- ‘How many’ is for countable nouns (e.g., *How many books?*).\n- ‘How some’ is not a valid question structure."
+        },
+        {
+            "index": 15,
+            "question": "Which sentence is incorrect?\n- a) I have two cats.\n- b) I have many water.\n- c) I have some advice.",
+            "options": ["a", "b", "c"],
+            "correct": "b",
+            "correct_text": "‘I have many water’ is incorrect because:\n- *Water* is uncountable.\n- *Many* is for countable nouns; use *much* or *some* (e.g., *some water* 💧).",
+            "incorrect_text": "Incorrect options:\n- ‘I have two cats’ is correct (*cats* is countable).\n- ‘I have some advice’ is correct (*advice* is uncountable, *some* fits)."
+        },
+        {
+            "index": 16,
+            "question": "Choose the correct quantifier:\n- I don’t have ___ friends.",
+            "options": ["much", "many", "a little"],
+            "correct": "b",
+            "correct_text": "‘Many’ is correct because:\n- *Friends* is a countable noun.\n- ‘Many’ is used in negative sentences for countable nouns (e.g., *not many friends* 👥).",
+            "incorrect_text": "Incorrect options:\n- ‘Much’ is for uncountable nouns (e.g., *much water*).\n- ‘A little’ is for uncountable nouns (e.g., *a little sugar*)."
+        },
+        {
+            "index": 17,
+            "question": "Which uses *time* correctly as a countable noun?\n- a) Time flies so fast.\n- b) I called her three times.\n- c) I don’t have much times.",
+            "options": ["a", "b", "c"],
+            "correct": "b",
+            "correct_text": "‘I called her three times’ is correct because:\n- *Time* is countable when referring to specific instances.\n- *Times* is the plural form (e.g., *three times* 📞).",
+            "incorrect_text": "Incorrect options:\n- ‘Time flies so fast’ uses *time* as uncountable.\n- ‘Much times’ is wrong; *times* (countable) uses *many*."
+        },
+        {
+            "index": 18,
+            "question": "Which is correct:\n- ___ information is available online.",
+            "options": ["Many", "A", "Some"],
+            "correct": "c",
+            "correct_text": "‘Some’ is correct because:\n- *Information* is uncountable.\n- ‘Some’ is used for uncountable nouns in affirmative sentences (e.g., *some information* 📊).",
+            "incorrect_text": "Incorrect options:\n- ‘Many’ is for countable nouns (e.g., *many books*).\n- ‘A’ is wrong because *information* doesn’t take *a/an*."
+        },
+        {
+            "index": 19,
+            "question": "Which sentence is correct?\n- a) I need a book.\n- b) I need an advice.\n- c) I need books are new.",
+            "options": ["a", "b", "c"],
+            "correct": "a",
+            "correct_text": "‘I need a book’ is correct because:\n- *Book* is a countable singular noun.\n- ‘A’ is required for singular countable nouns (e.g., *a book* 📚).",
+            "incorrect_text": "Incorrect options:\n- ‘I need an advice’ is wrong; *advice* is uncountable (*some advice* ✅).\n- ‘I need books are new’ lacks articles and has incorrect verb form (*Books are new* ✅)."
+        },
+        {
+            "index": 20,
+            "question": "Choose the correct form:\n- There’s ___ sugar in the jar.",
+            "options": ["a few", "a little", "many"],
+            "correct": "b",
+            "correct_text": "‘A little’ is correct because:\n- *Sugar* is uncountable.\n- ‘A little’ indicates a small positive amount (e.g., *a little sugar* 🥄).",
+            "incorrect_text": "Incorrect options:\n- ‘A few’ is for countable nouns (e.g., *a few cookies*).\n- ‘Many’ is for countable nouns (e.g., *many books*)."
+        }
+    ]
+}

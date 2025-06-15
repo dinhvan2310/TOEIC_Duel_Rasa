@@ -1,0 +1,171 @@
+version: "3.1"
+
+slots:
+  countable_uncountable_nouns_is_skip_theory:
+    type: bool
+    mappings:
+      - type: controlled
+
+  # Understand
+  countable_uncountable_nouns_understand_1:
+    type: bool
+    mappings:
+      - type: controlled
+  countable_uncountable_nouns_understand_2:
+    type: bool
+    mappings:
+      - type: controlled
+
+  # Practice
+  countable_uncountable_nouns_practice:
+    type: bool
+    mappings:
+      - type: controlled
+
+  # Practice questions 1-30
+  countable_uncountable_nouns_practice_q1:
+    type: categorical
+    values:
+      - a
+      - b
+      - c
+    mappings:
+      - type: controlled
+  countable_uncountable_nouns_practice_q2:
+    type: categorical
+    values:
+      - a
+      - b
+      - c
+    mappings:
+      - type: controlled
+
+responses:
+  # Begin
+  utter_countable_uncountable_nouns_begin:
+    - text: |
+        🎓 Welcome to the TOEIC Grammar lesson!
+        In this lesson, we'll learn about countable and uncountable nouns.
+        Let's get started!
+  # Ask if skip theory
+  utter_ask_countable_uncountable_nouns_is_skip_theory:
+    - text: |
+        🤔 Do you want to skip the theory part and go straight to the practice?
+      buttons:
+        - title: "Yes"
+          payload: "/SetSlots(countable_uncountable_nouns_is_skip_theory=true)"
+        - title: "No"
+          payload: "/SetSlots(countable_uncountable_nouns_is_skip_theory=false)"
+  # End
+  utter_countable_uncountable_nouns_end:
+    - text: |
+        🎉 Thank you for learning about countable and uncountable nouns!
+        I hope you found this helpful.
+        Have a great day! 🌟
+      image: "https://static.klipy.com/ii/feea28532d9709f5128558f418c779d0/c9/40/StrU5mdz.gif"
+
+  # Grammar Content
+  utter_countable_uncountable_nouns_grammar_1:
+    - text: |
+        🍏 **Countable nouns** are nouns that refer to things you can count (one, two, three, ...).
+        Example: apple, chair, student.
+  utter_countable_uncountable_nouns_explain_more_1:
+    - text: |
+        🧮 You can count countable nouns individually. For example: 1 apple, 2 apples.
+      metadata:
+        rephrase: True
+        rephrase_prompt: |
+          You are a TOEIC teacher. Rephrase the response based on {{current_input}}, {{suggested_response}}, and {{history}}.
+          Keep the response concise, avoid repetition, and do not add introductory sentences or unnecessary explanations. Use Markdown for formatting (e.g., headers, lists, ...) and emoji if needed.
+
+          Explain more about countable nouns.
+
+          {{history}}
+          {{current_input}}
+          Suggested AI Response: {{suggested_response}}
+          Rephrased AI Response:
+  utter_countable_uncountable_nouns_grammar_2:
+    - text: |
+        ✨ Countable nouns have singular and plural forms. You can use numbers and articles (a/an/the) with them.
+        Example: a book, two books.
+  utter_countable_uncountable_nouns_explain_more_2:
+    - text: |
+        📚 With countable nouns, use "a/an" for one, and add "s" for more than one. Example: a cat, three cats.
+      metadata:
+        rephrase: True
+        rephrase_prompt: |
+          You are a TOEIC teacher. Rephrase the response based on {{current_input}}, {{suggested_response}}, and {{history}}.
+          Keep the response concise, avoid repetition, and do not add introductory sentences or unnecessary explanations. Use Markdown for formatting (e.g., headers, lists, ...) and emoji if needed.
+
+          Explain more about singular and plural forms of countable nouns.
+
+          {{history}}
+          {{current_input}}
+          Suggested AI Response: {{suggested_response}}
+          Rephrased AI Response:
+
+  # Ask understand for each grammar step
+  utter_ask_countable_uncountable_nouns_understand_1:
+    - text: |
+        🤔 Do you understand this part?
+        (Please answer: **yes** or **no**)
+      buttons:
+        - title: "Yes"
+          payload: "/SetSlots(countable_uncountable_nouns_understand_1=true)"
+        - title: "No"
+          payload: "/SetSlots(countable_uncountable_nouns_understand_1=false)"
+  utter_ask_countable_uncountable_nouns_understand_2:
+    - text: |
+        🤔 Do you understand this part?
+        (Please answer: **yes** or **no**)
+      buttons:
+        - title: "Yes"
+          payload: "/SetSlots(countable_uncountable_nouns_understand_2=true)"
+        - title: "No"
+          payload: "/SetSlots(countable_uncountable_nouns_understand_2=false)"
+
+  # Ask if practice
+  utter_ask_countable_uncountable_nouns_practice:
+    - text: |
+        📝 Would you like to try some practice questions?
+      buttons:
+        - title: "Yes"
+          payload: "/SetSlots(countable_uncountable_nouns_practice=true)"
+        - title: "No"
+          payload: "/SetSlots(countable_uncountable_nouns_practice=false)"
+
+  # Practice question 1
+  utter_ask_countable_uncountable_nouns_practice_q1:
+    - text: |
+        ❓ **Question 1:** Choose the countable noun:
+      buttons:
+        - title: "🍏 apple"
+          payload: "a"
+        - title: "💧 water"
+          payload: "b"
+        - title: "🍚 rice"
+          payload: "c"
+  utter_countable_uncountable_nouns_correct_q1:
+    - text: |
+        ✅ Correct! **'apple'** is a countable noun.
+  utter_countable_uncountable_nouns_incorrect_q1:
+    - text: |
+        ❌ Not quite. The correct answer is **'apple' (A)** because it can be counted.
+
+  # Practice question 2
+  utter_ask_countable_uncountable_nouns_practice_q2:
+    - text: |
+        ❓ **Question 2:** Which is an uncountable noun?
+      buttons:
+        - title: "🍞 bread"
+          payload: "a"
+        - title: "🐕 dog"
+          payload: "b"
+        - title: "📚 book"
+          payload: "c"
+  utter_countable_uncountable_nouns_correct_q2:
+    - text: |
+        ✅ Correct! **'bread'** is an uncountable noun.
+  utter_countable_uncountable_nouns_incorrect_q2:
+    - text: |
+        ❌ Not quite. The correct answer is **'bread' (A)** because it cannot be counted.

@@ -1,0 +1,22 @@
+recipe: default.v1
+language: "en"  # Default language: English
+additional_languages:
+  - "vi"   # Vietnamese
+pipeline:
+- name: CompactLLMCommandGenerator
+  flow_retrieval:
+    active: true
+    embeddings:
+      model_group: gemini_embedding
+  llm:
+    model_group: gemini_llm
+
+policies:
+- name: FlowPolicy
+# - name: IntentlessPolicy
+#   llm:
+#     model_group: gemini_llm
+assistant_id: 20250422-014744-sizzling-underpass
+
+session_config:
+  start_flow: session_start

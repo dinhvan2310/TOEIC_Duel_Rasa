@@ -1,0 +1,292 @@
+flows:
+  countable_uncountable_nouns_grammar:
+    description: Learn about countable uncountable nouns
+    steps:
+    - collect: countable_uncountable_nouns_is_start
+      next:
+      - if: slots.countable_uncountable_nouns_is_start = true
+        then:
+        - action: utter_countable_uncountable_nouns_begin
+          next: countable_uncountable_nouns_ask_is_skip_theory
+      - else: END
+    - id: countable_uncountable_nouns_ask_is_skip_theory
+      collect: countable_uncountable_nouns_is_skip_theory
+      next:
+      - if: slots.countable_uncountable_nouns_is_skip_theory = true
+        then: countable_uncountable_nouns_practice_q1
+      - else: countable_uncountable_nouns_grammar_1
+    - id: countable_uncountable_nouns_grammar_1
+      action: utter_countable_uncountable_nouns_grammar_1
+      next: countable_uncountable_nouns_ask_understand_grammar_1
+    - id: countable_uncountable_nouns_ask_understand_grammar_1
+      collect: countable_uncountable_nouns_understand_1
+      next:
+      - if: slots.countable_uncountable_nouns_understand_1 = false
+        then: countable_uncountable_nouns_grammar_2
+      - else:
+        - action: utter_countable_uncountable_nouns_explain_more_1
+          next: countable_uncountable_nouns_grammar_2
+    - id: countable_uncountable_nouns_grammar_2
+      action: utter_countable_uncountable_nouns_grammar_2
+      next: countable_uncountable_nouns_ask_understand_grammar_2
+    - id: countable_uncountable_nouns_ask_understand_grammar_2
+      collect: countable_uncountable_nouns_understand_2
+      next:
+      - if: slots.countable_uncountable_nouns_understand_2 = false
+        then: countable_uncountable_nouns_grammar_3
+      - else:
+        - action: utter_countable_uncountable_nouns_explain_more_2
+          next: countable_uncountable_nouns_grammar_3
+    - id: countable_uncountable_nouns_grammar_3
+      action: utter_countable_uncountable_nouns_grammar_3
+      next: countable_uncountable_nouns_ask_understand_grammar_3
+    - id: countable_uncountable_nouns_ask_understand_grammar_3
+      collect: countable_uncountable_nouns_understand_3
+      next:
+      - if: slots.countable_uncountable_nouns_understand_3 = false
+        then: countable_uncountable_nouns_grammar_4
+      - else:
+        - action: utter_countable_uncountable_nouns_explain_more_3
+          next: countable_uncountable_nouns_grammar_4
+    - id: countable_uncountable_nouns_grammar_4
+      action: utter_countable_uncountable_nouns_grammar_4
+      next: countable_uncountable_nouns_ask_understand_grammar_4
+    - id: countable_uncountable_nouns_ask_understand_grammar_4
+      collect: countable_uncountable_nouns_understand_4
+      next:
+      - if: slots.countable_uncountable_nouns_understand_4 = false
+        then: countable_uncountable_nouns_grammar_5
+      - else:
+        - action: utter_countable_uncountable_nouns_explain_more_4
+          next: countable_uncountable_nouns_grammar_5
+    - id: countable_uncountable_nouns_grammar_5
+      action: utter_countable_uncountable_nouns_grammar_5
+      next: countable_uncountable_nouns_ask_understand_grammar_5
+    - id: countable_uncountable_nouns_ask_understand_grammar_5
+      collect: countable_uncountable_nouns_understand_5
+      next:
+      - if: slots.countable_uncountable_nouns_understand_5 = false
+        then: countable_uncountable_nouns_grammar_6
+      - else:
+        - action: utter_countable_uncountable_nouns_explain_more_5
+          next: countable_uncountable_nouns_grammar_6
+    - id: countable_uncountable_nouns_grammar_6
+      action: utter_countable_uncountable_nouns_grammar_6
+      next: countable_uncountable_nouns_ask_understand_grammar_6
+    - id: countable_uncountable_nouns_ask_understand_grammar_6
+      collect: countable_uncountable_nouns_understand_6
+      next:
+      - if: slots.countable_uncountable_nouns_understand_6 = false
+        then: countable_uncountable_nouns_ask_practice
+      - else:
+        - action: utter_countable_uncountable_nouns_explain_more_6
+          next: countable_uncountable_nouns_ask_practice
+    - id: countable_uncountable_nouns_ask_practice
+      collect: countable_uncountable_nouns_practice
+      next:
+      - if: slots.countable_uncountable_nouns_practice = true
+        then: countable_uncountable_nouns_practice_q1
+      - else: countable_uncountable_nouns_end_lesson
+    - id: countable_uncountable_nouns_practice_q1
+      collect: countable_uncountable_nouns_practice_q1
+      next:
+      - if: slots.countable_uncountable_nouns_practice_q1 = "b"
+        then:
+        - action: utter_countable_uncountable_nouns_correct_q1
+          next: countable_uncountable_nouns_practice_q2
+      - else:
+        - action: utter_countable_uncountable_nouns_incorrect_q1
+          next: countable_uncountable_nouns_practice_q2
+    - id: countable_uncountable_nouns_practice_q2
+      collect: countable_uncountable_nouns_practice_q2
+      next:
+      - if: slots.countable_uncountable_nouns_practice_q2 = "a"
+        then:
+        - action: utter_countable_uncountable_nouns_correct_q2
+          next: countable_uncountable_nouns_practice_q3
+      - else:
+        - action: utter_countable_uncountable_nouns_incorrect_q2
+          next: countable_uncountable_nouns_practice_q3
+    - id: countable_uncountable_nouns_practice_q3
+      collect: countable_uncountable_nouns_practice_q3
+      next:
+      - if: slots.countable_uncountable_nouns_practice_q3 = "c"
+        then:
+        - action: utter_countable_uncountable_nouns_correct_q3
+          next: countable_uncountable_nouns_practice_q4
+      - else:
+        - action: utter_countable_uncountable_nouns_incorrect_q3
+          next: countable_uncountable_nouns_practice_q4
+    - id: countable_uncountable_nouns_practice_q4
+      collect: countable_uncountable_nouns_practice_q4
+      next:
+      - if: slots.countable_uncountable_nouns_practice_q4 = "a"
+        then:
+        - action: utter_countable_uncountable_nouns_correct_q4
+          next: countable_uncountable_nouns_practice_q5
+      - else:
+        - action: utter_countable_uncountable_nouns_incorrect_q4
+          next: countable_uncountable_nouns_practice_q5
+    - id: countable_uncountable_nouns_practice_q5
+      collect: countable_uncountable_nouns_practice_q5
+      next:
+      - if: slots.countable_uncountable_nouns_practice_q5 = "b"
+        then:
+        - action: utter_countable_uncountable_nouns_correct_q5
+          next: countable_uncountable_nouns_practice_q6
+      - else:
+        - action: utter_countable_uncountable_nouns_incorrect_q5
+          next: countable_uncountable_nouns_practice_q6
+    - id: countable_uncountable_nouns_practice_q6
+      collect: countable_uncountable_nouns_practice_q6
+      next:
+      - if: slots.countable_uncountable_nouns_practice_q6 = "b"
+        then:
+        - action: utter_countable_uncountable_nouns_correct_q6
+          next: countable_uncountable_nouns_practice_q7
+      - else:
+        - action: utter_countable_uncountable_nouns_incorrect_q6
+          next: countable_uncountable_nouns_practice_q7
+    - id: countable_uncountable_nouns_practice_q7
+      collect: countable_uncountable_nouns_practice_q7
+      next:
+      - if: slots.countable_uncountable_nouns_practice_q7 = "a"
+        then:
+        - action: utter_countable_uncountable_nouns_correct_q7
+          next: countable_uncountable_nouns_practice_q8
+      - else:
+        - action: utter_countable_uncountable_nouns_incorrect_q7
+          next: countable_uncountable_nouns_practice_q8
+    - id: countable_uncountable_nouns_practice_q8
+      collect: countable_uncountable_nouns_practice_q8
+      next:
+      - if: slots.countable_uncountable_nouns_practice_q8 = "b"
+        then:
+        - action: utter_countable_uncountable_nouns_correct_q8
+          next: countable_uncountable_nouns_practice_q9
+      - else:
+        - action: utter_countable_uncountable_nouns_incorrect_q8
+          next: countable_uncountable_nouns_practice_q9
+    - id: countable_uncountable_nouns_practice_q9
+      collect: countable_uncountable_nouns_practice_q9
+      next:
+      - if: slots.countable_uncountable_nouns_practice_q9 = "b"
+        then:
+        - action: utter_countable_uncountable_nouns_correct_q9
+          next: countable_uncountable_nouns_practice_q10
+      - else:
+        - action: utter_countable_uncountable_nouns_incorrect_q9
+          next: countable_uncountable_nouns_practice_q10
+    - id: countable_uncountable_nouns_practice_q10
+      collect: countable_uncountable_nouns_practice_q10
+      next:
+      - if: slots.countable_uncountable_nouns_practice_q10 = "b"
+        then:
+        - action: utter_countable_uncountable_nouns_correct_q10
+          next: countable_uncountable_nouns_practice_q11
+      - else:
+        - action: utter_countable_uncountable_nouns_incorrect_q10
+          next: countable_uncountable_nouns_practice_q11
+    - id: countable_uncountable_nouns_practice_q11
+      collect: countable_uncountable_nouns_practice_q11
+      next:
+      - if: slots.countable_uncountable_nouns_practice_q11 = "b"
+        then:
+        - action: utter_countable_uncountable_nouns_correct_q11
+          next: countable_uncountable_nouns_practice_q12
+      - else:
+        - action: utter_countable_uncountable_nouns_incorrect_q11
+          next: countable_uncountable_nouns_practice_q12
+    - id: countable_uncountable_nouns_practice_q12
+      collect: countable_uncountable_nouns_practice_q12
+      next:
+      - if: slots.countable_uncountable_nouns_practice_q12 = "b"
+        then:
+        - action: utter_countable_uncountable_nouns_correct_q12
+          next: countable_uncountable_nouns_practice_q13
+      - else:
+        - action: utter_countable_uncountable_nouns_incorrect_q12
+          next: countable_uncountable_nouns_practice_q13
+    - id: countable_uncountable_nouns_practice_q13
+      collect: countable_uncountable_nouns_practice_q13
+      next:
+      - if: slots.countable_uncountable_nouns_practice_q13 = "b"
+        then:
+        - action: utter_countable_uncountable_nouns_correct_q13
+          next: countable_uncountable_nouns_practice_q14
+      - else:
+        - action: utter_countable_uncountable_nouns_incorrect_q13
+          next: countable_uncountable_nouns_practice_q14
+    - id: countable_uncountable_nouns_practice_q14
+      collect: countable_uncountable_nouns_practice_q14
+      next:
+      - if: slots.countable_uncountable_nouns_practice_q14 = "b"
+        then:
+        - action: utter_countable_uncountable_nouns_correct_q14
+          next: countable_uncountable_nouns_practice_q15
+      - else:
+        - action: utter_countable_uncountable_nouns_incorrect_q14
+          next: countable_uncountable_nouns_practice_q15
+    - id: countable_uncountable_nouns_practice_q15
+      collect: countable_uncountable_nouns_practice_q15
+      next:
+      - if: slots.countable_uncountable_nouns_practice_q15 = "b"
+        then:
+        - action: utter_countable_uncountable_nouns_correct_q15
+          next: countable_uncountable_nouns_practice_q16
+      - else:
+        - action: utter_countable_uncountable_nouns_incorrect_q15
+          next: countable_uncountable_nouns_practice_q16
+    - id: countable_uncountable_nouns_practice_q16
+      collect: countable_uncountable_nouns_practice_q16
+      next:
+      - if: slots.countable_uncountable_nouns_practice_q16 = "b"
+        then:
+        - action: utter_countable_uncountable_nouns_correct_q16
+          next: countable_uncountable_nouns_practice_q17
+      - else:
+        - action: utter_countable_uncountable_nouns_incorrect_q16
+          next: countable_uncountable_nouns_practice_q17
+    - id: countable_uncountable_nouns_practice_q17
+      collect: countable_uncountable_nouns_practice_q17
+      next:
+      - if: slots.countable_uncountable_nouns_practice_q17 = "b"
+        then:
+        - action: utter_countable_uncountable_nouns_correct_q17
+          next: countable_uncountable_nouns_practice_q18
+      - else:
+        - action: utter_countable_uncountable_nouns_incorrect_q17
+          next: countable_uncountable_nouns_practice_q18
+    - id: countable_uncountable_nouns_practice_q18
+      collect: countable_uncountable_nouns_practice_q18
+      next:
+      - if: slots.countable_uncountable_nouns_practice_q18 = "c"
+        then:
+        - action: utter_countable_uncountable_nouns_correct_q18
+          next: countable_uncountable_nouns_practice_q19
+      - else:
+        - action: utter_countable_uncountable_nouns_incorrect_q18
+          next: countable_uncountable_nouns_practice_q19
+    - id: countable_uncountable_nouns_practice_q19
+      collect: countable_uncountable_nouns_practice_q19
+      next:
+      - if: slots.countable_uncountable_nouns_practice_q19 = "a"
+        then:
+        - action: utter_countable_uncountable_nouns_correct_q19
+          next: countable_uncountable_nouns_practice_q20
+      - else:
+        - action: utter_countable_uncountable_nouns_incorrect_q19
+          next: countable_uncountable_nouns_practice_q20
+    - id: countable_uncountable_nouns_practice_q20
+      collect: countable_uncountable_nouns_practice_q20
+      next:
+      - if: slots.countable_uncountable_nouns_practice_q20 = "b"
+        then:
+        - action: utter_countable_uncountable_nouns_correct_q20
+          next: countable_uncountable_nouns_end_lesson
+      - else:
+        - action: utter_countable_uncountable_nouns_incorrect_q20
+          next: countable_uncountable_nouns_end_lesson
+    - id: countable_uncountable_nouns_end_lesson
+      action: utter_countable_uncountable_nouns_end
+      next: END

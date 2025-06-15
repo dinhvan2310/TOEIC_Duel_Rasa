@@ -1,0 +1,62 @@
+# This file contains the different endpoints your bot can use.
+
+# Server where the models are pulled from.
+# https://rasa.com/docs/rasa-pro/production/model-storage#fetching-models-from-a-server
+
+#models:
+#  url: http://my-server.com/models/default_core@latest
+#  wait_time_between_pulls:  10   # [optional](default: 100)
+
+# Server which runs your custom actions.
+# https://rasa.com/docs/rasa-pro/concepts/custom-actions
+
+action_endpoint:
+  actions_module: "actions"
+
+# Tracker store which is used to store the conversations.
+# By default the conversations are stored in memory.
+# https://rasa.com/docs/rasa-pro/production/tracker-stores
+# Event broker which all conversation events should be streamed to.
+# https://rasa.com/docs/rasa-pro/production/event-brokers
+
+#event_broker:
+#  url: localhost
+#  username: username
+#  password: password
+#  queue: queue
+
+# The lines below activate contextual rephrasing, using the default OpenAI language model.
+# Ensure the OPENAI_API_KEY is set to prevent any missing API key errors.
+# For more details, refer to the documentation:
+# https://rasa.com/docs/rasa-pro/concepts/contextual-response-rephraser
+# To enable the rephraser, remove the comment symbols in the lines below.
+nlg:
+  type: rephrase
+  llm:
+    model_group: gemini_llm
+
+model_groups:
+  - id: gemini_llm
+    models:
+      - provider: gemini
+        model: gemini-2.0-flash
+        api_key: ${MY_GEMINI_API_KEY_1}
+  - id: gemini_embedding
+    models:
+      - provider: gemini
+        model: gemini/text-embedding-004
+        api_key: ${MY_GEMINI_API_KEY_2}
+
+# tracker_store:
+#   type: sql
+#   dialect: "postgresql"
+#   url: "postgresql://postgres:Nhant3019.@db.mboblelqadcopldrdqjn.supabase.co:5432/postgres"
+tracker_store:
+  type: redis
+  url: ${REDIS_URL}
+  port: ${REDIS_PORT}
+  db: ${REDIS_DB}
+  username: ${REDIS_USERNAME}
+  password: ${REDIS_PASSWORD}
+  use_ssl: false
+  ttl: 604800

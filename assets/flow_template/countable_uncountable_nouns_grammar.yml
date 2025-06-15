@@ -1,0 +1,70 @@
+flows:
+  countable_uncountable_nouns_grammar:
+    description: Learn about countable and uncountable nouns
+    steps:
+      - action: utter_countable_uncountable_nouns_begin
+      - collect: countable_uncountable_nouns_is_skip_theory
+        next:
+          - if: slots.countable_uncountable_nouns_is_skip_theory = true
+            then: countable_uncountable_nouns_ask_practice
+          - else: countable_uncountable_nouns_grammar_1
+
+      - id: countable_uncountable_nouns_grammar_1
+        action: utter_countable_uncountable_nouns_grammar_1
+        next: countable_uncountable_nouns_ask_understand_grammar_1
+      - id: countable_uncountable_nouns_ask_understand_grammar_1
+        collect: countable_uncountable_nouns_understand_1
+        next:
+          - if: slots.countable_uncountable_nouns_understand_1 = true
+            then: countable_uncountable_nouns_grammar_2
+          - else:
+              - action: utter_countable_uncountable_nouns_explain_more_1
+                next: countable_uncountable_nouns_grammar_2
+
+      - id: countable_uncountable_nouns_grammar_2
+        action: utter_countable_uncountable_nouns_grammar_2
+        next: countable_uncountable_nouns_ask_understand_grammar_2
+      - id: countable_uncountable_nouns_ask_understand_grammar_2
+        collect: countable_uncountable_nouns_understand_2
+        next:
+          - if: slots.countable_uncountable_nouns_understand_2 = true
+            then: countable_uncountable_nouns_ask_practice
+          - else:
+              - action: utter_countable_uncountable_nouns_explain_more_2
+                next: countable_uncountable_nouns_ask_practice
+
+      - id: countable_uncountable_nouns_ask_practice
+        collect: countable_uncountable_nouns_practice
+        next:
+          - if: slots.countable_uncountable_nouns_practice = true
+            then: countable_uncountable_nouns_practice_q1
+          - else: countable_uncountable_nouns_end_lesson
+
+      # Practice question 1
+      - id: countable_uncountable_nouns_practice_q1
+        collect: countable_uncountable_nouns_practice_q1
+        next:
+          - if: slots.countable_uncountable_nouns_practice_q1 = "b"
+            then:
+              - action: utter_countable_uncountable_nouns_correct_q1
+                next: countable_uncountable_nouns_practice_q2
+          - else:
+              - action: utter_countable_uncountable_nouns_incorrect_q1
+                next: countable_uncountable_nouns_practice_q2
+      
+      # Practice question 2
+      - id: countable_uncountable_nouns_practice_q2
+        collect: countable_uncountable_nouns_practice_q2
+        next:
+          - if: slots.countable_uncountable_nouns_practice_q2 = "b"
+            then:
+              - action: utter_countable_uncountable_nouns_correct_q2
+                next: countable_uncountable_nouns_end_lesson
+          - else:
+              - action: utter_countable_uncountable_nouns_incorrect_q2
+                next: countable_uncountable_nouns_end_lesson
+
+      # End lesson
+      - id: countable_uncountable_nouns_end_lesson
+        action: utter_countable_uncountable_nouns_end
+        next: END 

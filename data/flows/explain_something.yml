@@ -1,0 +1,16 @@
+flows:
+  explain_something:
+    description: This flow is designed to provide clear, concise, and engaging explanations about specific components of the TOEIC test, such as grammar rules, vocabulary usage, sentence structures, or other relevant topics, tailored to the user's query. The explanation aims to enhance the user's understanding of TOEIC-related concepts, offering practical examples and tips to improve their test performance.
+    steps:
+      - id: explain_something
+        action: action_explain_something_with_llm
+        next: user_query_continue_or_exit
+      - id: user_query_continue_or_exit
+        collect: user_query_continue_or_exit
+        description: |
+          Collect a user query to continue or intent to exit the explanation.
+          The user can continue the explanation by saying any question related to the explanation, or exit the explanation by saying "exit".
+        next:
+          - if: slots.user_query_continue_or_exit == "exit"
+            then: END
+          - else: explain_something

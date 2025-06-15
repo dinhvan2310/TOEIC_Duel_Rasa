@@ -1,0 +1,42 @@
+flows:
+  lookup_word_meaning:
+    description: Lookup the meaning of a word and offer related options
+    steps:
+      - collect: word
+        description: |
+          Collect an English word from the user.
+          The word should consist of alphabetic characters only.
+        next:
+          - if: slots.word is not None and slots.word matches "^[a-zA-Z]+$"
+            then: lookup_meaning
+          - else: utter_invalid_word
+
+      - id: lookup_meaning
+        action: action_lookup_word_meaning
+        next:
+          - if: slots.word_meaning is not None
+            then: utter_word_meaning
+          - else: utter_word_not_found
+
+      - id: utter_word_meaning
+        action: utter_word_meaning
+        next: explain_more
+
+      - id: explain_more
+        collect: word_option
+        next:
+          - if: slots.word_option = "explain"
+            then: utter_word_explanation
+          - else: END
+
+      - id: utter_word_explanation
+        action: utter_word_explanation
+        next: END
+
+      - id: utter_word_not_found
+        action: utter_word_not_found
+        next: END
+
+      - id: utter_invalid_word
+        action: utter_invalid_word
+        next: END

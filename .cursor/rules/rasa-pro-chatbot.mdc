@@ -1,0 +1,50 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Rasa Pro Chatbot Integration Rule
+
+## Overview
+This rule describes the integration of a smart chatbot using Rasa Pro for the TOEIC Duel App. The chatbot will support vocabulary lookup, grammar explanations, conversation topic suggestions, study reminders, and TOEIC-related Q&A. It must be real-time, user-friendly for Vietnamese users, and easily extensible.
+
+## Key Requirements
+- Integrate Rasa Pro backend (hosted/cloud or self-hosted).
+- Communicate between app and Rasa via API ([REST/websocket](mdc:credentials.yml)).
+- User-friendly chat UI: send/receive messages, quick replies, buttons, images.
+- Support main intents: vocabulary lookup, grammar explanation, study reminders, TOEIC Q&A, small talk.
+- Support Vietnamese and English.
+- Store conversation history.
+- Send study reminders via chatbot.
+
+## Implementation Steps
+1. **Design conversation flows** (intents, entities, main TOEIC flows).
+2. **Configure and deploy Rasa Pro server** (cloud/self-hosted).
+3. **Create API proxy or direct connection** ([credentials.yml](mdc:credentials.yml)).
+4. **Build chat UI** (Chatbot component, quick reply, loading, etc.).
+5. **Integrate message sending/receiving between app and Rasa.**
+6. **Handle main intents:** vocabulary, grammar, reminders, small talk.
+7. **Store conversation history** (local/cloud as needed).
+8. **Test conversation, UX, edge cases.**
+9. **Optimize performance and chat UX/UI.**
+
+## Potential Challenges
+- Ensure low latency, real-time chat.
+- Handle natural Vietnamese, context disambiguation.
+- Secure API, user authentication.
+- Optimize chat UI for mobile, support various message types (text, button, image).
+- Easy extensibility for new intents/flows.
+
+## Testing Strategy
+- Test intents, entities, conversation flows with various scenarios.
+- Test chat UX/UI on multiple devices.
+- Test network errors, reconnect, timeout.
+- Evaluate intent accuracy and chatbot responses.
+
+## References
+- [credentials.yml](mdc:credentials.yml) — Rasa channel/API configuration.
+- [config.yml](mdc:config.yml) — App configuration.
+- [endpoints.yml](mdc:endpoints.yml) — Rasa endpoints.
+
+---
+This rule guides the development and navigation of all code and configuration related to the Rasa Pro chatbot integration for TOEIC Duel App.

@@ -1,0 +1,90 @@
+version: "3.1"
+
+actions:
+  - action_lookup_word_meaning
+  - action_explain_more
+
+slots:
+  word:
+    type: text
+    mappings:
+      - type: from_llm
+    influence_conversation: true
+  word_meaning:
+    type: text
+    mappings:
+      - type: controlled
+  word_explanation:
+    type: text
+    mappings:
+      - type: controlled
+  word_option:
+    type: categorical
+    values:
+      - explain
+      - exit
+    mappings:
+      - type: from_llm
+    influence_conversation: true
+
+responses:
+  utter_ask_word:
+  - text: "🔍 *Which word would you like to look up?*"
+  utter_word_meaning:
+  - text: "**{word}** means: {word_meaning} ✨"
+    metadata:
+      rephrase: True
+      rephrase_prompt: |
+        Rephrase the response based on {{current_input}}, {{suggested_response}}, and {{history}}.
+        Provide the common meaning of the word in simple English or Vietnamese, tailored to TOEIC contexts (e.g., work, business, office). Include 2-3 short example sentences in TOEIC-related contexts. Avoid introductory sentences or unnecessary explanations. Use Markdown for formatting, including emoji if appropriate. Ensure the response is concise (50-100 words).
+
+        {{history}}
+        {{current_input}}
+        Suggested AI Response: {{suggested_response}}
+        Rephrased AI Response:
+  utter_ask_word_option:
+  - text: "Would you like to know more about **{word}**?"
+    buttons:
+      - payload: "/SetSlots(word_option=explain)"
+        title: "😢 Explain more"
+      - payload: "/SetSlots(word_option=exit)"
+        title: "👌 No, thanks"
+  utter_word_explanation:
+  - text: "📝 *More about* **{word}**: {word_meaning}"
+    metadata:
+      rephrase: True
+      rephrase_prompt: |
+        Rephrase the response based on {{current_input}}, {{suggested_response}}, and {{history}}.
+          Provide a detailed explanation of the word, focusing on its relevance to the TOEIC test. Include the following:
+          1. Pronunciation: Provide the IPA (International Phonetic Alphabet) and suggest online dictionaries (e.g., Cambridge, Oxford, TFlat) for audio samples.
+          2. Part of Speech: Identify the main part of speech (e.g., noun, verb, adjective, adverb) and any other forms (e.g., apply → application, applicant, applicable).
+          3. Meaning: List the primary meaning and relevant secondary meanings, prioritizing TOEIC contexts (e.g., work, office, business, technology, customer service).
+          4. Usage: Include common structures (e.g., apply for a job) and collocations (e.g., make a decision, highly qualified).
+          5. Examples: Provide 2-3 simple, clear example sentences in TOEIC contexts (e.g., office, business).
+          6. Synonyms and Antonyms: List 1-2 synonyms and antonyms to expand vocabulary and avoid confusion in TOEIC questions.
+          7. Word Forms: List related word forms (e.g., create → creative, creativity) to help with TOEIC Part 5 (word formation).
+          8. TOEIC Relevance: Indicate if the word is common in TOEIC (e.g., part of the 600 essential TOEIC words) and its frequency in tests.
+          Keep the response concise, avoid repetition, and do not add introductory sentences or unnecessary explanations. Use Markdown for formatting (e.g., headers, lists, emoji).
+
+          {{history}}
+          {{current_input}}
+          Suggested AI Response: {{suggested_response}}
+          Rephrased AI Response:
+
+  utter_word_not_found:
+  - text: "😕 Sorry, I couldn't find the meaning of **{word}**."
+    metadata:
+      rephrase: True
+      rephrase_prompt: |
+        Rephrase the response based on {{current_input}}, {{suggested_response}}, and {{history}}, using markdown.
+        
+        Try to find the meaning of the word in the context of the conversation.
+        If the word is not an English word, return a message saying it's not an English word. 
+        Else, return the meaning of the word.
+        
+        {{history}}
+        {{current_input}}
+        Suggested AI Response: {{suggested_response}}
+        Rephrased AI Response:
+  utter_invalid_word:
+  - text: "❗ Please enter a valid English word (letters only)."

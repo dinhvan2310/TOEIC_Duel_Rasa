@@ -1,0 +1,1058 @@
+version: '3.1'
+slots:
+  countable_uncountable_nouns_is_start:
+    type: bool
+    mappings:
+    - type: controlled
+  countable_uncountable_nouns_is_skip_theory:
+    type: bool
+    mappings:
+    - type: controlled
+  countable_uncountable_nouns_practice:
+    type: bool
+    mappings:
+    - type: controlled
+  countable_uncountable_nouns_understand_1:
+    type: bool
+    mappings:
+    - type: controlled
+  countable_uncountable_nouns_understand_2:
+    type: bool
+    mappings:
+    - type: controlled
+  countable_uncountable_nouns_understand_3:
+    type: bool
+    mappings:
+    - type: controlled
+  countable_uncountable_nouns_understand_4:
+    type: bool
+    mappings:
+    - type: controlled
+  countable_uncountable_nouns_understand_5:
+    type: bool
+    mappings:
+    - type: controlled
+  countable_uncountable_nouns_understand_6:
+    type: bool
+    mappings:
+    - type: controlled
+  countable_uncountable_nouns_practice_q1:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  countable_uncountable_nouns_practice_q2:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  countable_uncountable_nouns_practice_q3:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  countable_uncountable_nouns_practice_q4:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  countable_uncountable_nouns_practice_q5:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  countable_uncountable_nouns_practice_q6:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  countable_uncountable_nouns_practice_q7:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  countable_uncountable_nouns_practice_q8:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  countable_uncountable_nouns_practice_q9:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  countable_uncountable_nouns_practice_q10:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  countable_uncountable_nouns_practice_q11:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  countable_uncountable_nouns_practice_q12:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  countable_uncountable_nouns_practice_q13:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  countable_uncountable_nouns_practice_q14:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  countable_uncountable_nouns_practice_q15:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  countable_uncountable_nouns_practice_q16:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  countable_uncountable_nouns_practice_q17:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  countable_uncountable_nouns_practice_q18:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  countable_uncountable_nouns_practice_q19:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  countable_uncountable_nouns_practice_q20:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+responses:
+  utter_countable_uncountable_nouns_begin:
+  - text: 🚀 Let's start learning about countable uncountable nouns!, (you can ask
+      me to use Vietnamese for this lesson if you want)
+  utter_ask_countable_uncountable_nouns_is_start:
+  - text: Are you sure you want to learn about countable uncountable nouns? 🤔
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(countable_uncountable_nouns_is_start=true)
+    - title: 'No'
+      payload: /SetSlots(countable_uncountable_nouns_is_start=false)
+  utter_ask_countable_uncountable_nouns_is_skip_theory:
+  - text: Would you like to skip the theory and go straight to practice?
+    buttons:
+    - title: Yes, skip theory
+      payload: /SetSlots(countable_uncountable_nouns_is_skip_theory=true)
+    - title: No, show me the theory
+      payload: /SetSlots(countable_uncountable_nouns_is_skip_theory=false)
+  utter_ask_countable_uncountable_nouns_practice:
+  - text: 📝 Would you like to try some practice questions?
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(countable_uncountable_nouns_practice=true)
+    - title: 'No'
+      payload: /SetSlots(countable_uncountable_nouns_practice=false)
+  utter_countable_uncountable_nouns_grammar_1:
+  - text: '**Countable nouns** are things you can count: *books*, *students*, *ideas*.
+      📘
+
+      - Use *a/an* (singular), *the* (specific).
+
+      - Use numbers: *two pens*, *three apples*.
+
+      - Quantifiers: *many*, *a few*, *several*.
+
+      - Question: *How many...?*'
+    translation:
+      vi: '**Danh từ đếm được** là những thứ bạn có thể đếm được: *books*, *students*,
+        *ideas*. 📘
+
+        - Dùng *a/an* cho số ít, *the* cho trường hợp cụ thể.
+
+        - Dùng số đếm: *two pens*, *three apples*.
+
+        - Từ chỉ số lượng: *many*, *a few*, *several*.
+
+        - Câu hỏi: *How many...?*'
+  utter_countable_uncountable_nouns_explain_more_1:
+  - text: 'Countable nouns refer to individual items that can be counted.
+
+      - **Examples**: *book/books*, *idea/ideas*, *student/students*.
+
+      - **Articles**: Use *a/an* for singular (*a book*), *the* for specific nouns
+      (*the idea*).
+
+      - **Numbers**: Combine with numerals (*three pens*, *two phones*).
+
+      - **Quantifiers**: *many*, *a few*, *several*.
+
+      - **Questions**: Ask with *how many* (*How many chairs?*).
+
+      - **Irregular plurals**: *man/men*, *child/children*.
+
+      - **General use**: Use plural with no article when general (*Books are useful*).'
+    translation:
+      vi: 'Danh từ đếm được là những thứ có thể đếm được từng cái.
+
+        - **Ví dụ**: *book/books*, *idea/ideas*, *student/students*.
+
+        - **Mạo từ**: Dùng *a/an* cho danh từ số ít (*a book*), dùng *the* cho trường
+        hợp cụ thể (*the idea*).
+
+        - **Số lượng**: Có thể đi với số đếm (*three pens*, *two phones*).
+
+        - **Từ chỉ lượng**: *many*, *a few*, *several*.
+
+        - **Câu hỏi**: Dùng *how many* (*How many chairs?*).
+
+        - **Số nhiều bất quy tắc**: *man/men*, *child/children*.
+
+        - **Trường hợp chung**: Không cần mạo từ với danh từ số nhiều mang nghĩa chung
+        (*Books are useful*).'
+  utter_ask_countable_uncountable_nouns_understand_1:
+  - text: 🤔 Do you want to get more details about this?
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(countable_uncountable_nouns_understand_1=true)
+    - title: 'No'
+      payload: /SetSlots(countable_uncountable_nouns_understand_1=false)
+  utter_countable_uncountable_nouns_grammar_2:
+  - text: '**Uncountable nouns** can’t be counted: *water*, *sugar*, *information*.
+      💧
+
+      - No *a/an*, no plural.
+
+      - Quantifiers: *much*, *a little*, *some*.
+
+      - Question: *How much...?*'
+    translation:
+      vi: '**Danh từ không đếm được** là những thứ không thể đếm riêng lẻ: *water*,
+        *sugar*, *information*. 💧
+
+        - Không dùng *a/an*, không có số nhiều.
+
+        - Từ chỉ lượng: *much*, *a little*, *some*.
+
+        - Câu hỏi: *How much...?*'
+  utter_countable_uncountable_nouns_explain_more_2:
+  - text: 'Uncountable nouns are substances or concepts that can’t be separated into
+      individual units.
+
+      - **Examples**: *water*, *rice*, *advice*, *money*.
+
+      - **No a/an or plural**: *a water* ❌, *informations* ❌.
+
+      - **Quantifiers**: *much*, *a little*, *some*.
+
+      - **Questions**: Use *how much* (*How much sugar?*).
+
+      - **Use units**: *a bottle of water*, *two pieces of furniture*.
+
+      - **Verb**: Always singular (*Water is clean*).'
+    translation:
+      vi: 'Danh từ không đếm được là những chất, khái niệm không thể tách thành đơn
+        vị riêng lẻ.
+
+        - **Ví dụ**: *water*, *rice*, *advice*, *money*.
+
+        - **Không dùng a/an hoặc số nhiều**: *a water* ❌, *informations* ❌.
+
+        - **Từ chỉ lượng**: *much*, *a little*, *some*.
+
+        - **Câu hỏi**: Dùng *how much* (*How much sugar?*).
+
+        - **Dùng đơn vị để đo lường**: *a bottle of water*, *two pieces of furniture*.
+
+        - **Động từ**: Luôn dùng số ít (*Water is clean*).'
+  utter_ask_countable_uncountable_nouns_understand_2:
+  - text: 🤔 Do you want to get more details about this?
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(countable_uncountable_nouns_understand_2=true)
+    - title: 'No'
+      payload: /SetSlots(countable_uncountable_nouns_understand_2=false)
+  utter_countable_uncountable_nouns_grammar_3:
+  - text: '**Quantifiers** show amount: 📏
+
+      - *Many*, *a few* → countable (*many books*).
+
+      - *Much*, *a little* → uncountable (*much water*).
+
+      - *Some*, *any*, *a lot of* → both types.'
+    translation:
+      vi: '**Từ chỉ lượng** diễn tả số lượng: 📏
+
+        - *Many*, *a few* dùng với danh từ đếm được (*many books*).
+
+        - *Much*, *a little* dùng với danh từ không đếm được (*much water*).
+
+        - *Some*, *any*, *a lot of* dùng với cả hai loại.'
+  utter_countable_uncountable_nouns_explain_more_3:
+  - text: 'Quantifiers are words that express quantity.
+
+      - **For countable nouns**: *many*, *a few*, *several*.
+
+      - **For uncountable nouns**: *much*, *a little*, *a bit of*.
+
+      - **For both types**: *some*, *any*, *a lot of*, *plenty of*.
+
+      - **Questions**: Use *how many* (countable), *how much* (uncountable).
+
+      - **Meaning**: *a few*/*a little* = a small amount (positive); *few*/*little*
+      = almost none (negative).'
+    translation:
+      vi: 'Từ chỉ lượng là những từ cho biết số lượng.
+
+        - **Với danh từ đếm được**: *many*, *a few*, *several*.
+
+        - **Với danh từ không đếm được**: *much*, *a little*, *a bit of*.
+
+        - **Dùng chung**: *some*, *any*, *a lot of*, *plenty of*.
+
+        - **Câu hỏi**: Dùng *how many* (cho danh từ đếm được), *how much* (cho danh
+        từ không đếm được).
+
+        - **Ý nghĩa**: *a few*/*a little* mang nghĩa tích cực (đủ dùng), *few*/*little*
+        mang nghĩa tiêu cực (gần như không có).'
+  utter_ask_countable_uncountable_nouns_understand_3:
+  - text: 🤔 Do you want to get more details about this?
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(countable_uncountable_nouns_understand_3=true)
+    - title: 'No'
+      payload: /SetSlots(countable_uncountable_nouns_understand_3=false)
+  utter_countable_uncountable_nouns_grammar_4:
+  - text: '**Some nouns** can be countable or uncountable, depending on meaning. ☕
+
+      - *Coffee* (uncountable: the drink), *two coffees* (countable: cups).
+
+      - *Hair* (all hair), *a hair* (one strand).'
+    translation:
+      vi: '**Một số danh từ** có thể đếm được hoặc không đếm được tùy vào ngữ cảnh.
+        ☕
+
+        - *Coffee* (không đếm được: chất lỏng), *two coffees* (đếm được: ly).
+
+        - *Hair* (tóc nói chung), *a hair* (sợi tóc).'
+  utter_countable_uncountable_nouns_explain_more_4:
+  - text: "Certain nouns change from uncountable to countable based on context.\n\
+      - **Examples**:\n  - *Coffee* (substance: *I love coffee*) vs. *two coffees*\
+      \ (cups).\n  - *Hair* (uncountable: *Her hair is long*) vs. *a hair* (a single\
+      \ strand).\n  - *Paper* (material) vs. *two papers* (documents).\n  - *Light*\
+      \ (general brightness) vs. *lights* (lamps).\n- Context decides grammar and\
+      \ article/quantifier use."
+    translation:
+      vi: "Một số danh từ có thể là đếm được hoặc không đếm được, tùy vào ý nghĩa.\n\
+        - **Ví dụ**:\n  - *Coffee* là chất lỏng nói chung (*I love coffee*) nhưng\
+        \ *two coffees* nghĩa là hai ly cà phê.\n  - *Hair* là mái tóc, nhưng *a hair*\
+        \ là một sợi tóc.\n  - *Paper* (giấy) vs. *two papers* (hai bài báo).\n  -\
+        \ *Light* (ánh sáng) vs. *two lights* (hai đèn).\n- Ngữ cảnh quyết định cách\
+        \ dùng mạo từ và từ chỉ lượng."
+  utter_ask_countable_uncountable_nouns_understand_4:
+  - text: 🤔 Do you want to get more details about this?
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(countable_uncountable_nouns_understand_4=true)
+    - title: 'No'
+      payload: /SetSlots(countable_uncountable_nouns_understand_4=false)
+  utter_countable_uncountable_nouns_grammar_5:
+  - text: '**Collective uncountable nouns**: *furniture*, *luggage*, *equipment*.
+      🛋️
+
+      - No *a/an*, no plural.
+
+      - Use units: *a piece of furniture*, *two items of luggage*.'
+    translation:
+      vi: '**Danh từ tập hợp không đếm được**: *furniture*, *luggage*, *equipment*.
+        🛋️
+
+        - Không dùng *a/an*, không có số nhiều.
+
+        - Dùng đơn vị để đếm: *a piece of furniture*, *two items of luggage*.'
+  utter_countable_uncountable_nouns_explain_more_5:
+  - text: 'Some uncountable nouns refer to groups of objects and are called collective
+      nouns.
+
+      - **Examples**: *furniture*, *luggage*, *equipment*, *clothing*.
+
+      - **No a/an or plural**: *a furniture*, *luggages* ❌.
+
+      - **Quantify with units**: *a piece of furniture*, *three items of luggage*,
+      *two sets of equipment*.
+
+      - **Verb form**: Singular (*The equipment is ready*).'
+    translation:
+      vi: 'Một số danh từ không đếm được diễn tả một nhóm đồ vật và được gọi là danh
+        từ tập hợp.
+
+        - **Ví dụ**: *furniture* (đồ nội thất), *luggage* (hành lý), *equipment* (thiết
+        bị).
+
+        - **Không dùng a/an hay số nhiều**: *a furniture*, *luggages* ❌.
+
+        - **Đếm bằng đơn vị**: *a piece of furniture*, *three items of luggage*, *two
+        sets of equipment*.
+
+        - **Động từ**: Luôn dùng số ít (*The equipment is ready*).'
+  utter_ask_countable_uncountable_nouns_understand_5:
+  - text: 🤔 Do you want to get more details about this?
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(countable_uncountable_nouns_understand_5=true)
+    - title: 'No'
+      payload: /SetSlots(countable_uncountable_nouns_understand_5=false)
+  utter_countable_uncountable_nouns_grammar_6:
+  - text: '**Common mistakes** with uncountable nouns: ⚠️
+
+      - Don’t use *a/an*: *a luggage* ❌
+
+      - Don’t use *many*: *many money* ❌
+
+      - Don’t pluralize: *informations* ❌
+
+      - Use: *some luggage*, *much water* ✅'
+    translation:
+      vi: '**Lỗi sai phổ biến** với danh từ không đếm được: ⚠️
+
+        - Không dùng *a/an*: *a luggage* ❌
+
+        - Không dùng *many*: *many money* ❌
+
+        - Không thêm “s”: *informations* ❌
+
+        - Dùng đúng: *some luggage*, *much water* ✅'
+  utter_countable_uncountable_nouns_explain_more_6:
+  - text: 'Avoid these typical mistakes:
+
+      - **Articles**: Never use *a/an* with uncountable nouns (*a furniture* ❌).
+
+      - **Plural forms**: Don’t add -s (*informations*, *luggages* ❌).
+
+      - **Quantifiers**: Don’t use *many* for uncountables (*many money* ❌).
+
+      - **Correct forms**: Use *some*, *much*, *a little*.
+
+      - **Examples**: *some advice*, *much water*, *a little salt*.'
+    translation:
+      vi: 'Tránh các lỗi thường gặp sau:
+
+        - **Mạo từ**: Không dùng *a/an* với danh từ không đếm được (*a furniture*
+        ❌).
+
+        - **Dạng số nhiều**: Không thêm “s” vào danh từ không đếm được (*informations*,
+        *luggages* ❌).
+
+        - **Từ chỉ lượng**: Không dùng *many* với danh từ không đếm được (*many money*
+        ❌).
+
+        - **Cách dùng đúng**: Dùng *some*, *much*, *a little*.
+
+        - **Ví dụ**: *some advice*, *much water*, *a little salt*.'
+  utter_ask_countable_uncountable_nouns_understand_6:
+  - text: 🤔 Do you want to get more details about this?
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(countable_uncountable_nouns_understand_6=true)
+    - title: 'No'
+      payload: /SetSlots(countable_uncountable_nouns_understand_6=false)
+  utter_ask_countable_uncountable_nouns_practice_q1:
+  - text: '❓ **Question 1:** Which article fits this sentence:
+
+      - ___ apple is on the table.'
+    buttons:
+    - title: a
+      payload: /SetSlots(countable_uncountable_nouns_practice_q1=a)
+    - title: an
+      payload: /SetSlots(countable_uncountable_nouns_practice_q1=b)
+    - title: the
+      payload: /SetSlots(countable_uncountable_nouns_practice_q1=c)
+  utter_countable_uncountable_nouns_correct_q1:
+  - text: '‘An’ is correct because:
+
+      - *Apple* is a countable singular noun.
+
+      - It starts with a vowel sound, so ‘an’ is used (e.g., *an apple* 🍎).'
+  utter_countable_uncountable_nouns_incorrect_q1:
+  - text: 'Incorrect options:
+
+      - ‘A’ is for consonant sounds (e.g., *a book*).
+
+      - ‘The’ is for specific nouns but less natural here for a general statement.'
+  utter_ask_countable_uncountable_nouns_practice_q2:
+  - text: '❓ **Question 2:** Choose the correct quantifier:
+
+      - ___ books are on the shelf.'
+    buttons:
+    - title: Many
+      payload: /SetSlots(countable_uncountable_nouns_practice_q2=a)
+    - title: Much
+      payload: /SetSlots(countable_uncountable_nouns_practice_q2=b)
+    - title: A little
+      payload: /SetSlots(countable_uncountable_nouns_practice_q2=c)
+  utter_countable_uncountable_nouns_correct_q2:
+  - text: '‘Many’ is correct because:
+
+      - *Books* is a countable plural noun.
+
+      - ‘Many’ is used for countable nouns (e.g., *many books* 📚).'
+  utter_countable_uncountable_nouns_incorrect_q2:
+  - text: 'Incorrect options:
+
+      - ‘Much’ is for uncountable nouns (e.g., *much water*).
+
+      - ‘A little’ is for uncountable nouns (e.g., *a little sugar*).'
+  utter_ask_countable_uncountable_nouns_practice_q3:
+  - text: '❓ **Question 3:** Which is correct:
+
+      - ___ water is in the glass.'
+    buttons:
+    - title: A
+      payload: /SetSlots(countable_uncountable_nouns_practice_q3=a)
+    - title: An
+      payload: /SetSlots(countable_uncountable_nouns_practice_q3=b)
+    - title: Some
+      payload: /SetSlots(countable_uncountable_nouns_practice_q3=c)
+  utter_countable_uncountable_nouns_correct_q3:
+  - text: '‘Some’ is correct because:
+
+      - *Water* is an uncountable noun.
+
+      - ‘Some’ is used for uncountable nouns in affirmative sentences (e.g., *some
+      water* 💧).'
+  utter_countable_uncountable_nouns_incorrect_q3:
+  - text: 'Incorrect options:
+
+      - ‘A’ and ‘An’ cannot be used with uncountable nouns like *water* (*a water*
+      ❌).'
+  utter_ask_countable_uncountable_nouns_practice_q4:
+  - text: '❓ **Question 4:** Fill in the blank:
+
+      - How ___ chairs do we need for the party?'
+    buttons:
+    - title: many
+      payload: /SetSlots(countable_uncountable_nouns_practice_q4=a)
+    - title: much
+      payload: /SetSlots(countable_uncountable_nouns_practice_q4=b)
+    - title: some
+      payload: /SetSlots(countable_uncountable_nouns_practice_q4=c)
+  utter_countable_uncountable_nouns_correct_q4:
+  - text: '‘How many’ is correct because:
+
+      - *Chairs* is a countable noun.
+
+      - ‘How many’ is used to ask about quantities of countable nouns (e.g., *How
+      many chairs?* 🪑).'
+  utter_countable_uncountable_nouns_incorrect_q4:
+  - text: 'Incorrect options:
+
+      - ‘How much’ is for uncountable nouns (e.g., *How much water?*).
+
+      - ‘Some’ is not used in ‘how’ questions for quantity.'
+  utter_ask_countable_uncountable_nouns_practice_q5:
+  - text: '❓ **Question 5:** Which sentence is correct?
+
+      - a) I need a luggage.
+
+      - b) I need some luggage.
+
+      - c) I need luggages.'
+    buttons:
+    - title: a
+      payload: /SetSlots(countable_uncountable_nouns_practice_q5=a)
+    - title: b
+      payload: /SetSlots(countable_uncountable_nouns_practice_q5=b)
+    - title: c
+      payload: /SetSlots(countable_uncountable_nouns_practice_q5=c)
+  utter_countable_uncountable_nouns_correct_q5:
+  - text: '‘I need some luggage’ is correct because:
+
+      - *Luggage* is an uncountable noun.
+
+      - ‘Some’ is used for uncountable nouns (e.g., *some luggage* 🧳).'
+  utter_countable_uncountable_nouns_incorrect_q5:
+  - text: 'Incorrect options:
+
+      - ‘A luggage’ is wrong because uncountable nouns don’t take ‘a’ (*a luggage*
+      ❌).
+
+      - ‘Luggages’ is wrong because *luggage* cannot be pluralized.'
+  utter_ask_countable_uncountable_nouns_practice_q6:
+  - text: '❓ **Question 6:** Choose the correct quantifier:
+
+      - There isn’t ___ time left.'
+    buttons:
+    - title: many
+      payload: /SetSlots(countable_uncountable_nouns_practice_q6=a)
+    - title: much
+      payload: /SetSlots(countable_uncountable_nouns_practice_q6=b)
+    - title: a few
+      payload: /SetSlots(countable_uncountable_nouns_practice_q6=c)
+  utter_countable_uncountable_nouns_correct_q6:
+  - text: '‘Much’ is correct because:
+
+      - *Time* is uncountable in this context (general concept).
+
+      - ‘Much’ is used for uncountable nouns in negative sentences (e.g., *not much
+      time* ⏳).'
+  utter_countable_uncountable_nouns_incorrect_q6:
+  - text: 'Incorrect options:
+
+      - ‘Many’ is for countable nouns (e.g., *many books*).
+
+      - ‘A few’ is for countable nouns and implies a positive amount.'
+  utter_ask_countable_uncountable_nouns_practice_q7:
+  - text: '❓ **Question 7:** Which is correct for *coffee* as a drink order?
+
+      - a) I’d like a coffee.
+
+      - b) I’d like some coffees.
+
+      - c) I’d like much coffee.'
+    buttons:
+    - title: a
+      payload: /SetSlots(countable_uncountable_nouns_practice_q7=a)
+    - title: b
+      payload: /SetSlots(countable_uncountable_nouns_practice_q7=b)
+    - title: c
+      payload: /SetSlots(countable_uncountable_nouns_practice_q7=c)
+  utter_countable_uncountable_nouns_correct_q7:
+  - text: '‘I’d like a coffee’ is correct because:
+
+      - *Coffee* is countable when referring to a specific order (one cup).
+
+      - ‘A’ is used for singular countable nouns (e.g., *a coffee* ☕).'
+  utter_countable_uncountable_nouns_incorrect_q7:
+  - text: 'Incorrect options:
+
+      - ‘Some coffees’ implies multiple cups but is less common.
+
+      - ‘Much coffee’ is wrong because *much* is for uncountable *coffee* (e.g., *much
+      coffee* ❌ for orders).'
+  utter_ask_countable_uncountable_nouns_practice_q8:
+  - text: '❓ **Question 8:** Fill in the blank:
+
+      - I have ___ ideas for the project.'
+    buttons:
+    - title: a little
+      payload: /SetSlots(countable_uncountable_nouns_practice_q8=a)
+    - title: a few
+      payload: /SetSlots(countable_uncountable_nouns_practice_q8=b)
+    - title: much
+      payload: /SetSlots(countable_uncountable_nouns_practice_q8=c)
+  utter_countable_uncountable_nouns_correct_q8:
+  - text: '‘A few’ is correct because:
+
+      - *Ideas* is a countable noun.
+
+      - ‘A few’ indicates a small positive amount (e.g., *a few ideas* 💡).'
+  utter_countable_uncountable_nouns_incorrect_q8:
+  - text: 'Incorrect options:
+
+      - ‘A little’ is for uncountable nouns (e.g., *a little water*).
+
+      - ‘Much’ is for uncountable nouns (e.g., *much information*).'
+  utter_ask_countable_uncountable_nouns_practice_q9:
+  - text: '❓ **Question 9:** Which sentence uses *hair* correctly?
+
+      - a) Her hair are long.
+
+      - b) A hair is in my soup.
+
+      - c) I found hairs in my soup.'
+    buttons:
+    - title: a
+      payload: /SetSlots(countable_uncountable_nouns_practice_q9=a)
+    - title: b
+      payload: /SetSlots(countable_uncountable_nouns_practice_q9=b)
+    - title: c
+      payload: /SetSlots(countable_uncountable_nouns_practice_q9=c)
+  utter_countable_uncountable_nouns_correct_q9:
+  - text: '‘A hair is in my soup’ is correct because:
+
+      - *Hair* is countable when referring to a single strand.
+
+      - ‘A’ is used for singular countable nouns (e.g., *a hair* 🧑‍🦱).'
+  utter_countable_uncountable_nouns_incorrect_q9:
+  - text: 'Incorrect options:
+
+      - ‘Her hair are long’ is wrong because *hair* (as a whole) is uncountable and
+      takes *is*.
+
+      - ‘Hairs’ is less common; *a hair* is preferred for single strands.'
+  utter_ask_countable_uncountable_nouns_practice_q10:
+  - text: '❓ **Question 10:** Which is correct:
+
+      - ___ furniture is expensive.'
+    buttons:
+    - title: A
+      payload: /SetSlots(countable_uncountable_nouns_practice_q10=a)
+    - title: Some
+      payload: /SetSlots(countable_uncountable_nouns_practice_q10=b)
+    - title: Many
+      payload: /SetSlots(countable_uncountable_nouns_practice_q10=c)
+  utter_countable_uncountable_nouns_correct_q10:
+  - text: '‘Some’ is correct because:
+
+      - *Furniture* is an uncountable collective noun.
+
+      - ‘Some’ is used for uncountable nouns in affirmative sentences (e.g., *some
+      furniture* 🛋️).'
+  utter_countable_uncountable_nouns_incorrect_q10:
+  - text: 'Incorrect options:
+
+      - ‘A’ is wrong because *furniture* doesn’t take *a/an*.
+
+      - ‘Many’ is for countable nouns (e.g., *many chairs*).'
+  utter_ask_countable_uncountable_nouns_practice_q11:
+  - text: '❓ **Question 11:** Choose the correct form:
+
+      - I need to buy ___ .'
+    buttons:
+    - title: two furnitures
+      payload: /SetSlots(countable_uncountable_nouns_practice_q11=a)
+    - title: two pieces of furniture
+      payload: /SetSlots(countable_uncountable_nouns_practice_q11=b)
+    - title: a furniture
+      payload: /SetSlots(countable_uncountable_nouns_practice_q11=c)
+  utter_countable_uncountable_nouns_correct_q11:
+  - text: '‘Two pieces of furniture’ is correct because:
+
+      - *Furniture* is uncountable.
+
+      - Units like *piece* quantify it (e.g., *two pieces of furniture* 🪑🛏️).'
+  utter_countable_uncountable_nouns_incorrect_q11:
+  - text: 'Incorrect options:
+
+      - ‘Two furnitures’ is wrong because *furniture* cannot be pluralized.
+
+      - ‘A furniture’ is wrong because *furniture* doesn’t take *a/an*.'
+  utter_ask_countable_uncountable_nouns_practice_q12:
+  - text: '❓ **Question 12:** Which quantifier fits:
+
+      - There are ___ cookies left.'
+    buttons:
+    - title: a little
+      payload: /SetSlots(countable_uncountable_nouns_practice_q12=a)
+    - title: a few
+      payload: /SetSlots(countable_uncountable_nouns_practice_q12=b)
+    - title: much
+      payload: /SetSlots(countable_uncountable_nouns_practice_q12=c)
+  utter_countable_uncountable_nouns_correct_q12:
+  - text: '‘A few’ is correct because:
+
+      - *Cookies* is a countable noun.
+
+      - ‘A few’ indicates a small positive amount (e.g., *a few cookies* 🍪).'
+  utter_countable_uncountable_nouns_incorrect_q12:
+  - text: 'Incorrect options:
+
+      - ‘A little’ is for uncountable nouns (e.g., *a little sugar*).
+
+      - ‘Much’ is for uncountable nouns (e.g., *much water*).'
+  utter_ask_countable_uncountable_nouns_practice_q13:
+  - text: '❓ **Question 13:** Which is correct for *paper* as a material?
+
+      - a) I need two papers.
+
+      - b) I need some paper.
+
+      - c) I need a paper.'
+    buttons:
+    - title: a
+      payload: /SetSlots(countable_uncountable_nouns_practice_q13=a)
+    - title: b
+      payload: /SetSlots(countable_uncountable_nouns_practice_q13=b)
+    - title: c
+      payload: /SetSlots(countable_uncountable_nouns_practice_q13=c)
+  utter_countable_uncountable_nouns_correct_q13:
+  - text: '‘I need some paper’ is correct because:
+
+      - *Paper* is uncountable when referring to the material.
+
+      - ‘Some’ is used for uncountable nouns (e.g., *some paper* 📜).'
+  utter_countable_uncountable_nouns_incorrect_q13:
+  - text: 'Incorrect options:
+
+      - ‘Two papers’ refers to documents, not material.
+
+      - ‘A paper’ is for documents (e.g., *a paper* for a report).'
+  utter_ask_countable_uncountable_nouns_practice_q14:
+  - text: '❓ **Question 14:** Fill in the blank:
+
+      - ___ time do you spend studying?'
+    buttons:
+    - title: How many
+      payload: /SetSlots(countable_uncountable_nouns_practice_q14=a)
+    - title: How much
+      payload: /SetSlots(countable_uncountable_nouns_practice_q14=b)
+    - title: How some
+      payload: /SetSlots(countable_uncountable_nouns_practice_q14=c)
+  utter_countable_uncountable_nouns_correct_q14:
+  - text: '‘How much’ is correct because:
+
+      - *Time* is uncountable in this context (general concept).
+
+      - ‘How much’ is used for uncountable nouns (e.g., *How much time?* ⏳).'
+  utter_countable_uncountable_nouns_incorrect_q14:
+  - text: 'Incorrect options:
+
+      - ‘How many’ is for countable nouns (e.g., *How many books?*).
+
+      - ‘How some’ is not a valid question structure.'
+  utter_ask_countable_uncountable_nouns_practice_q15:
+  - text: '❓ **Question 15:** Which sentence is incorrect?
+
+      - a) I have two cats.
+
+      - b) I have many water.
+
+      - c) I have some advice.'
+    buttons:
+    - title: a
+      payload: /SetSlots(countable_uncountable_nouns_practice_q15=a)
+    - title: b
+      payload: /SetSlots(countable_uncountable_nouns_practice_q15=b)
+    - title: c
+      payload: /SetSlots(countable_uncountable_nouns_practice_q15=c)
+  utter_countable_uncountable_nouns_correct_q15:
+  - text: '‘I have many water’ is incorrect because:
+
+      - *Water* is uncountable.
+
+      - *Many* is for countable nouns; use *much* or *some* (e.g., *some water* 💧).'
+  utter_countable_uncountable_nouns_incorrect_q15:
+  - text: 'Incorrect options:
+
+      - ‘I have two cats’ is correct (*cats* is countable).
+
+      - ‘I have some advice’ is correct (*advice* is uncountable, *some* fits).'
+  utter_ask_countable_uncountable_nouns_practice_q16:
+  - text: '❓ **Question 16:** Choose the correct quantifier:
+
+      - I don’t have ___ friends.'
+    buttons:
+    - title: much
+      payload: /SetSlots(countable_uncountable_nouns_practice_q16=a)
+    - title: many
+      payload: /SetSlots(countable_uncountable_nouns_practice_q16=b)
+    - title: a little
+      payload: /SetSlots(countable_uncountable_nouns_practice_q16=c)
+  utter_countable_uncountable_nouns_correct_q16:
+  - text: '‘Many’ is correct because:
+
+      - *Friends* is a countable noun.
+
+      - ‘Many’ is used in negative sentences for countable nouns (e.g., *not many
+      friends* 👥).'
+  utter_countable_uncountable_nouns_incorrect_q16:
+  - text: 'Incorrect options:
+
+      - ‘Much’ is for uncountable nouns (e.g., *much water*).
+
+      - ‘A little’ is for uncountable nouns (e.g., *a little sugar*).'
+  utter_ask_countable_uncountable_nouns_practice_q17:
+  - text: '❓ **Question 17:** Which uses *time* correctly as a countable noun?
+
+      - a) Time flies so fast.
+
+      - b) I called her three times.
+
+      - c) I don’t have much times.'
+    buttons:
+    - title: a
+      payload: /SetSlots(countable_uncountable_nouns_practice_q17=a)
+    - title: b
+      payload: /SetSlots(countable_uncountable_nouns_practice_q17=b)
+    - title: c
+      payload: /SetSlots(countable_uncountable_nouns_practice_q17=c)
+  utter_countable_uncountable_nouns_correct_q17:
+  - text: '‘I called her three times’ is correct because:
+
+      - *Time* is countable when referring to specific instances.
+
+      - *Times* is the plural form (e.g., *three times* 📞).'
+  utter_countable_uncountable_nouns_incorrect_q17:
+  - text: 'Incorrect options:
+
+      - ‘Time flies so fast’ uses *time* as uncountable.
+
+      - ‘Much times’ is wrong; *times* (countable) uses *many*.'
+  utter_ask_countable_uncountable_nouns_practice_q18:
+  - text: '❓ **Question 18:** Which is correct:
+
+      - ___ information is available online.'
+    buttons:
+    - title: Many
+      payload: /SetSlots(countable_uncountable_nouns_practice_q18=a)
+    - title: A
+      payload: /SetSlots(countable_uncountable_nouns_practice_q18=b)
+    - title: Some
+      payload: /SetSlots(countable_uncountable_nouns_practice_q18=c)
+  utter_countable_uncountable_nouns_correct_q18:
+  - text: '‘Some’ is correct because:
+
+      - *Information* is uncountable.
+
+      - ‘Some’ is used for uncountable nouns in affirmative sentences (e.g., *some
+      information* 📊).'
+  utter_countable_uncountable_nouns_incorrect_q18:
+  - text: 'Incorrect options:
+
+      - ‘Many’ is for countable nouns (e.g., *many books*).
+
+      - ‘A’ is wrong because *information* doesn’t take *a/an*.'
+  utter_ask_countable_uncountable_nouns_practice_q19:
+  - text: '❓ **Question 19:** Which sentence is correct?
+
+      - a) I need a book.
+
+      - b) I need an advice.
+
+      - c) I need books are new.'
+    buttons:
+    - title: a
+      payload: /SetSlots(countable_uncountable_nouns_practice_q19=a)
+    - title: b
+      payload: /SetSlots(countable_uncountable_nouns_practice_q19=b)
+    - title: c
+      payload: /SetSlots(countable_uncountable_nouns_practice_q19=c)
+  utter_countable_uncountable_nouns_correct_q19:
+  - text: '‘I need a book’ is correct because:
+
+      - *Book* is a countable singular noun.
+
+      - ‘A’ is required for singular countable nouns (e.g., *a book* 📚).'
+  utter_countable_uncountable_nouns_incorrect_q19:
+  - text: 'Incorrect options:
+
+      - ‘I need an advice’ is wrong; *advice* is uncountable (*some advice* ✅).
+
+      - ‘I need books are new’ lacks articles and has incorrect verb form (*Books
+      are new* ✅).'
+  utter_ask_countable_uncountable_nouns_practice_q20:
+  - text: '❓ **Question 20:** Choose the correct form:
+
+      - There’s ___ sugar in the jar.'
+    buttons:
+    - title: a few
+      payload: /SetSlots(countable_uncountable_nouns_practice_q20=a)
+    - title: a little
+      payload: /SetSlots(countable_uncountable_nouns_practice_q20=b)
+    - title: many
+      payload: /SetSlots(countable_uncountable_nouns_practice_q20=c)
+  utter_countable_uncountable_nouns_correct_q20:
+  - text: '‘A little’ is correct because:
+
+      - *Sugar* is uncountable.
+
+      - ‘A little’ indicates a small positive amount (e.g., *a little sugar* 🥄).'
+  utter_countable_uncountable_nouns_incorrect_q20:
+  - text: 'Incorrect options:
+
+      - ‘A few’ is for countable nouns (e.g., *a few cookies*).
+
+      - ‘Many’ is for countable nouns (e.g., *many books*).'
+  utter_countable_uncountable_nouns_end:
+  - text: 🎉 Thank you for learning about countable uncountable nouns! I hope you found
+      this helpful. Have a great day! 🎉
+    image: https://static.klipy.com/ii/feea28532d9709f5128558f418c779d0/c9/40/StrU5mdz.gif
+  - text: 🎉 Great job finishing this lesson! Keep up the good work and see you next
+      time! 🎉
+    image: https://static.klipy.com/ii/feea28532d9709f5128558f418c779d0/c9/40/StrU5mdz.gif
+  - text: 👏 You did amazing! Thanks for learning with me. Have a wonderful day!
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/89/0c/eVPjF1Tc.gif
+  - text: 🌟 Congratulations on completing the topic! Hope you enjoyed it. See you
+      soon!
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/30/9a/txBGxv21.gif
+  - text: 🎊 Well done! You've learned something new today. Take care and keep practicing!
+    image: https://static.klipy.com/ii/925f17378dd1893b674a723c07535afe/92/6e/GkcD7BLA.gif
+  - text: ✨ That's a wrap! Thanks for joining this lesson. Wishing you lots of success!
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/61/ec/cC1mwNmR.gif
+  - text: 🎈 Thank you for your effort! Hope you had fun learning. See you in the next
+      lesson!
+    image: https://static.klipy.com/ii/c3a19a0b747a76e98651f2b9a3cca5ff/c5/d0/EvUga4Gv.gif
+  - text: 🚀 You're awesome! Thanks for joining this lesson. Keep shining and see you
+      soon!
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/30/9a/txBGxv21.gif
+  - text: 🥳 Lesson complete! Hope you had fun. Don't forget to practice and smile
+      every day!
+    image: https://static.klipy.com/ii/925f17378dd1893b674a723c07535afe/92/6e/GkcD7BLA.gif
+  - text: 💡 You did it! Keep learning and growing. Until next time!
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/61/ec/cC1mwNmR.gif
+  - text: 😃 Thanks for your hard work! Wishing you lots of success ahead.
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/89/0c/eVPjF1Tc.gif
+  - text: 🍀 Good luck on your learning journey! See you in the next lesson.
+    image: https://static.klipy.com/ii/c3a19a0b747a76e98651f2b9a3cca5ff/c5/d0/EvUga4Gv.gif
+  - text: 🦸‍♂️ You're a grammar hero! Thanks for learning with me.
+    image: https://static.klipy.com/ii/feea28532d9709f5128558f418c779d0/d6/c9/kKEmDTpE.gif
+  - text: 📚 Another topic mastered! Proud of you. See you again soon!
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/30/9a/txBGxv21.gif
