@@ -51,12 +51,12 @@ model_groups:
 #   type: sql
 #   dialect: "postgresql"
 #   url: "postgresql://postgres:Nhant3019.@db.mboblelqadcopldrdqjn.supabase.co:5432/postgres"
-# tracker_store:
-#   type: redis
-#   url: ${REDIS_URL}
-#   port: ${REDIS_PORT}
-#   db: ${REDIS_DB}
-#   username: ${REDIS_USERNAME}
-#   password: ${REDIS_PASSWORD}
-#   use_ssl: false
-#   ttl: 604800
+tracker_store:
+  type: redis
+  url: ${REDIS_URL}
+  port: ${REDIS_PORT}
+  db: ${REDIS_DB}
+  username: ${REDIS_USERNAME}
+  password: ${REDIS_PASSWORD}
+  use_ssl: false
+  ttl: 604800

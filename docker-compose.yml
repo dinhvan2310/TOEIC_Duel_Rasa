@@ -4,8 +4,6 @@ services:
     build: .
     ports:
       - "5005:5005"
-    env_file:
-      - .env
     environment:
       - TZ=Asia/Ho_Chi_Minh
     container_name: rasa-prod

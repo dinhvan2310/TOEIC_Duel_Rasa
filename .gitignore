@@ -97,7 +97,6 @@ poetry.lock
 
 # Rasa
 .rasa/
-models/
 
 # Docker
 *.pid
