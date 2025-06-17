@@ -9,6 +9,9 @@ RUN apt-get update && apt-get install -y build-essential gcc
 
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Train the Rasa model
+RUN rasa train
+
 EXPOSE 5005
 
 CMD ["rasa", "run", "--enable-api", "--cors", "*"]
