@@ -1,0 +1,242 @@
+flows:
+  personal_pronouns_grammar:
+    description: Learn about personal pronouns
+    steps:
+    - collect: personal_pronouns_is_start
+      next:
+      - if: slots.personal_pronouns_is_start = true
+        then:
+        - action: utter_personal_pronouns_begin
+          next: personal_pronouns_ask_is_skip_theory
+      - else: END
+    - id: personal_pronouns_ask_is_skip_theory
+      collect: personal_pronouns_is_skip_theory
+      next:
+      - if: slots.personal_pronouns_is_skip_theory = true
+        then: personal_pronouns_practice_q1
+      - else: personal_pronouns_grammar_1
+    - id: personal_pronouns_grammar_1
+      action: utter_personal_pronouns_grammar_1
+      next: personal_pronouns_ask_understand_grammar_1
+    - id: personal_pronouns_ask_understand_grammar_1
+      collect: personal_pronouns_understand_1
+      next:
+      - if: slots.personal_pronouns_understand_1 = false
+        then: personal_pronouns_grammar_2
+      - else:
+        - action: utter_personal_pronouns_explain_more_1
+          next: personal_pronouns_grammar_2
+    - id: personal_pronouns_grammar_2
+      action: utter_personal_pronouns_grammar_2
+      next: personal_pronouns_ask_understand_grammar_2
+    - id: personal_pronouns_ask_understand_grammar_2
+      collect: personal_pronouns_understand_2
+      next:
+      - if: slots.personal_pronouns_understand_2 = false
+        then: personal_pronouns_grammar_3
+      - else:
+        - action: utter_personal_pronouns_explain_more_2
+          next: personal_pronouns_grammar_3
+    - id: personal_pronouns_grammar_3
+      action: utter_personal_pronouns_grammar_3
+      next: personal_pronouns_ask_understand_grammar_3
+    - id: personal_pronouns_ask_understand_grammar_3
+      collect: personal_pronouns_understand_3
+      next:
+      - if: slots.personal_pronouns_understand_3 = false
+        then: personal_pronouns_grammar_4
+      - else:
+        - action: utter_personal_pronouns_explain_more_3
+          next: personal_pronouns_grammar_4
+    - id: personal_pronouns_grammar_4
+      action: utter_personal_pronouns_grammar_4
+      next: personal_pronouns_ask_understand_grammar_4
+    - id: personal_pronouns_ask_understand_grammar_4
+      collect: personal_pronouns_understand_4
+      next:
+      - if: slots.personal_pronouns_understand_4 = false
+        then: personal_pronouns_grammar_5
+      - else:
+        - action: utter_personal_pronouns_explain_more_4
+          next: personal_pronouns_grammar_5
+    - id: personal_pronouns_grammar_5
+      action: utter_personal_pronouns_grammar_5
+      next: personal_pronouns_ask_understand_grammar_5
+    - id: personal_pronouns_ask_understand_grammar_5
+      collect: personal_pronouns_understand_5
+      next:
+      - if: slots.personal_pronouns_understand_5 = false
+        then: personal_pronouns_grammar_6
+      - else:
+        - action: utter_personal_pronouns_explain_more_5
+          next: personal_pronouns_grammar_6
+    - id: personal_pronouns_grammar_6
+      action: utter_personal_pronouns_grammar_6
+      next: personal_pronouns_ask_understand_grammar_6
+    - id: personal_pronouns_ask_understand_grammar_6
+      collect: personal_pronouns_understand_6
+      next:
+      - if: slots.personal_pronouns_understand_6 = false
+        then: personal_pronouns_ask_practice
+      - else:
+        - action: utter_personal_pronouns_explain_more_6
+          next: personal_pronouns_ask_practice
+    - id: personal_pronouns_ask_practice
+      collect: personal_pronouns_practice
+      next:
+      - if: slots.personal_pronouns_practice = true
+        then: personal_pronouns_practice_q1
+      - else: personal_pronouns_end_lesson
+    - id: personal_pronouns_practice_q1
+      collect: personal_pronouns_practice_q1
+      next:
+      - if: slots.personal_pronouns_practice_q1 = "a"
+        then:
+        - action: utter_personal_pronouns_correct_q1
+          next: personal_pronouns_practice_q2
+      - else:
+        - action: utter_personal_pronouns_incorrect_q1
+          next: personal_pronouns_practice_q2
+    - id: personal_pronouns_practice_q2
+      collect: personal_pronouns_practice_q2
+      next:
+      - if: slots.personal_pronouns_practice_q2 = "b"
+        then:
+        - action: utter_personal_pronouns_correct_q2
+          next: personal_pronouns_practice_q3
+      - else:
+        - action: utter_personal_pronouns_incorrect_q2
+          next: personal_pronouns_practice_q3
+    - id: personal_pronouns_practice_q3
+      collect: personal_pronouns_practice_q3
+      next:
+      - if: slots.personal_pronouns_practice_q3 = "b"
+        then:
+        - action: utter_personal_pronouns_correct_q3
+          next: personal_pronouns_practice_q4
+      - else:
+        - action: utter_personal_pronouns_incorrect_q3
+          next: personal_pronouns_practice_q4
+    - id: personal_pronouns_practice_q4
+      collect: personal_pronouns_practice_q4
+      next:
+      - if: slots.personal_pronouns_practice_q4 = "a"
+        then:
+        - action: utter_personal_pronouns_correct_q4
+          next: personal_pronouns_practice_q5
+      - else:
+        - action: utter_personal_pronouns_incorrect_q4
+          next: personal_pronouns_practice_q5
+    - id: personal_pronouns_practice_q5
+      collect: personal_pronouns_practice_q5
+      next:
+      - if: slots.personal_pronouns_practice_q5 = "b"
+        then:
+        - action: utter_personal_pronouns_correct_q5
+          next: personal_pronouns_practice_q6
+      - else:
+        - action: utter_personal_pronouns_incorrect_q5
+          next: personal_pronouns_practice_q6
+    - id: personal_pronouns_practice_q6
+      collect: personal_pronouns_practice_q6
+      next:
+      - if: slots.personal_pronouns_practice_q6 = "a"
+        then:
+        - action: utter_personal_pronouns_correct_q6
+          next: personal_pronouns_practice_q7
+      - else:
+        - action: utter_personal_pronouns_incorrect_q6
+          next: personal_pronouns_practice_q7
+    - id: personal_pronouns_practice_q7
+      collect: personal_pronouns_practice_q7
+      next:
+      - if: slots.personal_pronouns_practice_q7 = "b"
+        then:
+        - action: utter_personal_pronouns_correct_q7
+          next: personal_pronouns_practice_q8
+      - else:
+        - action: utter_personal_pronouns_incorrect_q7
+          next: personal_pronouns_practice_q8
+    - id: personal_pronouns_practice_q8
+      collect: personal_pronouns_practice_q8
+      next:
+      - if: slots.personal_pronouns_practice_q8 = "a"
+        then:
+        - action: utter_personal_pronouns_correct_q8
+          next: personal_pronouns_practice_q9
+      - else:
+        - action: utter_personal_pronouns_incorrect_q8
+          next: personal_pronouns_practice_q9
+    - id: personal_pronouns_practice_q9
+      collect: personal_pronouns_practice_q9
+      next:
+      - if: slots.personal_pronouns_practice_q9 = "b"
+        then:
+        - action: utter_personal_pronouns_correct_q9
+          next: personal_pronouns_practice_q10
+      - else:
+        - action: utter_personal_pronouns_incorrect_q9
+          next: personal_pronouns_practice_q10
+    - id: personal_pronouns_practice_q10
+      collect: personal_pronouns_practice_q10
+      next:
+      - if: slots.personal_pronouns_practice_q10 = "a"
+        then:
+        - action: utter_personal_pronouns_correct_q10
+          next: personal_pronouns_practice_q11
+      - else:
+        - action: utter_personal_pronouns_incorrect_q10
+          next: personal_pronouns_practice_q11
+    - id: personal_pronouns_practice_q11
+      collect: personal_pronouns_practice_q11
+      next:
+      - if: slots.personal_pronouns_practice_q11 = "a"
+        then:
+        - action: utter_personal_pronouns_correct_q11
+          next: personal_pronouns_practice_q12
+      - else:
+        - action: utter_personal_pronouns_incorrect_q11
+          next: personal_pronouns_practice_q12
+    - id: personal_pronouns_practice_q12
+      collect: personal_pronouns_practice_q12
+      next:
+      - if: slots.personal_pronouns_practice_q12 = "b"
+        then:
+        - action: utter_personal_pronouns_correct_q12
+          next: personal_pronouns_practice_q13
+      - else:
+        - action: utter_personal_pronouns_incorrect_q12
+          next: personal_pronouns_practice_q13
+    - id: personal_pronouns_practice_q13
+      collect: personal_pronouns_practice_q13
+      next:
+      - if: slots.personal_pronouns_practice_q13 = "b"
+        then:
+        - action: utter_personal_pronouns_correct_q13
+          next: personal_pronouns_practice_q14
+      - else:
+        - action: utter_personal_pronouns_incorrect_q13
+          next: personal_pronouns_practice_q14
+    - id: personal_pronouns_practice_q14
+      collect: personal_pronouns_practice_q14
+      next:
+      - if: slots.personal_pronouns_practice_q14 = "a"
+        then:
+        - action: utter_personal_pronouns_correct_q14
+          next: personal_pronouns_practice_q15
+      - else:
+        - action: utter_personal_pronouns_incorrect_q14
+          next: personal_pronouns_practice_q15
+    - id: personal_pronouns_practice_q15
+      collect: personal_pronouns_practice_q15
+      next:
+      - if: slots.personal_pronouns_practice_q15 = "b"
+        then:
+        - action: utter_personal_pronouns_correct_q15
+          next: personal_pronouns_end_lesson
+      - else:
+        - action: utter_personal_pronouns_incorrect_q15
+          next: personal_pronouns_end_lesson
+    - id: personal_pronouns_end_lesson
+      action: utter_personal_pronouns_end
+      next: END

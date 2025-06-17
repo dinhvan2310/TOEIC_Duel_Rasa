@@ -1,0 +1,822 @@
+version: '3.1'
+slots:
+  singular_and_plural_nouns_is_start:
+    type: bool
+    mappings:
+    - type: controlled
+  singular_and_plural_nouns_is_skip_theory:
+    type: bool
+    mappings:
+    - type: controlled
+  singular_and_plural_nouns_practice:
+    type: bool
+    mappings:
+    - type: controlled
+  singular_and_plural_nouns_understand_1:
+    type: bool
+    mappings:
+    - type: controlled
+  singular_and_plural_nouns_understand_2:
+    type: bool
+    mappings:
+    - type: controlled
+  singular_and_plural_nouns_understand_3:
+    type: bool
+    mappings:
+    - type: controlled
+  singular_and_plural_nouns_understand_4:
+    type: bool
+    mappings:
+    - type: controlled
+  singular_and_plural_nouns_understand_5:
+    type: bool
+    mappings:
+    - type: controlled
+  singular_and_plural_nouns_understand_6:
+    type: bool
+    mappings:
+    - type: controlled
+  singular_and_plural_nouns_practice_q1:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  singular_and_plural_nouns_practice_q2:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  singular_and_plural_nouns_practice_q3:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  singular_and_plural_nouns_practice_q4:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  singular_and_plural_nouns_practice_q5:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  singular_and_plural_nouns_practice_q6:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  singular_and_plural_nouns_practice_q7:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  singular_and_plural_nouns_practice_q8:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  singular_and_plural_nouns_practice_q9:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  singular_and_plural_nouns_practice_q10:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  singular_and_plural_nouns_practice_q11:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  singular_and_plural_nouns_practice_q12:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  singular_and_plural_nouns_practice_q13:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  singular_and_plural_nouns_practice_q14:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  singular_and_plural_nouns_practice_q15:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+responses:
+  utter_singular_and_plural_nouns_begin:
+  - text: 🚀 Let's start learning about singular and plural nouns!, (you can ask me
+      to use Vietnamese for this lesson if you want)
+  utter_ask_singular_and_plural_nouns_is_start:
+  - text: Are you sure you want to learn about singular and plural nouns? 🤔
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(singular_and_plural_nouns_is_start=true)
+    - title: 'No'
+      payload: /SetSlots(singular_and_plural_nouns_is_start=false)
+  utter_ask_singular_and_plural_nouns_is_skip_theory:
+  - text: Would you like to skip the theory and go straight to practice?
+    buttons:
+    - title: Yes, skip theory
+      payload: /SetSlots(singular_and_plural_nouns_is_skip_theory=true)
+    - title: No, show me the theory
+      payload: /SetSlots(singular_and_plural_nouns_is_skip_theory=false)
+  utter_ask_singular_and_plural_nouns_practice:
+  - text: 📝 Would you like to try some practice questions?
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(singular_and_plural_nouns_practice=true)
+    - title: 'No'
+      payload: /SetSlots(singular_and_plural_nouns_practice=false)
+  utter_singular_and_plural_nouns_grammar_1:
+  - text: '**Singular nouns**: Refer to one item. 📖
+
+      - Examples: *book*, *teacher*.
+
+      - Use with *a/an*, *the*, singular verbs.'
+    translation:
+      vi: '**Danh từ số ít**: Chỉ một vật. 📖
+
+        - Ví dụ: *book*, *teacher*.
+
+        - Dùng với *a/an*, *the*, động từ số ít.'
+  utter_singular_and_plural_nouns_explain_more_1:
+  - text: 'Singular nouns name one person, place, thing, or idea. They require a determiner
+      (*a*, *an*, *the*, *my*) and pair with singular verbs.
+
+      - **Examples**: *book*, *teacher*, *city*.
+
+      - **Usage**: *A book is on the table*, *The teacher speaks*.
+
+      - **Note**: Always use a determiner for singular countable nouns (*a book*,
+      not *book is here*).
+
+      - **Exceptions**: Proper nouns may omit determiners (*John is here*).'
+    translation:
+      vi: 'Danh từ số ít chỉ một người, nơi, vật, hoặc ý tưởng. Chúng cần mạo từ (*a*,
+        *an*, *the*, *my*) và đi với động từ số ít.
+
+        - **Ví dụ**: *book*, *teacher*, *city*.
+
+        - **Cách dùng**: *A book is on the table*, *The teacher speaks*.
+
+        - **Lưu ý**: Danh từ đếm được số ít luôn cần mạo từ (*a book*, không phải
+        *book is here*).
+
+        - **Ngoại lệ**: Danh từ riêng có thể không cần mạo từ (*John is here*).'
+  utter_ask_singular_and_plural_nouns_understand_1:
+  - text: 🤔 Do you want to get more details about this?
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(singular_and_plural_nouns_understand_1=true)
+    - title: 'No'
+      payload: /SetSlots(singular_and_plural_nouns_understand_1=false)
+  utter_singular_and_plural_nouns_grammar_2:
+  - text: '**Plural nouns (regular)**: Refer to more than one, add -s or -es. 📚
+
+      - Examples: *books*, *buses*.
+
+      - Use with *the*, *some*, plural verbs.'
+    translation:
+      vi: '**Danh từ số nhiều (quy tắc)**: Chỉ nhiều hơn một, thêm -s hoặc -es. 📚
+
+        - Ví dụ: *books*, *buses*.
+
+        - Dùng với *the*, *some*, động từ số nhiều.'
+  utter_singular_and_plural_nouns_explain_more_2:
+  - text: 'Regular plural nouns are formed by adding -s or -es to singular nouns to
+      indicate more than one. They pair with plural verbs.
+
+      - **Add -s**: *book* → *books*, *cat* → *cats*.
+
+      - **Add -es**: For nouns ending in s, x, z, ch, sh (*bus* → *buses*, *box* →
+      *boxes*).
+
+      - **Usage**: *Books are useful*, *The buses are late*.
+
+      - **Note**: No determiner needed for general statements (*Cats are cute*).'
+    translation:
+      vi: 'Danh từ số nhiều quy tắc được tạo bằng cách thêm -s hoặc -es vào danh từ
+        số ít để chỉ nhiều hơn một. Chúng đi với động từ số nhiều.
+
+        - **Thêm -s**: *book* → *books*, *cat* → *cats*.
+
+        - **Thêm -es**: Cho danh từ kết thúc bằng s, x, z, ch, sh (*bus* → *buses*,
+        *box* → *boxes*).
+
+        - **Cách dùng**: *Books are useful*, *The buses are late*.
+
+        - **Lưu ý**: Không cần mạo từ cho câu nói chung (*Cats are cute*).'
+  utter_ask_singular_and_plural_nouns_understand_2:
+  - text: 🤔 Do you want to get more details about this?
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(singular_and_plural_nouns_understand_2=true)
+    - title: 'No'
+      payload: /SetSlots(singular_and_plural_nouns_understand_2=false)
+  utter_singular_and_plural_nouns_grammar_3:
+  - text: '**Plural nouns (y-ending)**: Consonant + y becomes -ies. 🏙️
+
+      - Examples: *city* → *cities*.
+
+      - Use with plural verbs.'
+    translation:
+      vi: '**Danh từ số nhiều (kết thúc y)**: Phụ âm + y thành -ies. 🏙️
+
+        - Ví dụ: *city* → *cities*.
+
+        - Dùng với động từ số nhiều.'
+  utter_singular_and_plural_nouns_explain_more_3:
+  - text: 'Nouns ending in a consonant followed by y form plurals by changing y to
+      i and adding -es. They pair with plural verbs.
+
+      - **Examples**: *city* → *cities*, *baby* → *babies*, *penny* → *pennies*.
+
+      - **Usage**: *Cities are crowded*, *The babies are sleeping*.
+
+      - **Note**: If y follows a vowel, add -s (*toy* → *toys*).
+
+      - **Exceptions**: Proper nouns (*Henry* → *Henrys*).'
+    translation:
+      vi: 'Danh từ kết thúc bằng phụ âm + y tạo số nhiều bằng cách đổi y thành i và
+        thêm -es. Chúng đi với động từ số nhiều.
+
+        - **Ví dụ**: *city* → *cities*, *baby* → *babies*, *penny* → *pennies*.
+
+        - **Cách dùng**: *Cities are crowded*, *The babies are sleeping*.
+
+        - **Lưu ý**: Nếu y sau nguyên âm, thêm -s (*toy* → *toys*).
+
+        - **Ngoại lệ**: Danh từ riêng (*Henry* → *Henrys*).'
+  utter_ask_singular_and_plural_nouns_understand_3:
+  - text: 🤔 Do you want to get more details about this?
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(singular_and_plural_nouns_understand_3=true)
+    - title: 'No'
+      payload: /SetSlots(singular_and_plural_nouns_understand_3=false)
+  utter_singular_and_plural_nouns_grammar_4:
+  - text: '**Irregular plural nouns**: Unique plural forms. 👥
+
+      - Examples: *man* → *men*, *child* → *children*.
+
+      - Use with plural verbs.'
+    translation:
+      vi: '**Danh từ số nhiều bất quy tắc**: Dạng số nhiều đặc biệt. 👥
+
+        - Ví dụ: *man* → *men*, *child* → *children*.
+
+        - Dùng với động từ số nhiều.'
+  utter_singular_and_plural_nouns_explain_more_4:
+  - text: 'Irregular plural nouns do not follow standard -s or -es rules and have
+      unique forms. They pair with plural verbs.
+
+      - **Examples**: *man* → *men*, *child* → *children*, *tooth* → *teeth*, *mouse*
+      → *mice*.
+
+      - **Usage**: *Men are working*, *The children are playing*.
+
+      - **Note**: Some nouns have Latin/Greek origins (*cactus* → *cacti*, *criterion*
+      → *criteria*).
+
+      - **Memorization**: Common irregulars must be learned.'
+    translation:
+      vi: 'Danh từ số nhiều bất quy tắc không theo quy tắc -s hoặc -es, có dạng đặc
+        biệt. Chúng đi với động từ số nhiều.
+
+        - **Ví dụ**: *man* → *men*, *child* → *children*, *tooth* → *teeth*, *mouse*
+        → *mice*.
+
+        - **Cách dùng**: *Men are working*, *The children are playing*.
+
+        - **Lưu ý**: Một số danh từ gốc Latinh/Hy Lạp (*cactus* → *cacti*, *criterion*
+        → *criteria*).
+
+        - **Ghi nhớ**: Cần học thuộc các dạng bất quy tắc phổ biến.'
+  utter_ask_singular_and_plural_nouns_understand_4:
+  - text: 🤔 Do you want to get more details about this?
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(singular_and_plural_nouns_understand_4=true)
+    - title: 'No'
+      payload: /SetSlots(singular_and_plural_nouns_understand_4=false)
+  utter_singular_and_plural_nouns_grammar_5:
+  - text: '**Same form nouns**: Singular and plural are identical. 🐑
+
+      - Examples: *sheep*, *fish*.
+
+      - Verb depends on context.'
+    translation:
+      vi: '**Danh từ đồng dạng**: Số ít và số nhiều giống nhau. 🐑
+
+        - Ví dụ: *sheep*, *fish*.
+
+        - Động từ phụ thuộc ngữ cảnh.'
+  utter_singular_and_plural_nouns_explain_more_5:
+  - text: 'Some nouns have the same form for singular and plural, with verb agreement
+      depending on context.
+
+      - **Examples**: *sheep*, *fish*, *deer*, *species*.
+
+      - **Usage**: *One sheep is here* (singular verb), *Many sheep are here* (plural
+      verb).
+
+      - **Note**: Context determines number (*Fish swim* for plural, *A fish swims*
+      for singular).
+
+      - **Exceptions**: Rarely, plurals like *fishes* exist for different species.'
+    translation:
+      vi: 'Một số danh từ có dạng giống nhau cho số ít và số nhiều, động từ phụ thuộc
+        ngữ cảnh.
+
+        - **Ví dụ**: *sheep*, *fish*, *deer*, *species*.
+
+        - **Cách dùng**: *One sheep is here* (động từ số ít), *Many sheep are here*
+        (động từ số nhiều).
+
+        - **Lưu ý**: Ngữ cảnh xác định số lượng (*Fish swim* cho số nhiều, *A fish
+        swims* cho số ít).
+
+        - **Ngoại lệ**: Hiếm khi, dạng như *fishes* dùng cho các loài khác nhau.'
+  utter_ask_singular_and_plural_nouns_understand_5:
+  - text: 🤔 Do you want to get more details about this?
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(singular_and_plural_nouns_understand_5=true)
+    - title: 'No'
+      payload: /SetSlots(singular_and_plural_nouns_understand_5=false)
+  utter_singular_and_plural_nouns_grammar_6:
+  - text: '**Always plural nouns**: Plural form, plural verb. 👖
+
+      - Examples: *trousers*, *jeans*.
+
+      - No singular form.'
+    translation:
+      vi: '**Danh từ luôn số nhiều**: Dạng số nhiều, động từ số nhiều. 👖
+
+        - Ví dụ: *trousers*, *jeans*.
+
+        - Không có dạng số ít.'
+  utter_singular_and_plural_nouns_explain_more_6:
+  - text: 'Certain nouns are always plural, take plural verbs, and have no singular
+      form or a different meaning in singular.
+
+      - **Examples**: *trousers*, *jeans*, *glasses*, *savings*.
+
+      - **Usage**: *My trousers are new*, *The glasses are on the table*.
+
+      - **Note**: Singular forms, if they exist, have different meanings (*glass*
+      = material).
+
+      - **Exceptions**: Some like *news* look plural but take singular verbs (*The
+      news is good*).'
+    translation:
+      vi: 'Một số danh từ luôn ở dạng số nhiều, dùng động từ số nhiều, không có dạng
+        số ít hoặc số ít mang nghĩa khác.
+
+        - **Ví dụ**: *trousers*, *jeans*, *glasses*, *savings*.
+
+        - **Cách dùng**: *My trousers are new*, *The glasses are on the table*.
+
+        - **Lưu ý**: Dạng số ít, nếu có, mang nghĩa khác (*glass* = chất liệu).
+
+        - **Ngoại lệ**: Một số như *news* trông số nhiều nhưng dùng động từ số ít
+        (*The news is good*).'
+  utter_ask_singular_and_plural_nouns_understand_6:
+  - text: 🤔 Do you want to get more details about this?
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(singular_and_plural_nouns_understand_6=true)
+    - title: 'No'
+      payload: /SetSlots(singular_and_plural_nouns_understand_6=false)
+  utter_ask_singular_and_plural_nouns_practice_q1:
+  - text: '❓ **Question 1:** Choose the correct plural form:
+
+      - The singular noun is *book*.'
+    buttons:
+    - title: bookes
+      payload: /SetSlots(singular_and_plural_nouns_practice_q1=a)
+    - title: books
+      payload: /SetSlots(singular_and_plural_nouns_practice_q1=b)
+    - title: bookies
+      payload: /SetSlots(singular_and_plural_nouns_practice_q1=c)
+  utter_singular_and_plural_nouns_correct_q1:
+  - text: '‘Books’ is correct because:
+
+      - Regular nouns form plurals by adding -s.
+
+      - *Book* → *books* 📚.'
+  utter_singular_and_plural_nouns_incorrect_q1:
+  - text: 'Incorrect options:
+
+      - ‘Bookes’ is not a standard plural.
+
+      - ‘Bookies’ is unrelated (slang for bookmakers).'
+  utter_ask_singular_and_plural_nouns_practice_q2:
+  - text: '❓ **Question 2:** Choose the correct plural form:
+
+      - The singular noun is *bus*.'
+    buttons:
+    - title: buses
+      payload: /SetSlots(singular_and_plural_nouns_practice_q2=a)
+    - title: busses
+      payload: /SetSlots(singular_and_plural_nouns_practice_q2=b)
+    - title: busies
+      payload: /SetSlots(singular_and_plural_nouns_practice_q2=c)
+  utter_singular_and_plural_nouns_correct_q2:
+  - text: '‘Buses’ is correct because:
+
+      - Nouns ending in s add -es.
+
+      - *Bus* → *buses* 🚌.'
+  utter_singular_and_plural_nouns_incorrect_q2:
+  - text: 'Incorrect options:
+
+      - ‘Busses’ is a rare variant, not standard.
+
+      - ‘Busies’ is incorrect.'
+  utter_ask_singular_and_plural_nouns_practice_q3:
+  - text: '❓ **Question 3:** Choose the correct plural form:
+
+      - The singular noun is *city*.'
+    buttons:
+    - title: citys
+      payload: /SetSlots(singular_and_plural_nouns_practice_q3=a)
+    - title: cities
+      payload: /SetSlots(singular_and_plural_nouns_practice_q3=b)
+    - title: cites
+      payload: /SetSlots(singular_and_plural_nouns_practice_q3=c)
+  utter_singular_and_plural_nouns_correct_q3:
+  - text: '‘Cities’ is correct because:
+
+      - Nouns ending in consonant + y change y to i and add -es.
+
+      - *City* → *cities* 🏙️.'
+  utter_singular_and_plural_nouns_incorrect_q3:
+  - text: 'Incorrect options:
+
+      - ‘Citys’ ignores the y-rule.
+
+      - ‘Cites’ is a verb form.'
+  utter_ask_singular_and_plural_nouns_practice_q4:
+  - text: '❓ **Question 4:** Choose the correct plural form:
+
+      - The singular noun is *man*.'
+    buttons:
+    - title: mans
+      payload: /SetSlots(singular_and_plural_nouns_practice_q4=a)
+    - title: men
+      payload: /SetSlots(singular_and_plural_nouns_practice_q4=b)
+    - title: mens
+      payload: /SetSlots(singular_and_plural_nouns_practice_q4=c)
+  utter_singular_and_plural_nouns_correct_q4:
+  - text: '‘Men’ is correct because:
+
+      - *Man* has an irregular plural form.
+
+      - *Man* → *men* 👥.'
+  utter_singular_and_plural_nouns_incorrect_q4:
+  - text: 'Incorrect options:
+
+      - ‘Mans’ and ‘mens’ are not valid plurals.'
+  utter_ask_singular_and_plural_nouns_practice_q5:
+  - text: '❓ **Question 5:** Choose the correct form:
+
+      - I saw one ___ in the field.'
+    buttons:
+    - title: sheep
+      payload: /SetSlots(singular_and_plural_nouns_practice_q5=a)
+    - title: sheeps
+      payload: /SetSlots(singular_and_plural_nouns_practice_q5=b)
+    - title: sheepes
+      payload: /SetSlots(singular_and_plural_nouns_practice_q5=c)
+  utter_singular_and_plural_nouns_correct_q5:
+  - text: '‘Sheep’ is correct because:
+
+      - *Sheep* has the same form for singular and plural.
+
+      - Singular: *one sheep* 🐑.'
+  utter_singular_and_plural_nouns_incorrect_q5:
+  - text: 'Incorrect options:
+
+      - ‘Sheeps’ and ‘sheepes’ are not valid forms.'
+    image: https://static.klipy.com/ii/3bbfac09dcb32c2b1e87ad063c4ac16e/5d/05/AuRALdGY.gif
+  utter_ask_singular_and_plural_nouns_practice_q6:
+  - text: '❓ **Question 6:** Choose the correct verb:
+
+      - My trousers ___ new.'
+    buttons:
+    - title: is
+      payload: /SetSlots(singular_and_plural_nouns_practice_q6=a)
+    - title: are
+      payload: /SetSlots(singular_and_plural_nouns_practice_q6=b)
+    - title: be
+      payload: /SetSlots(singular_and_plural_nouns_practice_q6=c)
+  utter_singular_and_plural_nouns_correct_q6:
+  - text: '‘Are’ is correct because:
+
+      - *Trousers* is always plural and takes a plural verb.
+
+      - *My trousers are new* 👖.'
+  utter_singular_and_plural_nouns_incorrect_q6:
+  - text: 'Incorrect options:
+
+      - ‘Is’ is for singular nouns.
+
+      - ‘Be’ is not conjugated correctly.'
+  utter_ask_singular_and_plural_nouns_practice_q7:
+  - text: '❓ **Question 7:** Choose the correct plural form:
+
+      - The singular noun is *child*.'
+    buttons:
+    - title: childs
+      payload: /SetSlots(singular_and_plural_nouns_practice_q7=a)
+    - title: children
+      payload: /SetSlots(singular_and_plural_nouns_practice_q7=b)
+    - title: childrens
+      payload: /SetSlots(singular_and_plural_nouns_practice_q7=c)
+  utter_singular_and_plural_nouns_correct_q7:
+  - text: '‘Children’ is correct because:
+
+      - *Child* has an irregular plural form.
+
+      - *Child* → *children* 👧👦.'
+  utter_singular_and_plural_nouns_incorrect_q7:
+  - text: 'Incorrect options:
+
+      - ‘Childs’ and ‘childrens’ are not valid plurals.'
+  utter_ask_singular_and_plural_nouns_practice_q8:
+  - text: '❓ **Question 8:** Choose the correct verb:
+
+      - The news ___ on at 6 p.m.'
+    buttons:
+    - title: is
+      payload: /SetSlots(singular_and_plural_nouns_practice_q8=a)
+    - title: are
+      payload: /SetSlots(singular_and_plural_nouns_practice_q8=b)
+    - title: be
+      payload: /SetSlots(singular_and_plural_nouns_practice_q8=c)
+  utter_singular_and_plural_nouns_correct_q8:
+  - text: '‘Is’ is correct because:
+
+      - *News* looks plural but takes a singular verb.
+
+      - *The news is on at 6 p.m.* 📺.'
+  utter_singular_and_plural_nouns_incorrect_q8:
+  - text: 'Incorrect options:
+
+      - ‘Are’ is for plural nouns.
+
+      - ‘Be’ is not conjugated correctly.'
+  utter_ask_singular_and_plural_nouns_practice_q9:
+  - text: '❓ **Question 9:** Choose the correct plural form:
+
+      - The singular noun is *box*.'
+    buttons:
+    - title: boxes
+      payload: /SetSlots(singular_and_plural_nouns_practice_q9=a)
+    - title: boxs
+      payload: /SetSlots(singular_and_plural_nouns_practice_q9=b)
+    - title: boxies
+      payload: /SetSlots(singular_and_plural_nouns_practice_q9=c)
+  utter_singular_and_plural_nouns_correct_q9:
+  - text: '‘Boxes’ is correct because:
+
+      - Nouns ending in x add -es.
+
+      - *Box* → *boxes* 📦.'
+  utter_singular_and_plural_nouns_incorrect_q9:
+  - text: 'Incorrect options:
+
+      - ‘Boxs’ is incorrect.
+
+      - ‘Boxies’ follows the wrong rule.'
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/a9/1a/HSGgoGTj.gif
+  utter_ask_singular_and_plural_nouns_practice_q10:
+  - text: '❓ **Question 10:** Choose the correct form:
+
+      - There are many ___ in the lake.'
+    buttons:
+    - title: fish
+      payload: /SetSlots(singular_and_plural_nouns_practice_q10=a)
+    - title: fishes
+      payload: /SetSlots(singular_and_plural_nouns_practice_q10=b)
+    - title: fishs
+      payload: /SetSlots(singular_and_plural_nouns_practice_q10=c)
+  utter_singular_and_plural_nouns_correct_q10:
+  - text: '‘Fish’ is correct because:
+
+      - *Fish* is the same for singular and plural.
+
+      - Plural: *many fish* 🐟.'
+  utter_singular_and_plural_nouns_incorrect_q10:
+  - text: 'Incorrect options:
+
+      - ‘Fishes’ is rare, used for species.
+
+      - ‘Fishs’ is incorrect.'
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/59/cb/TZKBkz6k.gif
+  utter_ask_singular_and_plural_nouns_practice_q11:
+  - text: '❓ **Question 11:** Choose the correct plural form:
+
+      - The singular noun is *tooth*.'
+    buttons:
+    - title: tooths
+      payload: /SetSlots(singular_and_plural_nouns_practice_q11=a)
+    - title: teeth
+      payload: /SetSlots(singular_and_plural_nouns_practice_q11=b)
+    - title: teethes
+      payload: /SetSlots(singular_and_plural_nouns_practice_q11=c)
+  utter_singular_and_plural_nouns_correct_q11:
+  - text: '‘Teeth’ is correct because:
+
+      - *Tooth* has an irregular plural form.
+
+      - *Tooth* → *teeth* 😬.'
+  utter_singular_and_plural_nouns_incorrect_q11:
+  - text: 'Incorrect options:
+
+      - ‘Tooths’ and ‘teethes’ are not valid plurals.'
+  utter_ask_singular_and_plural_nouns_practice_q12:
+  - text: '❓ **Question 12:** Choose the correct verb:
+
+      - The team ___ playing well.'
+    buttons:
+    - title: is
+      payload: /SetSlots(singular_and_plural_nouns_practice_q12=a)
+    - title: are
+      payload: /SetSlots(singular_and_plural_nouns_practice_q12=b)
+    - title: be
+      payload: /SetSlots(singular_and_plural_nouns_practice_q12=c)
+  utter_singular_and_plural_nouns_correct_q12:
+  - text: '‘Is’ is correct because:
+
+      - *Team* is a group noun treated as a single unit.
+
+      - *The team is playing well* ⚽.'
+  utter_singular_and_plural_nouns_incorrect_q12:
+  - text: 'Incorrect options:
+
+      - ‘Are’ is used if individuals are emphasized (*The team are arguing*).
+
+      - ‘Be’ is not conjugated correctly.'
+    image: https://static.klipy.com/ii/b34001f2c30672cdcb3d906c28815404/7f/be/Br9T2Vr9.png
+  utter_ask_singular_and_plural_nouns_practice_q13:
+  - text: '❓ **Question 13:** Choose the correct plural form:
+
+      - The singular noun is *cactus*.'
+    buttons:
+    - title: cactuses
+      payload: /SetSlots(singular_and_plural_nouns_practice_q13=a)
+    - title: cacti
+      payload: /SetSlots(singular_and_plural_nouns_practice_q13=b)
+    - title: cactus
+      payload: /SetSlots(singular_and_plural_nouns_practice_q13=c)
+  utter_singular_and_plural_nouns_correct_q13:
+  - text: '‘Cacti’ is correct because:
+
+      - *Cactus* has a Latin irregular plural.
+
+      - *Cactus* → *cacti* 🌵 (though *cactuses* is also acceptable).'
+  utter_singular_and_plural_nouns_incorrect_q13:
+  - text: 'Incorrect options:
+
+      - ‘Cactuses’ is less common but valid.
+
+      - ‘Cactus’ is singular.'
+    image: https://static.klipy.com/ii/b34001f2c30672cdcb3d906c28815404/7f/be/Br9T2Vr9.png
+  utter_ask_singular_and_plural_nouns_practice_q14:
+  - text: '❓ **Question 14:** Choose the correct form:
+
+      - My glasses ___ on the table.'
+    buttons:
+    - title: is
+      payload: /SetSlots(singular_and_plural_nouns_practice_q14=a)
+    - title: are
+      payload: /SetSlots(singular_and_plural_nouns_practice_q14=b)
+    - title: be
+      payload: /SetSlots(singular_and_plural_nouns_practice_q14=c)
+  utter_singular_and_plural_nouns_correct_q14:
+  - text: '‘Are’ is correct because:
+
+      - *Glasses* is always plural and takes a plural verb.
+
+      - *My glasses are on the table* 👓.'
+  utter_singular_and_plural_nouns_incorrect_q14:
+  - text: 'Incorrect options:
+
+      - ‘Is’ is for singular nouns.
+
+      - ‘Be’ is not conjugated correctly.'
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/a9/1a/HSGgoGTj.gif
+  utter_ask_singular_and_plural_nouns_practice_q15:
+  - text: '❓ **Question 15:** Choose the correct plural form:
+
+      - The singular noun is *baby*.'
+    buttons:
+    - title: babys
+      payload: /SetSlots(singular_and_plural_nouns_practice_q15=a)
+    - title: babies
+      payload: /SetSlots(singular_and_plural_nouns_practice_q15=b)
+    - title: babyes
+      payload: /SetSlots(singular_and_plural_nouns_practice_q15=c)
+  utter_singular_and_plural_nouns_correct_q15:
+  - text: '‘Babies’ is correct because:
+
+      - Nouns ending in consonant + y change y to i and add -es.
+
+      - *Baby* → *babies* 👶.'
+  utter_singular_and_plural_nouns_incorrect_q15:
+  - text: 'Incorrect options:
+
+      - ‘Babys’ ignores the y-rule.
+
+      - ‘Babyes’ is incorrect.'
+  utter_singular_and_plural_nouns_end:
+  - text: 🎉 Thank you for learning about singular and plural nouns! I hope you found
+      this helpful. Have a great day! 🎉
+    image: https://static.klipy.com/ii/feea28532d9709f5128558f418c779d0/c9/40/StrU5mdz.gif
+  - text: 🎉 Great job finishing this lesson! Keep up the good work and see you next
+      time! 🎉
+    image: https://static.klipy.com/ii/feea28532d9709f5128558f418c779d0/c9/40/StrU5mdz.gif
+  - text: 👏 You did amazing! Thanks for learning with me. Have a wonderful day!
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/89/0c/eVPjF1Tc.gif
+  - text: 🌟 Congratulations on completing the topic! Hope you enjoyed it. See you
+      soon!
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/30/9a/txBGxv21.gif
+  - text: 🎊 Well done! You've learned something new today. Take care and keep practicing!
+    image: https://static.klipy.com/ii/925f17378dd1893b674a723c07535afe/92/6e/GkcD7BLA.gif
+  - text: ✨ That's a wrap! Thanks for joining this lesson. Wishing you lots of success!
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/61/ec/cC1mwNmR.gif
+  - text: 🎈 Thank you for your effort! Hope you had fun learning. See you in the next
+      lesson!
+    image: https://static.klipy.com/ii/c3a19a0b747a76e98651f2b9a3cca5ff/c5/d0/EvUga4Gv.gif
+  - text: 🚀 You're awesome! Thanks for joining this lesson. Keep shining and see you
+      soon!
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/30/9a/txBGxv21.gif
+  - text: 🥳 Lesson complete! Hope you had fun. Don't forget to practice and smile
+      every day!
+    image: https://static.klipy.com/ii/925f17378dd1893b674a723c07535afe/92/6e/GkcD7BLA.gif
+  - text: 💡 You did it! Keep learning and growing. Until next time!
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/61/ec/cC1mwNmR.gif
+  - text: 😃 Thanks for your hard work! Wishing you lots of success ahead.
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/89/0c/eVPjF1Tc.gif
+  - text: 🍀 Good luck on your learning journey! See you in the next lesson.
+    image: https://static.klipy.com/ii/c3a19a0b747a76e98651f2b9a3cca5ff/c5/d0/EvUga4Gv.gif
+  - text: 🦸‍♂️ You're a grammar hero! Thanks for learning with me.
+    image: https://static.klipy.com/ii/feea28532d9709f5128558f418c779d0/d6/c9/kKEmDTpE.gif
+  - text: 📚 Another topic mastered! Proud of you. See you again soon!
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/30/9a/txBGxv21.gif

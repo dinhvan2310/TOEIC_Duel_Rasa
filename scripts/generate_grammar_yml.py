@@ -2,6 +2,7 @@ import yaml
 import json
 import sys
 import random
+import os
 
 def generate_slots(topic_name, num_grammar, num_practice):
     slots = {

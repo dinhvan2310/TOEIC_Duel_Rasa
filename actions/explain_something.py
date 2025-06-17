@@ -11,13 +11,19 @@ class ActionExplainSomethingWithLLM(Action):
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain):
         client = genai.Client(api_key='AIzaSyDslLO4803-g3UvoHhN94hF8CAcZRgWmAE')
         current_input = tracker.latest_message.get('text')
-        print(current_input)
+        user_messages = [e['text'] for e in tracker.events if e.get('event') == 'user' and 'text' in e]
         prompt = f"""
-Rephrase the following explanation for a TOEIC learner in simple English. Focus on clarity (grammar, vocabulary, sentence structure). Use Markdown and emojis for engagement. Avoid repeating previous explanations or unnecessary details.
+You are an English teacher specializing in TOEIC. Please provide a clear, concise, and engaging explanation tailored to the user's query below. Your explanation should:
+- Focus on grammar rules, vocabulary usage, sentence structures, or other relevant topics as needed.
+- Be written in simple English, suitable for TOEIC learners.
+- Use Markdown formatting and emojis for engagement.
+- Include practical examples and tips to help the user understand and apply the concept.
+- Avoid repeating previous explanations or unnecessary details.
 
-User Input: {current_input}
+User Query: {current_input}
+History: {user_messages}
 
-Rephrased Explanation:
+Standardized Explanation:
 """
         response = client.models.generate_content(
             model="gemini-1.5-flash",

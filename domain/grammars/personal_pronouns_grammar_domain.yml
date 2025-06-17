@@ -1,0 +1,903 @@
+version: '3.1'
+slots:
+  personal_pronouns_is_start:
+    type: bool
+    mappings:
+    - type: controlled
+  personal_pronouns_is_skip_theory:
+    type: bool
+    mappings:
+    - type: controlled
+  personal_pronouns_practice:
+    type: bool
+    mappings:
+    - type: controlled
+  personal_pronouns_understand_1:
+    type: bool
+    mappings:
+    - type: controlled
+  personal_pronouns_understand_2:
+    type: bool
+    mappings:
+    - type: controlled
+  personal_pronouns_understand_3:
+    type: bool
+    mappings:
+    - type: controlled
+  personal_pronouns_understand_4:
+    type: bool
+    mappings:
+    - type: controlled
+  personal_pronouns_understand_5:
+    type: bool
+    mappings:
+    - type: controlled
+  personal_pronouns_understand_6:
+    type: bool
+    mappings:
+    - type: controlled
+  personal_pronouns_practice_q1:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  personal_pronouns_practice_q2:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  personal_pronouns_practice_q3:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  personal_pronouns_practice_q4:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  personal_pronouns_practice_q5:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  personal_pronouns_practice_q6:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  personal_pronouns_practice_q7:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  personal_pronouns_practice_q8:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  personal_pronouns_practice_q9:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  personal_pronouns_practice_q10:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  personal_pronouns_practice_q11:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  personal_pronouns_practice_q12:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  personal_pronouns_practice_q13:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  personal_pronouns_practice_q14:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  personal_pronouns_practice_q15:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+responses:
+  utter_personal_pronouns_begin:
+  - text: 🚀 Let's start learning about personal pronouns!, (you can ask me to use
+      Vietnamese for this lesson if you want)
+  utter_ask_personal_pronouns_is_start:
+  - text: Are you sure you want to learn about personal pronouns? 🤔
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(personal_pronouns_is_start=true)
+    - title: 'No'
+      payload: /SetSlots(personal_pronouns_is_start=false)
+  utter_ask_personal_pronouns_is_skip_theory:
+  - text: Would you like to skip the theory and go straight to practice?
+    buttons:
+    - title: Yes, skip theory
+      payload: /SetSlots(personal_pronouns_is_skip_theory=true)
+    - title: No, show me the theory
+      payload: /SetSlots(personal_pronouns_is_skip_theory=false)
+  utter_ask_personal_pronouns_practice:
+  - text: 📝 Would you like to try some practice questions?
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(personal_pronouns_practice=true)
+    - title: 'No'
+      payload: /SetSlots(personal_pronouns_practice=false)
+  utter_personal_pronouns_grammar_1:
+  - text: '**Subjective pronouns**: Act as the subject of a sentence. 👤
+
+      - Examples: *I*, *he*, *she*, *they*.
+
+      - Use with verbs matching number.'
+    translation:
+      vi: '**Đại từ chủ ngữ**: Làm chủ ngữ của câu. 👤
+
+        - Ví dụ: *I*, *he*, *she*, *they*.
+
+        - Dùng với động từ phù hợp số lượng.'
+  utter_personal_pronouns_explain_more_1:
+  - text: 'Subjective pronouns replace nouns as the subject, indicating who performs
+      the action. They include *I*, *you*, *he*, *she*, *it*, *we*, *they*.
+
+      - **Usage**: Used at the start of a sentence or clause (*She works in sales*).
+
+      - **Verb Agreement**: Match singular/plural verbs (*He is*, *They are*).
+
+      - **Special Case**: Used after linking verbs in formal English (*It is I*).
+
+      - **TOEIC Note**: Common in Part 5 questions (*___ is responsible.*).
+
+      - **Examples**: *We are attending*, *He leads the team*.'
+    translation:
+      vi: 'Đại từ chủ ngữ thay thế danh từ làm chủ ngữ, chỉ người hoặc vật thực hiện
+        hành động. Bao gồm *I*, *you*, *he*, *she*, *it*, *we*, *they*.
+
+        - **Cách dùng**: Dùng đầu câu hoặc mệnh đề (*She works in sales*).
+
+        - **Phù hợp động từ**: Phù hợp số ít/số nhiều (*He is*, *They are*).
+
+        - **Trường hợp đặc biệt**: Dùng sau động từ liên kết trong văn trang trọng
+        (*It is I*).
+
+        - **Lưu ý TOEIC**: Thường xuất hiện trong câu hỏi Part 5 (*___ is responsible.*).
+
+        - **Ví dụ**: *We are attending*, *He leads the team*.'
+  utter_ask_personal_pronouns_understand_1:
+  - text: 🤔 Do you want to get more details about this?
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(personal_pronouns_understand_1=true)
+    - title: 'No'
+      payload: /SetSlots(personal_pronouns_understand_1=false)
+  utter_personal_pronouns_grammar_2:
+  - text: '**Objective pronouns**: Act as the object of verbs or prepositions. 📩
+
+      - Examples: *me*, *him*, *her*, *them*.
+
+      - Cannot be subjects.'
+    translation:
+      vi: '**Đại từ tân ngữ**: Làm tân ngữ của động từ hoặc giới từ. 📩
+
+        - Ví dụ: *me*, *him*, *her*, *them*.
+
+        - Không làm chủ ngữ.'
+  utter_personal_pronouns_explain_more_2:
+  - text: 'Objective pronouns replace nouns as the object of a verb or preposition,
+      indicating who receives the action. They include *me*, *you*, *him*, *her*,
+      *it*, *us*, *them*.
+
+      - **Usage**: Used after verbs (*She called me*) or prepositions (*to them*).
+
+      - **Note**: Cannot be used as subjects (*Me go* is incorrect).
+
+      - **TOEIC Note**: Common in Part 6 text completion (*Send it to ___*).
+
+      - **Examples**: *The manager invited us*, *He spoke to her*.'
+    translation:
+      vi: 'Đại từ tân ngữ thay thế danh từ làm tân ngữ của động từ hoặc giới từ, chỉ
+        người hoặc vật nhận hành động. Bao gồm *me*, *you*, *him*, *her*, *it*, *us*,
+        *them*.
+
+        - **Cách dùng**: Dùng sau động từ (*She called me*) hoặc giới từ (*to them*).
+
+        - **Lưu ý**: Không dùng làm chủ ngữ (*Me go* sai).
+
+        - **Lưu ý TOEIC**: Thường xuất hiện trong Part 6 (*Send it to ___*).
+
+        - **Ví dụ**: *The manager invited us*, *He spoke to her*.'
+  utter_ask_personal_pronouns_understand_2:
+  - text: 🤔 Do you want to get more details about this?
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(personal_pronouns_understand_2=true)
+    - title: 'No'
+      payload: /SetSlots(personal_pronouns_understand_2=false)
+  utter_personal_pronouns_grammar_3:
+  - text: '**Possessive adjectives**: Show ownership before nouns. 🏠
+
+      - Examples: *my*, *your*, *their*.
+
+      - Modify nouns directly.'
+    translation:
+      vi: '**Tính từ sở hữu**: Chỉ sự sở hữu trước danh từ. 🏠
+
+        - Ví dụ: *my*, *your*, *their*.
+
+        - Bổ nghĩa trực tiếp cho danh từ.'
+  utter_personal_pronouns_explain_more_3:
+  - text: 'Possessive adjectives indicate ownership and precede nouns. They include
+      *my*, *your*, *his*, *her*, *its*, *our*, *their*.
+
+      - **Usage**: Modify nouns (*My car is new*).
+
+      - **Note**: No apostrophes (*its* vs. *it’s* = *it is*).
+
+      - **TOEIC Note**: Tested in Part 5 (*___ team won*).
+
+      - **Examples**: *Their project succeeded*, *Her office is spacious*.
+
+      - **Distinction**: Unlike possessive pronouns, they cannot stand alone (*my
+      book*, not *my* alone).'
+    translation:
+      vi: 'Tính từ sở hữu chỉ sự sở hữu và đứng trước danh từ. Bao gồm *my*, *your*,
+        *his*, *her*, *its*, *our*, *their*.
+
+        - **Cách dùng**: Bổ nghĩa cho danh từ (*My car is new*).
+
+        - **Lưu ý**: Không dùng dấu nháy đơn (*its* khác *it’s* = *it is*).
+
+        - **Lưu ý TOEIC**: Thường kiểm tra trong Part 5 (*___ team won*).
+
+        - **Ví dụ**: *Their project succeeded*, *Her office is spacious*.
+
+        - **Phân biệt**: Không đứng một mình như đại từ sở hữu (*my book*, không phải
+        *my* riêng).'
+  utter_ask_personal_pronouns_understand_3:
+  - text: 🤔 Do you want to get more details about this?
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(personal_pronouns_understand_3=true)
+    - title: 'No'
+      payload: /SetSlots(personal_pronouns_understand_3=false)
+  utter_personal_pronouns_grammar_4:
+  - text: '**Possessive pronouns**: Stand-alone ownership. 💼
+
+      - Examples: *mine*, *yours*, *theirs*.
+
+      - Replace noun phrases.'
+    translation:
+      vi: '**Đại từ sở hữu độc lập**: Chỉ sở hữu, đứng một mình. 💼
+
+        - Ví dụ: *mine*, *yours*, *theirs*.
+
+        - Thay thế cụm danh từ.'
+  utter_personal_pronouns_explain_more_4:
+  - text: 'Possessive pronouns indicate ownership and replace noun phrases, standing
+      alone. They include *mine*, *yours*, *his*, *hers*, *ours*, *theirs* (no *its*).
+
+      - **Usage**: Replace nouns (*This book is mine*).
+
+      - **Note**: No apostrophes; *hers* is correct, not *her’s*.
+
+      - **TOEIC Note**: Common in Part 5 (*The decision is ___*).
+
+      - **Examples**: *The car is yours*, *This office is theirs*.
+
+      - **Distinction**: Unlike possessive adjectives, they do not precede nouns.'
+    translation:
+      vi: 'Đại từ sở hữu độc lập chỉ sự sở hữu và thay thế cụm danh từ, đứng một mình.
+        Bao gồm *mine*, *yours*, *his*, *hers*, *ours*, *theirs* (không có *its*).
+
+        - **Cách dùng**: Thay danh từ (*This book is mine*).
+
+        - **Lưu ý**: Không dùng dấu nháy đơn; *hers* đúng, không phải *her’s*.
+
+        - **Lưu ý TOEIC**: Thường xuất hiện trong Part 5 (*The decision is ___*).
+
+        - **Ví dụ**: *The car is yours*, *This office is theirs*.
+
+        - **Phân biệt**: Không đứng trước danh từ như tính từ sở hữu.'
+  utter_ask_personal_pronouns_understand_4:
+  - text: 🤔 Do you want to get more details about this?
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(personal_pronouns_understand_4=true)
+    - title: 'No'
+      payload: /SetSlots(personal_pronouns_understand_4=false)
+  utter_personal_pronouns_grammar_5:
+  - text: '**Singular *they***: Used for unknown or non-specific gender. 👥
+
+      - Example: *A student forgot their book.*
+
+      - Common in modern English.'
+    translation:
+      vi: '**Đại từ *they* số ít**: Dùng cho giới tính không xác định. 👥
+
+        - Ví dụ: *A student forgot their book.*
+
+        - Phổ biến trong tiếng Anh hiện đại.'
+  utter_personal_pronouns_explain_more_5:
+  - text: 'Singular *they* is used for a person of unknown or non-specific gender,
+      replacing *he/she*. It takes a plural verb.
+
+      - **Usage**: *If a student arrives, they must sign in*.
+
+      - **TOEIC Note**: Increasingly common in Part 5/6 (*Each employee submits ___
+      report*).
+
+      - **Examples**: *Someone left their bag*, *A manager needs their ID*.
+
+      - **Note**: Preferred over *he or she* for inclusivity in modern English, especially
+      in formal tests like TOEIC.'
+    translation:
+      vi: 'Đại từ *they* số ít dùng cho người có giới tính không xác định hoặc chung
+        chung, thay thế *he/she*. Dùng động từ số nhiều.
+
+        - **Cách dùng**: *If a student arrives, they must sign in*.
+
+        - **Lưu ý TOEIC**: Ngày càng phổ biến trong Part 5/6 (*Each employee submits
+        ___ report*).
+
+        - **Ví dụ**: *Someone left their bag*, *A manager needs their ID*.
+
+        - **Lưu ý**: Ưu tiên hơn *he or she* để đảm bảo tính hòa nhập trong tiếng
+        Anh hiện đại, đặc biệt trong bài thi TOEIC.'
+  utter_ask_personal_pronouns_understand_5:
+  - text: 🤔 Do you want to get more details about this?
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(personal_pronouns_understand_5=true)
+    - title: 'No'
+      payload: /SetSlots(personal_pronouns_understand_5=false)
+  utter_personal_pronouns_grammar_6:
+  - text: '**Pronoun *it***: Used for objects, animals, abstract ideas. 🐾
+
+      - Example: *The machine broke. It needs repair.*
+
+      - Singular verb.'
+    translation:
+      vi: '**Đại từ *it***: Dùng cho vật, động vật, ý niệm trừu tượng. 🐾
+
+        - Ví dụ: *The machine broke. It needs repair.*
+
+        - Động từ số ít.'
+  utter_personal_pronouns_explain_more_6:
+  - text: 'The pronoun *it* is used for inanimate objects, animals (except pets with
+      gender), time, weather, or abstract concepts. It takes a singular verb.
+
+      - **Usage**: *The chair is old. It needs replacing*.
+
+      - **TOEIC Note**: Common in Part 5/7 (*The policy is new. ___ takes effect*).
+
+      - **Examples**: *The meeting starts at 9. It lasts two hours*, *The news is
+      good. It was on TV*.
+
+      - **Note**: Use *he/she* for pets with known gender (*My dog is happy. He wags
+      his tail*).'
+    translation:
+      vi: 'Đại từ *it* dùng cho vật vô tri, động vật (trừ thú cưng có giới tính),
+        thời gian, thời tiết, hoặc khái niệm trừu tượng. Dùng động từ số ít.
+
+        - **Cách dùng**: *The chair is old. It needs replacing*.
+
+        - **Lưu ý TOEIC**: Thường xuất hiện trong Part 5/7 (*The policy is new. ___
+        takes effect*).
+
+        - **Ví dụ**: *The meeting starts at 9. It lasts two hours*, *The news is good.
+        It was on TV*.
+
+        - **Lưu ý**: Dùng *he/she* cho thú cưng có giới tính (*My dog is happy. He
+        wags his tail*).'
+  utter_ask_personal_pronouns_understand_6:
+  - text: 🤔 Do you want to get more details about this?
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(personal_pronouns_understand_6=true)
+    - title: 'No'
+      payload: /SetSlots(personal_pronouns_understand_6=false)
+  utter_ask_personal_pronouns_practice_q1:
+  - text: '❓ **Question 1:** Choose the correct pronoun:
+
+      - ___ is leading the meeting today.'
+    buttons:
+    - title: He
+      payload: /SetSlots(personal_pronouns_practice_q1=a)
+    - title: Him
+      payload: /SetSlots(personal_pronouns_practice_q1=b)
+    - title: His
+      payload: /SetSlots(personal_pronouns_practice_q1=c)
+  utter_personal_pronouns_correct_q1:
+  - text: '‘He’ is correct because:
+
+      - The pronoun is the subject of the sentence, requiring a subjective pronoun.
+
+      - *He* is a singular subjective pronoun for a male (*He is leading the meeting*
+      👨‍💼).
+
+      - **TOEIC Tip**: Part 5 tests subject-verb agreement with pronouns.'
+  utter_personal_pronouns_incorrect_q1:
+  - text: 'Incorrect options:
+
+      - ‘Him’ is an objective pronoun, used after verbs or prepositions (*She called
+      him*), not as a subject.
+
+      - ‘His’ is a possessive adjective, used before nouns (*His meeting*), not as
+      a subject.'
+  utter_ask_personal_pronouns_practice_q2:
+  - text: '❓ **Question 2:** Choose the correct pronoun:
+
+      - The manager invited ___ to the conference.'
+    buttons:
+    - title: we
+      payload: /SetSlots(personal_pronouns_practice_q2=a)
+    - title: us
+      payload: /SetSlots(personal_pronouns_practice_q2=b)
+    - title: our
+      payload: /SetSlots(personal_pronouns_practice_q2=c)
+  utter_personal_pronouns_correct_q2:
+  - text: '‘Us’ is correct because:
+
+      - The pronoun is the object of the verb *invited*, requiring an objective pronoun.
+
+      - *Us* is the plural objective pronoun (*The manager invited us* 📩).
+
+      - **TOEIC Tip**: Part 6 tests object pronouns in text completion.'
+  utter_personal_pronouns_incorrect_q2:
+  - text: 'Incorrect options:
+
+      - ‘We’ is a subjective pronoun, used as a subject (*We attended*), not an object.
+
+      - ‘Our’ is a possessive adjective, used before nouns (*Our team*), not as an
+      object.'
+    image: https://static.klipy.com/ii/3bbfac09dcb32c2b1e87ad063c4ac16e/5d/05/AuRALdGY.gif
+  utter_ask_personal_pronouns_practice_q3:
+  - text: '❓ **Question 3:** Choose the correct pronoun:
+
+      - This is ___ book, not yours.'
+    buttons:
+    - title: my
+      payload: /SetSlots(personal_pronouns_practice_q3=a)
+    - title: mine
+      payload: /SetSlots(personal_pronouns_practice_q3=b)
+    - title: me
+      payload: /SetSlots(personal_pronouns_practice_q3=c)
+  utter_personal_pronouns_correct_q3:
+  - text: '‘Mine’ is correct because:
+
+      - The pronoun stands alone, replacing a noun phrase, requiring a possessive
+      pronoun.
+
+      - *Mine* indicates ownership (*This is mine* 📚).
+
+      - **TOEIC Tip**: Part 5 tests possessive pronouns in sentence completion.'
+  utter_personal_pronouns_incorrect_q3:
+  - text: 'Incorrect options:
+
+      - ‘My’ is a possessive adjective, used before nouns (*My book*), not alone.
+
+      - ‘Me’ is an objective pronoun, used after verbs/prepositions (*Give it to me*),
+      not for ownership.'
+  utter_ask_personal_pronouns_practice_q4:
+  - text: '❓ **Question 4:** Choose the correct pronoun:
+
+      - The company revised ___ policy.'
+    buttons:
+    - title: its
+      payload: /SetSlots(personal_pronouns_practice_q4=a)
+    - title: it
+      payload: /SetSlots(personal_pronouns_practice_q4=b)
+    - title: their
+      payload: /SetSlots(personal_pronouns_practice_q4=c)
+  utter_personal_pronouns_correct_q4:
+  - text: '‘Its’ is correct because:
+
+      - The pronoun is a possessive adjective modifying *policy*.
+
+      - *Company* is singular and inanimate, so *its* is used (*The company revised
+      its policy* 🏢).
+
+      - **TOEIC Tip**: Part 5 tests possessive adjectives for singular entities like
+      companies.'
+  utter_personal_pronouns_incorrect_q4:
+  - text: 'Incorrect options:
+
+      - ‘It’ is a subjective/objective pronoun, not used before nouns (*It is new*,
+      not *It policy*).
+
+      - ‘Their’ is for plural subjects (*The employees revised their policy*), not
+      a singular company.'
+    image: https://static.klipy.com/ii/feea28532d9709f5128558f418c779d0/d6/c9/kKEmDTpE.gif
+  utter_ask_personal_pronouns_practice_q5:
+  - text: '❓ **Question 5:** Choose the correct pronoun:
+
+      - Each employee must submit ___ report by Friday.'
+    buttons:
+    - title: his
+      payload: /SetSlots(personal_pronouns_practice_q5=a)
+    - title: their
+      payload: /SetSlots(personal_pronouns_practice_q5=b)
+    - title: them
+      payload: /SetSlots(personal_pronouns_practice_q5=c)
+  utter_personal_pronouns_correct_q5:
+  - text: '‘Their’ is correct because:
+
+      - *Each employee* is singular but uses singular *they* for gender-neutral reference.
+
+      - *Their* is a possessive adjective for *report* (*Each employee must submit
+      their report* 📊).
+
+      - **TOEIC Tip**: Singular *they* is common in modern TOEIC for inclusivity.'
+  utter_personal_pronouns_incorrect_q5:
+  - text: 'Incorrect options:
+
+      - ‘His’ assumes male gender, less inclusive in modern English (*His report*).
+
+      - ‘Them’ is an objective pronoun, not used before nouns (*Submit them* is incorrect
+      here).'
+    image: https://static.klipy.com/ii/feea28532d9709f5128558f418c779d0/d6/c9/kKEmDTpE.gif
+  utter_ask_personal_pronouns_practice_q6:
+  - text: '❓ **Question 6:** Choose the correct pronoun:
+
+      - The meeting is at 10 a.m. ___ lasts two hours.'
+    buttons:
+    - title: It
+      payload: /SetSlots(personal_pronouns_practice_q6=a)
+    - title: They
+      payload: /SetSlots(personal_pronouns_practice_q6=b)
+    - title: Its
+      payload: /SetSlots(personal_pronouns_practice_q6=c)
+  utter_personal_pronouns_correct_q6:
+  - text: '‘It’ is correct because:
+
+      - *Meeting* is a singular, inanimate noun, requiring *it* as a subjective pronoun.
+
+      - *It* refers to the meeting (*It lasts two hours* ⏰).
+
+      - **TOEIC Tip**: Part 7 tests *it* for abstract nouns like meetings or policies.'
+  utter_personal_pronouns_incorrect_q6:
+  - text: 'Incorrect options:
+
+      - ‘They’ is for plural subjects (*The meetings last*), not singular.
+
+      - ‘Its’ is a possessive adjective, used before nouns (*Its duration*), not as
+      a subject.'
+  utter_ask_personal_pronouns_practice_q7:
+  - text: '❓ **Question 7:** Choose the correct pronoun:
+
+      - Please send the documents to ___ by Monday.'
+    buttons:
+    - title: she
+      payload: /SetSlots(personal_pronouns_practice_q7=a)
+    - title: her
+      payload: /SetSlots(personal_pronouns_practice_q7=b)
+    - title: hers
+      payload: /SetSlots(personal_pronouns_practice_q7=c)
+  utter_personal_pronouns_correct_q7:
+  - text: '‘Her’ is correct because:
+
+      - The pronoun is the object of the preposition *to*, requiring an objective
+      pronoun.
+
+      - *Her* is singular for a female (*Send the documents to her* 📧).
+
+      - **TOEIC Tip**: Part 6 tests prepositional phrases with objective pronouns.'
+  utter_personal_pronouns_incorrect_q7:
+  - text: 'Incorrect options:
+
+      - ‘She’ is a subjective pronoun, used as a subject (*She sent documents*), not
+      an object.
+
+      - ‘Hers’ is a possessive pronoun, used alone (*The documents are hers*), not
+      with prepositions.'
+    image: https://static.klipy.com/ii/b34001f2c30672cdcb3d906c28815404/7f/be/Br9T2Vr9.png
+  utter_ask_personal_pronouns_practice_q8:
+  - text: '❓ **Question 8:** Choose the correct pronoun:
+
+      - ___ are preparing for the presentation.'
+    buttons:
+    - title: We
+      payload: /SetSlots(personal_pronouns_practice_q8=a)
+    - title: Us
+      payload: /SetSlots(personal_pronouns_practice_q8=b)
+    - title: Our
+      payload: /SetSlots(personal_pronouns_practice_q8=c)
+  utter_personal_pronouns_correct_q8:
+  - text: '‘We’ is correct because:
+
+      - The pronoun is the subject, requiring a subjective pronoun.
+
+      - *We* is plural for a group (*We are preparing* 👥).
+
+      - **TOEIC Tip**: Part 5 tests subjective pronouns in workplace contexts.'
+  utter_personal_pronouns_incorrect_q8:
+  - text: 'Incorrect options:
+
+      - ‘Us’ is an objective pronoun, used after verbs/prepositions (*They invited
+      us*), not as a subject.
+
+      - ‘Our’ is a possessive adjective, used before nouns (*Our presentation*), not
+      as a subject.'
+  utter_ask_personal_pronouns_practice_q9:
+  - text: '❓ **Question 9:** Choose the correct pronoun:
+
+      - The decision was ___ to make.'
+    buttons:
+    - title: their
+      payload: /SetSlots(personal_pronouns_practice_q9=a)
+    - title: theirs
+      payload: /SetSlots(personal_pronouns_practice_q9=b)
+    - title: them
+      payload: /SetSlots(personal_pronouns_practice_q9=c)
+  utter_personal_pronouns_correct_q9:
+  - text: '‘Theirs’ is correct because:
+
+      - The pronoun stands alone, replacing a noun phrase, requiring a possessive
+      pronoun.
+
+      - *Theirs* indicates ownership (*The decision was theirs* 📝).
+
+      - **TOEIC Tip**: Part 5 tests possessive pronouns in sentence completion.'
+  utter_personal_pronouns_incorrect_q9:
+  - text: 'Incorrect options:
+
+      - ‘Their’ is a possessive adjective, used before nouns (*Their decision*), not
+      alone.
+
+      - ‘Them’ is an objective pronoun, used after verbs/prepositions (*Give it to
+      them*), not for ownership.'
+    image: https://static.klipy.com/ii/3bbfac09dcb32c2b1e87ad063c4ac16e/5d/05/AuRALdGY.gif
+  utter_ask_personal_pronouns_practice_q10:
+  - text: '❓ **Question 10:** Choose the correct pronoun:
+
+      - The machine is broken. ___ needs repair.'
+    buttons:
+    - title: It
+      payload: /SetSlots(personal_pronouns_practice_q10=a)
+    - title: They
+      payload: /SetSlots(personal_pronouns_practice_q10=b)
+    - title: Its
+      payload: /SetSlots(personal_pronouns_practice_q10=c)
+  utter_personal_pronouns_correct_q10:
+  - text: '‘It’ is correct because:
+
+      - *Machine* is a singular, inanimate noun, requiring *it* as a subjective pronoun.
+
+      - *It* refers to the machine (*It needs repair* 🔧).
+
+      - **TOEIC Tip**: Part 7 tests *it* for inanimate objects in technical contexts.'
+  utter_personal_pronouns_incorrect_q10:
+  - text: 'Incorrect options:
+
+      - ‘They’ is for plural subjects (*The machines need repair*), not singular.
+
+      - ‘Its’ is a possessive adjective, used before nouns (*Its parts*), not as a
+      subject.'
+  utter_ask_personal_pronouns_practice_q11:
+  - text: '❓ **Question 11:** Choose the correct pronoun:
+
+      - ___ team won the award.'
+    buttons:
+    - title: Our
+      payload: /SetSlots(personal_pronouns_practice_q11=a)
+    - title: Ours
+      payload: /SetSlots(personal_pronouns_practice_q11=b)
+    - title: Us
+      payload: /SetSlots(personal_pronouns_practice_q11=c)
+  utter_personal_pronouns_correct_q11:
+  - text: '‘Our’ is correct because:
+
+      - The pronoun is a possessive adjective modifying *team*.
+
+      - *Our* indicates ownership (*Our team won* 🏆).
+
+      - **TOEIC Tip**: Part 5 tests possessive adjectives in workplace scenarios.'
+  utter_personal_pronouns_incorrect_q11:
+  - text: 'Incorrect options:
+
+      - ‘Ours’ is a possessive pronoun, used alone (*The team is ours*), not before
+      nouns.
+
+      - ‘Us’ is an objective pronoun, used after verbs/prepositions (*They awarded
+      us*), not for ownership.'
+  utter_ask_personal_pronouns_practice_q12:
+  - text: '❓ **Question 12:** Choose the correct pronoun:
+
+      - A candidate must bring ___ ID.'
+    buttons:
+    - title: his
+      payload: /SetSlots(personal_pronouns_practice_q12=a)
+    - title: their
+      payload: /SetSlots(personal_pronouns_practice_q12=b)
+    - title: them
+      payload: /SetSlots(personal_pronouns_practice_q12=c)
+  utter_personal_pronouns_correct_q12:
+  - text: '‘Their’ is correct because:
+
+      - *Candidate* is singular but uses singular *they* for gender-neutral reference.
+
+      - *Their* is a possessive adjective for *ID* (*A candidate must bring their
+      ID* 🪪).
+
+      - **TOEIC Tip**: Singular *they* is common in TOEIC for inclusivity.'
+  utter_personal_pronouns_incorrect_q12:
+  - text: 'Incorrect options:
+
+      - ‘His’ assumes male gender, less inclusive (*His ID*).
+
+      - ‘Them’ is an objective pronoun, not used before nouns (*Bring them* is incorrect
+      here).'
+  utter_ask_personal_pronouns_practice_q13:
+  - text: '❓ **Question 13:** Choose the correct pronoun:
+
+      - The boss spoke to ___ yesterday.'
+    buttons:
+    - title: he
+      payload: /SetSlots(personal_pronouns_practice_q13=a)
+    - title: him
+      payload: /SetSlots(personal_pronouns_practice_q13=b)
+    - title: his
+      payload: /SetSlots(personal_pronouns_practice_q13=c)
+  utter_personal_pronouns_correct_q13:
+  - text: '‘Him’ is correct because:
+
+      - The pronoun is the object of the preposition *to*, requiring an objective
+      pronoun.
+
+      - *Him* is singular for a male (*The boss spoke to him* 🗣️).
+
+      - **TOEIC Tip**: Part 6 tests objective pronouns in prepositional phrases.'
+  utter_personal_pronouns_incorrect_q13:
+  - text: 'Incorrect options:
+
+      - ‘He’ is a subjective pronoun, used as a subject (*He spoke*), not an object.
+
+      - ‘His’ is a possessive adjective, used before nouns (*His boss*), not with
+      prepositions.'
+    image: https://static.klipy.com/ii/3bbfac09dcb32c2b1e87ad063c4ac16e/5d/05/AuRALdGY.gif
+  utter_ask_personal_pronouns_practice_q14:
+  - text: '❓ **Question 14:** Choose the correct pronoun:
+
+      - The policy is new. ___ takes effect today.'
+    buttons:
+    - title: It
+      payload: /SetSlots(personal_pronouns_practice_q14=a)
+    - title: They
+      payload: /SetSlots(personal_pronouns_practice_q14=b)
+    - title: Its
+      payload: /SetSlots(personal_pronouns_practice_q14=c)
+  utter_personal_pronouns_correct_q14:
+  - text: '‘It’ is correct because:
+
+      - *Policy* is a singular, abstract noun, requiring *it* as a subjective pronoun.
+
+      - *It* refers to the policy (*It takes effect today* 📜).
+
+      - **TOEIC Tip**: Part 7 tests *it* for abstract nouns in formal contexts.'
+  utter_personal_pronouns_incorrect_q14:
+  - text: 'Incorrect options:
+
+      - ‘They’ is for plural subjects (*The policies take effect*), not singular.
+
+      - ‘Its’ is a possessive adjective, used before nouns (*Its impact*), not as
+      a subject.'
+  utter_ask_personal_pronouns_practice_q15:
+  - text: '❓ **Question 15:** Choose the correct pronoun:
+
+      - This is ___ office, not theirs.'
+    buttons:
+    - title: my
+      payload: /SetSlots(personal_pronouns_practice_q15=a)
+    - title: mine
+      payload: /SetSlots(personal_pronouns_practice_q15=b)
+    - title: me
+      payload: /SetSlots(personal_pronouns_practice_q15=c)
+  utter_personal_pronouns_correct_q15:
+  - text: '‘Mine’ is correct because:
+
+      - The pronoun stands alone, replacing a noun phrase, requiring a possessive
+      pronoun.
+
+      - *Mine* indicates ownership (*This is mine* 🏢).
+
+      - **TOEIC Tip**: Part 5 tests possessive pronouns in ownership contexts.'
+  utter_personal_pronouns_incorrect_q15:
+  - text: 'Incorrect options:
+
+      - ‘My’ is a possessive adjective, used before nouns (*My office*), not alone.
+
+      - ‘Me’ is an objective pronoun, used after verbs/prepositions (*Give it to me*),
+      not for ownership.'
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/a9/1a/HSGgoGTj.gif
+  utter_personal_pronouns_end:
+  - text: 🎉 Thank you for learning about personal pronouns! I hope you found this
+      helpful. Have a great day! 🎉
+    image: https://static.klipy.com/ii/feea28532d9709f5128558f418c779d0/c9/40/StrU5mdz.gif
+  - text: 🎉 Great job finishing this lesson! Keep up the good work and see you next
+      time! 🎉
+    image: https://static.klipy.com/ii/feea28532d9709f5128558f418c779d0/c9/40/StrU5mdz.gif
+  - text: 👏 You did amazing! Thanks for learning with me. Have a wonderful day!
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/89/0c/eVPjF1Tc.gif
+  - text: 🌟 Congratulations on completing the topic! Hope you enjoyed it. See you
+      soon!
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/30/9a/txBGxv21.gif
+  - text: 🎊 Well done! You've learned something new today. Take care and keep practicing!
+    image: https://static.klipy.com/ii/925f17378dd1893b674a723c07535afe/92/6e/GkcD7BLA.gif
+  - text: ✨ That's a wrap! Thanks for joining this lesson. Wishing you lots of success!
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/61/ec/cC1mwNmR.gif
+  - text: 🎈 Thank you for your effort! Hope you had fun learning. See you in the next
+      lesson!
+    image: https://static.klipy.com/ii/c3a19a0b747a76e98651f2b9a3cca5ff/c5/d0/EvUga4Gv.gif
+  - text: 🚀 You're awesome! Thanks for joining this lesson. Keep shining and see you
+      soon!
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/30/9a/txBGxv21.gif
+  - text: 🥳 Lesson complete! Hope you had fun. Don't forget to practice and smile
+      every day!
+    image: https://static.klipy.com/ii/925f17378dd1893b674a723c07535afe/92/6e/GkcD7BLA.gif
+  - text: 💡 You did it! Keep learning and growing. Until next time!
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/61/ec/cC1mwNmR.gif
+  - text: 😃 Thanks for your hard work! Wishing you lots of success ahead.
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/89/0c/eVPjF1Tc.gif
+  - text: 🍀 Good luck on your learning journey! See you in the next lesson.
+    image: https://static.klipy.com/ii/c3a19a0b747a76e98651f2b9a3cca5ff/c5/d0/EvUga4Gv.gif
+  - text: 🦸‍♂️ You're a grammar hero! Thanks for learning with me.
+    image: https://static.klipy.com/ii/feea28532d9709f5128558f418c779d0/d6/c9/kKEmDTpE.gif
+  - text: 📚 Another topic mastered! Proud of you. See you again soon!
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/30/9a/txBGxv21.gif

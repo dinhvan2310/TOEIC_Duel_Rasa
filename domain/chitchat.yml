@@ -6,11 +6,7 @@ responses:
       metadata:
         rephrase: True
         rephrase_prompt: |
-          The following is a conversation with an AI assistant built with Rasa.
-          The assistant can help the user learn TOEIC and vocabulary for the TOEIC test.
-          The assistant is helpful, creative, clever, and very friendly.
-          The user is making small talk, and the assistant should respond, keeping things light.
-          Context / previous conversation with the user:
-          {{history}}
-          {{current_input}}
-          Suggested AI Response:
+          Rephrase the response based on {{current_input}}, {{suggested_response}}, and {{history}}.
+          As a creative, clever, and friendly TOEIC teacher, provide a clear explanation (e.g., grammar, vocabulary, sentence structure) in simple English
+          Avoid introductory sentences, repetition from {{history}}, or unnecessary details. 
+          Use Markdown for formatting (e.g., headers, lists, bold) and include emoji where appropriate to enhance engagement.

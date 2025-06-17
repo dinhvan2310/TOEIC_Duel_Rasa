@@ -1,0 +1,242 @@
+flows:
+  Articles_a_an_the_grammar:
+    description: Learn about Articles a an the
+    steps:
+    - collect: Articles_a_an_the_is_start
+      next:
+      - if: slots.Articles_a_an_the_is_start = true
+        then:
+        - action: utter_Articles_a_an_the_begin
+          next: Articles_a_an_the_ask_is_skip_theory
+      - else: END
+    - id: Articles_a_an_the_ask_is_skip_theory
+      collect: Articles_a_an_the_is_skip_theory
+      next:
+      - if: slots.Articles_a_an_the_is_skip_theory = true
+        then: Articles_a_an_the_practice_q1
+      - else: Articles_a_an_the_grammar_1
+    - id: Articles_a_an_the_grammar_1
+      action: utter_Articles_a_an_the_grammar_1
+      next: Articles_a_an_the_ask_understand_grammar_1
+    - id: Articles_a_an_the_ask_understand_grammar_1
+      collect: Articles_a_an_the_understand_1
+      next:
+      - if: slots.Articles_a_an_the_understand_1 = false
+        then: Articles_a_an_the_grammar_2
+      - else:
+        - action: utter_Articles_a_an_the_explain_more_1
+          next: Articles_a_an_the_grammar_2
+    - id: Articles_a_an_the_grammar_2
+      action: utter_Articles_a_an_the_grammar_2
+      next: Articles_a_an_the_ask_understand_grammar_2
+    - id: Articles_a_an_the_ask_understand_grammar_2
+      collect: Articles_a_an_the_understand_2
+      next:
+      - if: slots.Articles_a_an_the_understand_2 = false
+        then: Articles_a_an_the_grammar_3
+      - else:
+        - action: utter_Articles_a_an_the_explain_more_2
+          next: Articles_a_an_the_grammar_3
+    - id: Articles_a_an_the_grammar_3
+      action: utter_Articles_a_an_the_grammar_3
+      next: Articles_a_an_the_ask_understand_grammar_3
+    - id: Articles_a_an_the_ask_understand_grammar_3
+      collect: Articles_a_an_the_understand_3
+      next:
+      - if: slots.Articles_a_an_the_understand_3 = false
+        then: Articles_a_an_the_grammar_4
+      - else:
+        - action: utter_Articles_a_an_the_explain_more_3
+          next: Articles_a_an_the_grammar_4
+    - id: Articles_a_an_the_grammar_4
+      action: utter_Articles_a_an_the_grammar_4
+      next: Articles_a_an_the_ask_understand_grammar_4
+    - id: Articles_a_an_the_ask_understand_grammar_4
+      collect: Articles_a_an_the_understand_4
+      next:
+      - if: slots.Articles_a_an_the_understand_4 = false
+        then: Articles_a_an_the_grammar_5
+      - else:
+        - action: utter_Articles_a_an_the_explain_more_4
+          next: Articles_a_an_the_grammar_5
+    - id: Articles_a_an_the_grammar_5
+      action: utter_Articles_a_an_the_grammar_5
+      next: Articles_a_an_the_ask_understand_grammar_5
+    - id: Articles_a_an_the_ask_understand_grammar_5
+      collect: Articles_a_an_the_understand_5
+      next:
+      - if: slots.Articles_a_an_the_understand_5 = false
+        then: Articles_a_an_the_grammar_6
+      - else:
+        - action: utter_Articles_a_an_the_explain_more_5
+          next: Articles_a_an_the_grammar_6
+    - id: Articles_a_an_the_grammar_6
+      action: utter_Articles_a_an_the_grammar_6
+      next: Articles_a_an_the_ask_understand_grammar_6
+    - id: Articles_a_an_the_ask_understand_grammar_6
+      collect: Articles_a_an_the_understand_6
+      next:
+      - if: slots.Articles_a_an_the_understand_6 = false
+        then: Articles_a_an_the_ask_practice
+      - else:
+        - action: utter_Articles_a_an_the_explain_more_6
+          next: Articles_a_an_the_ask_practice
+    - id: Articles_a_an_the_ask_practice
+      collect: Articles_a_an_the_practice
+      next:
+      - if: slots.Articles_a_an_the_practice = true
+        then: Articles_a_an_the_practice_q1
+      - else: Articles_a_an_the_end_lesson
+    - id: Articles_a_an_the_practice_q1
+      collect: Articles_a_an_the_practice_q1
+      next:
+      - if: slots.Articles_a_an_the_practice_q1 = "b"
+        then:
+        - action: utter_Articles_a_an_the_correct_q1
+          next: Articles_a_an_the_practice_q2
+      - else:
+        - action: utter_Articles_a_an_the_incorrect_q1
+          next: Articles_a_an_the_practice_q2
+    - id: Articles_a_an_the_practice_q2
+      collect: Articles_a_an_the_practice_q2
+      next:
+      - if: slots.Articles_a_an_the_practice_q2 = "a"
+        then:
+        - action: utter_Articles_a_an_the_correct_q2
+          next: Articles_a_an_the_practice_q3
+      - else:
+        - action: utter_Articles_a_an_the_incorrect_q2
+          next: Articles_a_an_the_practice_q3
+    - id: Articles_a_an_the_practice_q3
+      collect: Articles_a_an_the_practice_q3
+      next:
+      - if: slots.Articles_a_an_the_practice_q3 = "c"
+        then:
+        - action: utter_Articles_a_an_the_correct_q3
+          next: Articles_a_an_the_practice_q4
+      - else:
+        - action: utter_Articles_a_an_the_incorrect_q3
+          next: Articles_a_an_the_practice_q4
+    - id: Articles_a_an_the_practice_q4
+      collect: Articles_a_an_the_practice_q4
+      next:
+      - if: slots.Articles_a_an_the_practice_q4 = "c"
+        then:
+        - action: utter_Articles_a_an_the_correct_q4
+          next: Articles_a_an_the_practice_q5
+      - else:
+        - action: utter_Articles_a_an_the_incorrect_q4
+          next: Articles_a_an_the_practice_q5
+    - id: Articles_a_an_the_practice_q5
+      collect: Articles_a_an_the_practice_q5
+      next:
+      - if: slots.Articles_a_an_the_practice_q5 = "a"
+        then:
+        - action: utter_Articles_a_an_the_correct_q5
+          next: Articles_a_an_the_practice_q6
+      - else:
+        - action: utter_Articles_a_an_the_incorrect_q5
+          next: Articles_a_an_the_practice_q6
+    - id: Articles_a_an_the_practice_q6
+      collect: Articles_a_an_the_practice_q6
+      next:
+      - if: slots.Articles_a_an_the_practice_q6 = "b"
+        then:
+        - action: utter_Articles_a_an_the_correct_q6
+          next: Articles_a_an_the_practice_q7
+      - else:
+        - action: utter_Articles_a_an_the_incorrect_q6
+          next: Articles_a_an_the_practice_q7
+    - id: Articles_a_an_the_practice_q7
+      collect: Articles_a_an_the_practice_q7
+      next:
+      - if: slots.Articles_a_an_the_practice_q7 = "c"
+        then:
+        - action: utter_Articles_a_an_the_correct_q7
+          next: Articles_a_an_the_practice_q8
+      - else:
+        - action: utter_Articles_a_an_the_incorrect_q7
+          next: Articles_a_an_the_practice_q8
+    - id: Articles_a_an_the_practice_q8
+      collect: Articles_a_an_the_practice_q8
+      next:
+      - if: slots.Articles_a_an_the_practice_q8 = "c"
+        then:
+        - action: utter_Articles_a_an_the_correct_q8
+          next: Articles_a_an_the_practice_q9
+      - else:
+        - action: utter_Articles_a_an_the_incorrect_q8
+          next: Articles_a_an_the_practice_q9
+    - id: Articles_a_an_the_practice_q9
+      collect: Articles_a_an_the_practice_q9
+      next:
+      - if: slots.Articles_a_an_the_practice_q9 = "a"
+        then:
+        - action: utter_Articles_a_an_the_correct_q9
+          next: Articles_a_an_the_practice_q10
+      - else:
+        - action: utter_Articles_a_an_the_incorrect_q9
+          next: Articles_a_an_the_practice_q10
+    - id: Articles_a_an_the_practice_q10
+      collect: Articles_a_an_the_practice_q10
+      next:
+      - if: slots.Articles_a_an_the_practice_q10 = "c"
+        then:
+        - action: utter_Articles_a_an_the_correct_q10
+          next: Articles_a_an_the_practice_q11
+      - else:
+        - action: utter_Articles_a_an_the_incorrect_q10
+          next: Articles_a_an_the_practice_q11
+    - id: Articles_a_an_the_practice_q11
+      collect: Articles_a_an_the_practice_q11
+      next:
+      - if: slots.Articles_a_an_the_practice_q11 = "c"
+        then:
+        - action: utter_Articles_a_an_the_correct_q11
+          next: Articles_a_an_the_practice_q12
+      - else:
+        - action: utter_Articles_a_an_the_incorrect_q11
+          next: Articles_a_an_the_practice_q12
+    - id: Articles_a_an_the_practice_q12
+      collect: Articles_a_an_the_practice_q12
+      next:
+      - if: slots.Articles_a_an_the_practice_q12 = "a"
+        then:
+        - action: utter_Articles_a_an_the_correct_q12
+          next: Articles_a_an_the_practice_q13
+      - else:
+        - action: utter_Articles_a_an_the_incorrect_q12
+          next: Articles_a_an_the_practice_q13
+    - id: Articles_a_an_the_practice_q13
+      collect: Articles_a_an_the_practice_q13
+      next:
+      - if: slots.Articles_a_an_the_practice_q13 = "b"
+        then:
+        - action: utter_Articles_a_an_the_correct_q13
+          next: Articles_a_an_the_practice_q14
+      - else:
+        - action: utter_Articles_a_an_the_incorrect_q13
+          next: Articles_a_an_the_practice_q14
+    - id: Articles_a_an_the_practice_q14
+      collect: Articles_a_an_the_practice_q14
+      next:
+      - if: slots.Articles_a_an_the_practice_q14 = "c"
+        then:
+        - action: utter_Articles_a_an_the_correct_q14
+          next: Articles_a_an_the_practice_q15
+      - else:
+        - action: utter_Articles_a_an_the_incorrect_q14
+          next: Articles_a_an_the_practice_q15
+    - id: Articles_a_an_the_practice_q15
+      collect: Articles_a_an_the_practice_q15
+      next:
+      - if: slots.Articles_a_an_the_practice_q15 = "b"
+        then:
+        - action: utter_Articles_a_an_the_correct_q15
+          next: Articles_a_an_the_end_lesson
+      - else:
+        - action: utter_Articles_a_an_the_incorrect_q15
+          next: Articles_a_an_the_end_lesson
+    - id: Articles_a_an_the_end_lesson
+      action: utter_Articles_a_an_the_end
+      next: END

@@ -1,0 +1,831 @@
+version: '3.1'
+slots:
+  Articles_a_an_the_is_start:
+    type: bool
+    mappings:
+    - type: controlled
+  Articles_a_an_the_is_skip_theory:
+    type: bool
+    mappings:
+    - type: controlled
+  Articles_a_an_the_practice:
+    type: bool
+    mappings:
+    - type: controlled
+  Articles_a_an_the_understand_1:
+    type: bool
+    mappings:
+    - type: controlled
+  Articles_a_an_the_understand_2:
+    type: bool
+    mappings:
+    - type: controlled
+  Articles_a_an_the_understand_3:
+    type: bool
+    mappings:
+    - type: controlled
+  Articles_a_an_the_understand_4:
+    type: bool
+    mappings:
+    - type: controlled
+  Articles_a_an_the_understand_5:
+    type: bool
+    mappings:
+    - type: controlled
+  Articles_a_an_the_understand_6:
+    type: bool
+    mappings:
+    - type: controlled
+  Articles_a_an_the_practice_q1:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  Articles_a_an_the_practice_q2:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  Articles_a_an_the_practice_q3:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  Articles_a_an_the_practice_q4:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  Articles_a_an_the_practice_q5:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  Articles_a_an_the_practice_q6:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  Articles_a_an_the_practice_q7:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  Articles_a_an_the_practice_q8:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  Articles_a_an_the_practice_q9:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  Articles_a_an_the_practice_q10:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  Articles_a_an_the_practice_q11:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  Articles_a_an_the_practice_q12:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  Articles_a_an_the_practice_q13:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  Articles_a_an_the_practice_q14:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+  Articles_a_an_the_practice_q15:
+    type: categorical
+    values:
+    - a
+    - b
+    - c
+    mappings:
+    - type: controlled
+responses:
+  utter_Articles_a_an_the_begin:
+  - text: 🚀 Let's start learning about Articles a an the!, (you can ask me to use
+      Vietnamese for this lesson if you want)
+  utter_ask_Articles_a_an_the_is_start:
+  - text: Are you sure you want to learn about Articles a an the? 🤔
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(Articles_a_an_the_is_start=true)
+    - title: 'No'
+      payload: /SetSlots(Articles_a_an_the_is_start=false)
+  utter_ask_Articles_a_an_the_is_skip_theory:
+  - text: Would you like to skip the theory and go straight to practice?
+    buttons:
+    - title: Yes, skip theory
+      payload: /SetSlots(Articles_a_an_the_is_skip_theory=true)
+    - title: No, show me the theory
+      payload: /SetSlots(Articles_a_an_the_is_skip_theory=false)
+  utter_ask_Articles_a_an_the_practice:
+  - text: 📝 Would you like to try some practice questions?
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(Articles_a_an_the_practice=true)
+    - title: 'No'
+      payload: /SetSlots(Articles_a_an_the_practice=false)
+  utter_Articles_a_an_the_grammar_1:
+  - text: '**Indefinite article ''a''**: Used for singular countable nouns with consonant
+      sounds. 📚
+
+      - Examples: *a book*, *a car*.
+
+      - General, non-specific nouns.'
+    translation:
+      vi: '**Mạo từ bất định ''a''**: Dùng cho danh từ đếm được số ít bắt đầu bằng
+        âm phụ âm. 📚
+
+        - Ví dụ: *a book*, *a car*.
+
+        - Danh từ chung, không cụ thể.'
+  utter_Articles_a_an_the_explain_more_1:
+  - text: 'The indefinite article ''a'' is used before singular countable nouns that
+      begin with a consonant sound (not letter). It introduces a non-specific item.
+
+      - **Examples**: *a book*, *a car*, *a university* (/j/ sound).
+
+      - **Usage**: For first mentions or general items (*I need a pen*).
+
+      - **Note**: Based on sound, not spelling (*a union*, not *an union*).
+
+      - **Exceptions**: Avoid with uncountable nouns (*a water* is incorrect).'
+    translation:
+      vi: 'Mạo từ bất định ''a'' được dùng trước danh từ đếm được số ít bắt đầu bằng
+        âm phụ âm (không phải chữ cái). Nó giới thiệu một vật không cụ thể.
+
+        - **Ví dụ**: *a book*, *a car*, *a university* (âm /j/).
+
+        - **Cách dùng**: Dùng cho lần nhắc đầu hoặc vật chung (*Tôi cần một cái bút*).
+
+        - **Lưu ý**: Dựa trên âm, không phải chữ (*a union*, không phải *an union*).
+
+        - **Ngoại lệ**: Không dùng với danh từ không đếm được (*a water* sai).'
+  utter_ask_Articles_a_an_the_understand_1:
+  - text: 🤔 Do you want to get more details about this?
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(Articles_a_an_the_understand_1=true)
+    - title: 'No'
+      payload: /SetSlots(Articles_a_an_the_understand_1=false)
+  utter_Articles_a_an_the_grammar_2:
+  - text: '**Indefinite article ''an''**: Used for singular countable nouns with vowel
+      sounds. 🍎
+
+      - Examples: *an apple*, *an hour*.
+
+      - General, non-specific nouns.'
+    translation:
+      vi: '**Mạo từ bất định ''an''**: Dùng cho danh từ đếm được số ít bắt đầu bằng
+        âm nguyên âm. 🍎
+
+        - Ví dụ: *an apple*, *an hour*.
+
+        - Danh từ chung, không cụ thể.'
+  utter_Articles_a_an_the_explain_more_2:
+  - text: 'The indefinite article ''an'' is used before singular countable nouns that
+      begin with a vowel sound (a, e, i, o, u). It refers to non-specific items.
+
+      - **Examples**: *an apple*, *an egg*, *an hour* (silent ''h'').
+
+      - **Usage**: For first mentions (*I ate an orange*).
+
+      - **Note**: Pronunciation matters (*an MBA* due to /ɛm/ sound).
+
+      - **Exceptions**: Not for consonant sounds (*an university* is incorrect).'
+    translation:
+      vi: 'Mạo từ bất định ''an'' được dùng trước danh từ đếm được số ít bắt đầu bằng
+        âm nguyên âm (a, e, i, o, u). Nó chỉ vật không cụ thể.
+
+        - **Ví dụ**: *an apple*, *an egg*, *an hour* (''h'' câm).
+
+        - **Cách dùng**: Dùng cho lần nhắc đầu (*Tôi ăn một quả cam*).
+
+        - **Lưu ý**: Phụ thuộc phát âm (*an MBA* vì âm /ɛm/).
+
+        - **Ngoại lệ**: Không dùng với âm phụ âm (*an university* sai).'
+  utter_ask_Articles_a_an_the_understand_2:
+  - text: 🤔 Do you want to get more details about this?
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(Articles_a_an_the_understand_2=true)
+    - title: 'No'
+      payload: /SetSlots(Articles_a_an_the_understand_2=false)
+  utter_Articles_a_an_the_grammar_3:
+  - text: '**Definite article ''the''**: Used for specific nouns, singular or plural.
+      🌍
+
+      - Examples: *the book*, *the stars*.
+
+      - Known to speaker and listener.'
+    translation:
+      vi: '**Mạo từ xác định ''the''**: Dùng cho danh từ cụ thể, số ít hoặc số nhiều.
+        🌍
+
+        - Ví dụ: *the book*, *the stars*.
+
+        - Người nói và nghe đều biết.'
+  utter_Articles_a_an_the_explain_more_3:
+  - text: 'The definite article ''the'' is used for nouns that are specific or known
+      to both speaker and listener, regardless of countability.
+
+      - **Examples**: *the book on the table*, *the stars in the sky*.
+
+      - **Usage**: For previously mentioned nouns (*I saw a dog. The dog was cute*).
+
+      - **Unique nouns**: *the sun*, *the moon*.
+
+      - **Note**: Can be used with singular, plural, or uncountable nouns (*the water*).'
+    translation:
+      vi: 'Mạo từ xác định ''the'' dùng cho danh từ cụ thể hoặc cả người nói và người
+        nghe đều biết, bất kể đếm được hay không.
+
+        - **Ví dụ**: *the book on the table*, *the stars in the sky*.
+
+        - **Cách dùng**: Cho danh từ đã nhắc trước (*Tôi thấy một con chó. Con chó
+        đó dễ thương*).
+
+        - **Danh từ duy nhất**: *the sun*, *the moon*.
+
+        - **Lưu ý**: Dùng được với danh từ số ít, số nhiều, hoặc không đếm được (*the
+        water*).'
+  utter_ask_Articles_a_an_the_understand_3:
+  - text: 🤔 Do you want to get more details about this?
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(Articles_a_an_the_understand_3=true)
+    - title: 'No'
+      payload: /SetSlots(Articles_a_an_the_understand_3=false)
+  utter_Articles_a_an_the_grammar_4:
+  - text: '**No article**: Used for general plural or uncountable nouns. 📖
+
+      - Examples: *books are useful*, *water is vital*.
+
+      - Broad, non-specific statements.'
+    translation:
+      vi: '**Không mạo từ**: Dùng cho danh từ số nhiều hoặc không đếm được mang nghĩa
+        chung. 📖
+
+        - Ví dụ: *books are useful*, *water is vital*.
+
+        - Câu nói chung, không cụ thể.'
+  utter_Articles_a_an_the_explain_more_4:
+  - text: 'No article is used when making general statements about plural countable
+      nouns or uncountable nouns.
+
+      - **Examples**: *Books are educational*, *Water is essential*.
+
+      - **Usage**: For broad categories or abstract ideas (*Love is kind*).
+
+      - **Note**: Specific cases need ''the'' (*The books on the shelf are mine*).
+
+      - **Exceptions**: Proper nouns usually omit articles (*Vietnam is beautiful*).'
+    translation:
+      vi: 'Không dùng mạo từ khi nói chung về danh từ đếm được số nhiều hoặc danh
+        từ không đếm được.
+
+        - **Ví dụ**: *Books are educational*, *Water is essential*.
+
+        - **Cách dùng**: Cho danh từ thuộc loại chung hoặc ý niệm trừu tượng (*Love
+        is kind*).
+
+        - **Lưu ý**: Trường hợp cụ thể cần ''the'' (*The books on the shelf are mine*).
+
+        - **Ngoại lệ**: Danh từ riêng thường không cần mạo từ (*Vietnam is beautiful*).'
+  utter_ask_Articles_a_an_the_understand_4:
+  - text: 🤔 Do you want to get more details about this?
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(Articles_a_an_the_understand_4=true)
+    - title: 'No'
+      payload: /SetSlots(Articles_a_an_the_understand_4=false)
+  utter_Articles_a_an_the_grammar_5:
+  - text: '**Countable nouns**: Items you can count. 🍏
+
+      - Examples: *apples*, *chairs*.
+
+      - Use *a/an*, *the*, numbers, *many*, *few*.'
+    translation:
+      vi: '**Danh từ đếm được**: Vật có thể đếm. 🍏
+
+        - Ví dụ: *apples*, *chairs*.
+
+        - Dùng *a/an*, *the*, số đếm, *many*, *few*.'
+  utter_Articles_a_an_the_explain_more_5:
+  - text: 'Countable nouns are individual items that can be quantified.
+
+      - **Examples**: *apple/apples*, *chair/chairs*.
+
+      - **Articles**: *a/an* for singular (*a chair*), *the* for specific (*the apples*).
+
+      - **Quantifiers**: *many*, *a few*, *several* (*many books*).
+
+      - **Numbers**: *two chairs*, *three apples*.
+
+      - **Questions**: *How many chairs?*.
+
+      - **Irregular plurals**: *child/children*, *man/men*.'
+    translation:
+      vi: 'Danh từ đếm được là những vật có thể đếm riêng lẻ.
+
+        - **Ví dụ**: *apple/apples*, *chair/chairs*.
+
+        - **Mạo từ**: *a/an* cho số ít (*a chair*), *the* cho cụ thể (*the apples*).
+
+        - **Từ chỉ lượng**: *many*, *a few*, *several* (*many books*).
+
+        - **Số đếm**: *two chairs*, *three apples*.
+
+        - **Câu hỏi**: *How many chairs?*.
+
+        - **Số nhiều bất quy tắc**: *child/children*, *man/men*.'
+  utter_ask_Articles_a_an_the_understand_5:
+  - text: 🤔 Do you want to get more details about this?
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(Articles_a_an_the_understand_5=true)
+    - title: 'No'
+      payload: /SetSlots(Articles_a_an_the_understand_5=false)
+  utter_Articles_a_an_the_grammar_6:
+  - text: '**Uncountable nouns**: Things you cannot count. 💧
+
+      - Examples: *water*, *information*.
+
+      - Use *the*, *some*, *much*, no *a/an*.'
+    translation:
+      vi: '**Danh từ không đếm được**: Vật không thể đếm. 💧
+
+        - Ví dụ: *water*, *information*.
+
+        - Dùng *the*, *some*, *much*, không dùng *a/an*.'
+  utter_Articles_a_an_the_explain_more_6:
+  - text: 'Uncountable nouns refer to substances or concepts that cannot be counted
+      individually.
+
+      - **Examples**: *water*, *information*, *furniture*.
+
+      - **Articles**: Use *the* for specific cases (*the water in the glass*), no
+      *a/an* (*a water* is incorrect).
+
+      - **Quantifiers**: *much*, *some*, *a little* (*much information*).
+
+      - **Questions**: *How much water?*.
+
+      - **Note**: Some nouns can be both (*a coffee* = a cup, *coffee* = substance).'
+    translation:
+      vi: 'Danh từ không đếm được chỉ chất hoặc khái niệm không đếm riêng lẻ được.
+
+        - **Ví dụ**: *water*, *information*, *furniture*.
+
+        - **Mạo từ**: Dùng *the* cho cụ thể (*the water in the glass*), không dùng
+        *a/an* (*a water* sai).
+
+        - **Từ chỉ lượng**: *much*, *some*, *a little* (*much information*).
+
+        - **Câu hỏi**: *How much water?*.
+
+        - **Lưu ý**: Một số danh từ có thể cả hai (*a coffee* = một cốc, *coffee*
+        = chất).'
+  utter_ask_Articles_a_an_the_understand_6:
+  - text: 🤔 Do you want to get more details about this?
+    buttons:
+    - title: 'Yes'
+      payload: /SetSlots(Articles_a_an_the_understand_6=true)
+    - title: 'No'
+      payload: /SetSlots(Articles_a_an_the_understand_6=false)
+  utter_ask_Articles_a_an_the_practice_q1:
+  - text: '❓ **Question 1:** Which article fits this sentence:
+
+      - ___ apple is on the table.'
+    buttons:
+    - title: a
+      payload: /SetSlots(Articles_a_an_the_practice_q1=a)
+    - title: an
+      payload: /SetSlots(Articles_a_an_the_practice_q1=b)
+    - title: the
+      payload: /SetSlots(Articles_a_an_the_practice_q1=c)
+  utter_Articles_a_an_the_correct_q1:
+  - text: '‘An’ is correct because:
+
+      - *Apple* is a singular countable noun.
+
+      - It starts with a vowel sound, so ‘an’ is used (*an apple* 🍎).'
+  utter_Articles_a_an_the_incorrect_q1:
+  - text: 'Incorrect options:
+
+      - ‘A’ is for consonant sounds (*a book*).
+
+      - ‘The’ is for specific nouns but less natural here for a general statement.'
+    image: https://static.klipy.com/ii/b34001f2c30672cdcb3d906c28815404/7f/be/Br9T2Vr9.png
+  utter_ask_Articles_a_an_the_practice_q2:
+  - text: '❓ **Question 2:** Choose the correct article:
+
+      - I need ___ new phone.'
+    buttons:
+    - title: a
+      payload: /SetSlots(Articles_a_an_the_practice_q2=a)
+    - title: an
+      payload: /SetSlots(Articles_a_an_the_practice_q2=b)
+    - title: the
+      payload: /SetSlots(Articles_a_an_the_practice_q2=c)
+  utter_Articles_a_an_the_correct_q2:
+  - text: '‘A’ is correct because:
+
+      - *Phone* is a singular countable noun.
+
+      - It starts with a consonant sound, so ‘a’ is used (*a phone* 📱).'
+  utter_Articles_a_an_the_incorrect_q2:
+  - text: 'Incorrect options:
+
+      - ‘An’ is for vowel sounds (*an orange*).
+
+      - ‘The’ implies a specific phone, not general.'
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/59/cb/TZKBkz6k.gif
+  utter_ask_Articles_a_an_the_practice_q3:
+  - text: '❓ **Question 3:** Which article fits:
+
+      - ___ sun is shining today.'
+    buttons:
+    - title: a
+      payload: /SetSlots(Articles_a_an_the_practice_q3=a)
+    - title: an
+      payload: /SetSlots(Articles_a_an_the_practice_q3=b)
+    - title: the
+      payload: /SetSlots(Articles_a_an_the_practice_q3=c)
+  utter_Articles_a_an_the_correct_q3:
+  - text: '‘The’ is correct because:
+
+      - *Sun* is a unique, specific noun.
+
+      - ‘The’ is used for unique items (*the sun* ☀️).'
+  utter_Articles_a_an_the_incorrect_q3:
+  - text: 'Incorrect options:
+
+      - ‘A’ or ‘an’ are for non-specific countable nouns (*a book*, *an egg*).'
+  utter_ask_Articles_a_an_the_practice_q4:
+  - text: '❓ **Question 4:** Choose the correct option:
+
+      - ___ information is useful.'
+    buttons:
+    - title: a
+      payload: /SetSlots(Articles_a_an_the_practice_q4=a)
+    - title: an
+      payload: /SetSlots(Articles_a_an_the_practice_q4=b)
+    - title: no article
+      payload: /SetSlots(Articles_a_an_the_practice_q4=c)
+  utter_Articles_a_an_the_correct_q4:
+  - text: '‘No article’ is correct because:
+
+      - *Information* is an uncountable noun.
+
+      - General statements with uncountable nouns omit articles (*Information is useful*
+      📊).'
+  utter_Articles_a_an_the_incorrect_q4:
+  - text: 'Incorrect options:
+
+      - ‘A’ or ‘an’ are for singular countable nouns (*a book*, *an apple*).'
+  utter_ask_Articles_a_an_the_practice_q5:
+  - text: '❓ **Question 5:** Which fits:
+
+      - I have ___ dog and ___ cat.'
+    buttons:
+    - title: a/a
+      payload: /SetSlots(Articles_a_an_the_practice_q5=a)
+    - title: an/an
+      payload: /SetSlots(Articles_a_an_the_practice_q5=b)
+    - title: the/the
+      payload: /SetSlots(Articles_a_an_the_practice_q5=c)
+  utter_Articles_a_an_the_correct_q5:
+  - text: '‘A/a’ is correct because:
+
+      - *Dog* and *cat* are singular countable nouns with consonant sounds.
+
+      - Non-specific, so ‘a’ is used (*a dog*, *a cat* 🐶🐱).'
+  utter_Articles_a_an_the_incorrect_q5:
+  - text: 'Incorrect options:
+
+      - ‘An/an’ is for vowel sounds (*an egg*).
+
+      - ‘The/the’ is for specific nouns.'
+    image: https://static.klipy.com/ii/3bbfac09dcb32c2b1e87ad063c4ac16e/5d/05/AuRALdGY.gif
+  utter_ask_Articles_a_an_the_practice_q6:
+  - text: '❓ **Question 6:** Choose the correct article:
+
+      - ___ hour ago, I was here.'
+    buttons:
+    - title: a
+      payload: /SetSlots(Articles_a_an_the_practice_q6=a)
+    - title: an
+      payload: /SetSlots(Articles_a_an_the_practice_q6=b)
+    - title: the
+      payload: /SetSlots(Articles_a_an_the_practice_q6=c)
+  utter_Articles_a_an_the_correct_q6:
+  - text: '‘An’ is correct because:
+
+      - *Hour* is a singular countable noun.
+
+      - It starts with a vowel sound (silent ‘h’), so ‘an’ is used (*an hour* ⏰).'
+  utter_Articles_a_an_the_incorrect_q6:
+  - text: 'Incorrect options:
+
+      - ‘A’ is for consonant sounds (*a house*).
+
+      - ‘The’ is for specific nouns.'
+    image: https://static.klipy.com/ii/b34001f2c30672cdcb3d906c28815404/7f/be/Br9T2Vr9.png
+  utter_ask_Articles_a_an_the_practice_q7:
+  - text: '❓ **Question 7:** Which fits:
+
+      - ___ books are on the shelf.'
+    buttons:
+    - title: a
+      payload: /SetSlots(Articles_a_an_the_practice_q7=a)
+    - title: an
+      payload: /SetSlots(Articles_a_an_the_practice_q7=b)
+    - title: the
+      payload: /SetSlots(Articles_a_an_the_practice_q7=c)
+  utter_Articles_a_an_the_correct_q7:
+  - text: '‘The’ is correct because:
+
+      - *Books* are plural and specific (on the shelf).
+
+      - ‘The’ is used for specific nouns (*the books* 📚).'
+  utter_Articles_a_an_the_incorrect_q7:
+  - text: 'Incorrect options:
+
+      - ‘A’ or ‘an’ are for singular countable nouns (*a book*, *an apple*).'
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/59/cb/TZKBkz6k.gif
+  utter_ask_Articles_a_an_the_practice_q8:
+  - text: '❓ **Question 8:** Choose the correct option:
+
+      - ___ water is good for health.'
+    buttons:
+    - title: a
+      payload: /SetSlots(Articles_a_an_the_practice_q8=a)
+    - title: the
+      payload: /SetSlots(Articles_a_an_the_practice_q8=b)
+    - title: no article
+      payload: /SetSlots(Articles_a_an_the_practice_q8=c)
+  utter_Articles_a_an_the_correct_q8:
+  - text: '‘No article’ is correct because:
+
+      - *Water* is an uncountable noun.
+
+      - General statements omit articles (*Water is good for health* 💧).'
+  utter_Articles_a_an_the_incorrect_q8:
+  - text: 'Incorrect options:
+
+      - ‘A’ is for singular countable nouns (*a glass*).
+
+      - ‘The’ is for specific cases (*the water in the bottle*).'
+  utter_ask_Articles_a_an_the_practice_q9:
+  - text: '❓ **Question 9:** Which article fits:
+
+      - She is ___ teacher.'
+    buttons:
+    - title: a
+      payload: /SetSlots(Articles_a_an_the_practice_q9=a)
+    - title: an
+      payload: /SetSlots(Articles_a_an_the_practice_q9=b)
+    - title: the
+      payload: /SetSlots(Articles_a_an_the_practice_q9=c)
+  utter_Articles_a_an_the_correct_q9:
+  - text: '‘A’ is correct because:
+
+      - *Teacher* is a singular countable noun with a consonant sound.
+
+      - Non-specific, so ‘a’ is used (*a teacher* 👩‍🏫).'
+  utter_Articles_a_an_the_incorrect_q9:
+  - text: 'Incorrect options:
+
+      - ‘An’ is for vowel sounds (*an engineer*).
+
+      - ‘The’ is for specific nouns.'
+  utter_ask_Articles_a_an_the_practice_q10:
+  - text: '❓ **Question 10:** Choose the correct article:
+
+      - ___ children are playing.'
+    buttons:
+    - title: a
+      payload: /SetSlots(Articles_a_an_the_practice_q10=a)
+    - title: an
+      payload: /SetSlots(Articles_a_an_the_practice_q10=b)
+    - title: the
+      payload: /SetSlots(Articles_a_an_the_practice_q10=c)
+  utter_Articles_a_an_the_correct_q10:
+  - text: '‘The’ is correct because:
+
+      - *Children* is plural and specific (playing, implying known group).
+
+      - ‘The’ is used for specific nouns (*the children* 👧👦).'
+  utter_Articles_a_an_the_incorrect_q10:
+  - text: 'Incorrect options:
+
+      - ‘A’ or ‘an’ are for singular countable nouns (*a child*, *an egg*).'
+    image: https://static.klipy.com/ii/3bbfac09dcb32c2b1e87ad063c4ac16e/5d/05/AuRALdGY.gif
+  utter_ask_Articles_a_an_the_practice_q11:
+  - text: '❓ **Question 11:** Which fits:
+
+      - I need ___ advice.'
+    buttons:
+    - title: a
+      payload: /SetSlots(Articles_a_an_the_practice_q11=a)
+    - title: an
+      payload: /SetSlots(Articles_a_an_the_practice_q11=b)
+    - title: no article
+      payload: /SetSlots(Articles_a_an_the_practice_q11=c)
+  utter_Articles_a_an_the_correct_q11:
+  - text: '‘No article’ is correct because:
+
+      - *Advice* is an uncountable noun.
+
+      - General statements omit articles (*Advice is helpful* 💡).'
+  utter_Articles_a_an_the_incorrect_q11:
+  - text: 'Incorrect options:
+
+      - ‘A’ or ‘an’ are for singular countable nouns (*a suggestion*, *an idea*).'
+  utter_ask_Articles_a_an_the_practice_q12:
+  - text: '❓ **Question 12:** Choose the correct article:
+
+      - ___ university is nearby.'
+    buttons:
+    - title: a
+      payload: /SetSlots(Articles_a_an_the_practice_q12=a)
+    - title: an
+      payload: /SetSlots(Articles_a_an_the_practice_q12=b)
+    - title: the
+      payload: /SetSlots(Articles_a_an_the_practice_q12=c)
+  utter_Articles_a_an_the_correct_q12:
+  - text: '‘A’ is correct because:
+
+      - *University* is a singular countable noun.
+
+      - It starts with a consonant sound (/j/), so ‘a’ is used (*a university* 🏫).'
+  utter_Articles_a_an_the_incorrect_q12:
+  - text: 'Incorrect options:
+
+      - ‘An’ is for vowel sounds (*an umbrella*).
+
+      - ‘The’ is for specific nouns.'
+    image: https://static.klipy.com/ii/b34001f2c30672cdcb3d906c28815404/7f/be/Br9T2Vr9.png
+  utter_ask_Articles_a_an_the_practice_q13:
+  - text: '❓ **Question 13:** Which fits:
+
+      - ___ furniture in this room is new.'
+    buttons:
+    - title: a
+      payload: /SetSlots(Articles_a_an_the_practice_q13=a)
+    - title: the
+      payload: /SetSlots(Articles_a_an_the_practice_q13=b)
+    - title: no article
+      payload: /SetSlots(Articles_a_an_the_practice_q13=c)
+  utter_Articles_a_an_the_correct_q13:
+  - text: '‘The’ is correct because:
+
+      - *Furniture* is uncountable but specific (in this room).
+
+      - ‘The’ is used for specific nouns (*the furniture* 🪑).'
+  utter_Articles_a_an_the_incorrect_q13:
+  - text: 'Incorrect options:
+
+      - ‘A’ is for singular countable nouns (*a chair*).
+
+      - ‘No article’ is for general statements (*Furniture is expensive*).'
+  utter_ask_Articles_a_an_the_practice_q14:
+  - text: '❓ **Question 14:** Choose the correct option:
+
+      - ___ cats are cute.'
+    buttons:
+    - title: a
+      payload: /SetSlots(Articles_a_an_the_practice_q14=a)
+    - title: the
+      payload: /SetSlots(Articles_a_an_the_practice_q14=b)
+    - title: no article
+      payload: /SetSlots(Articles_a_an_the_practice_q14=c)
+  utter_Articles_a_an_the_correct_q14:
+  - text: '‘No article’ is correct because:
+
+      - *Cats* is a plural countable noun.
+
+      - General statements omit articles (*Cats are cute* 🐱).'
+  utter_Articles_a_an_the_incorrect_q14:
+  - text: 'Incorrect options:
+
+      - ‘A’ is for singular countable nouns (*a cat*).
+
+      - ‘The’ is for specific nouns (*the cats in the house*).'
+    image: https://static.klipy.com/ii/3bbfac09dcb32c2b1e87ad063c4ac16e/5d/05/AuRALdGY.gif
+  utter_ask_Articles_a_an_the_practice_q15:
+  - text: '❓ **Question 15:** Which article fits:
+
+      - I saw ___ elephant yesterday.'
+    buttons:
+    - title: a
+      payload: /SetSlots(Articles_a_an_the_practice_q15=a)
+    - title: an
+      payload: /SetSlots(Articles_a_an_the_practice_q15=b)
+    - title: the
+      payload: /SetSlots(Articles_a_an_the_practice_q15=c)
+  utter_Articles_a_an_the_correct_q15:
+  - text: '‘An’ is correct because:
+
+      - *Elephant* is a singular countable noun.
+
+      - It starts with a vowel sound, so ‘an’ is used (*an elephant* 🐘).'
+  utter_Articles_a_an_the_incorrect_q15:
+  - text: 'Incorrect options:
+
+      - ‘A’ is for consonant sounds (*a lion*).
+
+      - ‘The’ is for specific nouns but less natural here.'
+    image: https://static.klipy.com/ii/feea28532d9709f5128558f418c779d0/d6/c9/kKEmDTpE.gif
+  utter_Articles_a_an_the_end:
+  - text: 🎉 Thank you for learning about Articles a an the! I hope you found this
+      helpful. Have a great day! 🎉
+    image: https://static.klipy.com/ii/feea28532d9709f5128558f418c779d0/c9/40/StrU5mdz.gif
+  - text: 🎉 Great job finishing this lesson! Keep up the good work and see you next
+      time! 🎉
+    image: https://static.klipy.com/ii/feea28532d9709f5128558f418c779d0/c9/40/StrU5mdz.gif
+  - text: 👏 You did amazing! Thanks for learning with me. Have a wonderful day!
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/89/0c/eVPjF1Tc.gif
+  - text: 🌟 Congratulations on completing the topic! Hope you enjoyed it. See you
+      soon!
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/30/9a/txBGxv21.gif
+  - text: 🎊 Well done! You've learned something new today. Take care and keep practicing!
+    image: https://static.klipy.com/ii/925f17378dd1893b674a723c07535afe/92/6e/GkcD7BLA.gif
+  - text: ✨ That's a wrap! Thanks for joining this lesson. Wishing you lots of success!
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/61/ec/cC1mwNmR.gif
+  - text: 🎈 Thank you for your effort! Hope you had fun learning. See you in the next
+      lesson!
+    image: https://static.klipy.com/ii/c3a19a0b747a76e98651f2b9a3cca5ff/c5/d0/EvUga4Gv.gif
+  - text: 🚀 You're awesome! Thanks for joining this lesson. Keep shining and see you
+      soon!
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/30/9a/txBGxv21.gif
+  - text: 🥳 Lesson complete! Hope you had fun. Don't forget to practice and smile
+      every day!
+    image: https://static.klipy.com/ii/925f17378dd1893b674a723c07535afe/92/6e/GkcD7BLA.gif
+  - text: 💡 You did it! Keep learning and growing. Until next time!
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/61/ec/cC1mwNmR.gif
+  - text: 😃 Thanks for your hard work! Wishing you lots of success ahead.
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/89/0c/eVPjF1Tc.gif
+  - text: 🍀 Good luck on your learning journey! See you in the next lesson.
+    image: https://static.klipy.com/ii/c3a19a0b747a76e98651f2b9a3cca5ff/c5/d0/EvUga4Gv.gif
+  - text: 🦸‍♂️ You're a grammar hero! Thanks for learning with me.
+    image: https://static.klipy.com/ii/feea28532d9709f5128558f418c779d0/d6/c9/kKEmDTpE.gif
+  - text: 📚 Another topic mastered! Proud of you. See you again soon!
+    image: https://static.klipy.com/ii/c98c4a4935d23b95805f0befee091d8a/30/9a/txBGxv21.gif
