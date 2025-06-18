@@ -1,0 +1,38 @@
+version: "3.1"
+
+responses:
+  utter_provide_grammar_topics:
+    - text: |
+        🌟 Explore the World of English Grammar! 🌟
+
+        Let me guide you through these essential grammar topics:
+
+        📚 Basic Grammar:
+        - Possessive Pronouns
+        - Reflexive Pronouns
+        - Adjectives
+        - Adverbs
+        - Prepositions of Time
+        - Prepositions of Place
+        - Prepositions of Direction
+        - Comparative & Superlative
+        - Frequency Adverbs
+        - Countable & Uncountable Nouns
+        - Articles (a, an, the)
+        - Singular & Plural Nouns
+        - Personal Pronouns
+
+        📈 Intermediate Grammar:
+        - First Conditional
+        - Second Conditional
+        - Third Conditional
+        - Passive Voice
+        - Passive with Modals
+        - Reported Speech (Statements)
+        - Reported Speech (Questions)
+        - Related Clauses (Defining)
+        - Related Clauses (Non-defining)
+
+        ✨ Ready to enhance your grammar? Just tell me which topic interests you!
+
+        Example: "I want to learn about possessive pronouns" or "Tell me about articles"

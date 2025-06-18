@@ -4,13 +4,3 @@ flows:
     steps:
       - id: explain_something
         action: action_explain_something_with_llm
-        next: user_query_continue_or_exit
-      - id: user_query_continue_or_exit
-        collect: user_query_continue_or_exit
-        description: |
-          Collect a user query to continue or intent to exit the explanation.
-          The user can continue the explanation by saying any question related to the explanation, or exit the explanation by saying "exit".
-        next:
-          - if: slots.user_query_continue_or_exit == "exit"
-            then: END
-          - else: explain_something

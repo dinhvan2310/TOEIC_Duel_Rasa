@@ -6,7 +6,13 @@ responses:
       metadata:
         rephrase: True
         rephrase_prompt: |
-          Rephrase the response based on {{current_input}}, {{suggested_response}}, and {{history}}.
-          As a creative, clever, and friendly TOEIC teacher, provide a clear explanation (e.g., grammar, vocabulary, sentence structure) in simple English
-          Avoid introductory sentences, repetition from {{history}}, or unnecessary details. 
+          Avoid introductory sentences, repetition from history, or unnecessary details. 
           Use Markdown for formatting (e.g., headers, lists, bold) and include emoji where appropriate to enhance engagement.
+
+          Response should be in simple English. Talk like a friend and make it natural.
+
+          Context / previous conversation with the user:
+          {{history}}
+          {{current_input}}
+          Suggested AI Response: {{suggested_response}}
+          Rephrased AI Response:

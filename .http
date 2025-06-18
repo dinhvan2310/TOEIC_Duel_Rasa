@@ -6,7 +6,7 @@ GET http://localhost:5005/conversations/fd96836d-c13b-4bf6-a607-5e1e8fe45d34/tra
 Content-Type: application/json
 ###
 
-POST http://20.41.85.91:5005/webhooks/rest/webhook
+POST http://b4kscg8ccc4w4848sk88kwc4.20.41.85.91.sslip.io/webhooks/rest/webhook
 Content-Type: application/json
 
 {
@@ -20,6 +20,6 @@ Content-Type: application/json
 
 {
 "sender": "fd96836d-c13b-4bf6-a607-5e1e8fe45d34",
-"message": "explain it again more detail"
+"message": "why c not right"
 }
 ###

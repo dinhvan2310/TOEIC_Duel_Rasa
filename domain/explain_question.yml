@@ -1,0 +1,23 @@
+version: "3.1"
+
+actions:
+  - action_explain_question_with_llm
+
+slots:
+  question_number:
+    type: text
+    mappings:
+      - type: from_llm
+    influence_conversation: true
+  part_number:
+    type: text
+    mappings:
+      - type: from_llm
+    influence_conversation: true
+
+responses:
+  utter_ask_question_number:
+  - text: "🔍 *Which question number would you like to explain?*"
+  utter_ask_part_number:
+  - text: "🔍 *Which part number would you like to explain?*"
+  
